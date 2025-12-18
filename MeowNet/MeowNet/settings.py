@@ -32,15 +32,15 @@ SESSION_COOKIE_AGE = 900
 
 INSTALLED_APPS = [
     'django.contrib.admin',
-    'main',
-    'rest_framework',
-    'user',
-    'crm',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'main.apps.MainConfig',
+    'rest_framework',
+    'user',
+    'crm',
 ]
 
 MIDDLEWARE = [

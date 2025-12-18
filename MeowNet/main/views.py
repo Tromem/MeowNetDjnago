@@ -1,0 +1,6 @@
+from django.shortcuts import render
+from rest_framework.response import Response
+from rest_framework.views import APIView
+
+def main(req):
+    return render(req,template_name='main.html')

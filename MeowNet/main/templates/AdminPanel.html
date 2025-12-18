@@ -1,0 +1,153 @@
+{%extends 'main.html'%}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block title%}Административная панель{%endblock%}</title>
+    {%block link%}
+    <link rel="stylesheet" href={% static 'css/admin.css' %}">
+    {%endblock%}
+
+</head>
+<body>
+    {%block logolabel%} MeowAdm {%endblock%}
+    {%block bar%} 
+    <div class="buttons">
+        <div>
+            <button class="add"></button>
+        </div>
+        <div>
+            <button class="delete"></button>
+        </div>
+        
+    </div>
+    {%endblock%}
+    {%block content%}
+    
+    <div class="container-admins">
+        <div class="find_user">
+            <div class="find_user_bar">
+                
+                <div>
+                    <text>Поиск лицевого счета</text>
+                </div>
+                <div class='more_container_button'>
+                    <button class="more_button"></button>
+                </div>
+    
+            
+            </div>
+                <div class="find_user_by_data">
+                    <div>
+                        <text>По номеру ЛС</text><div>
+                            <input type="text" id="find_by_user_id">
+                        </div>
+                    </div>
+                    <div>
+                        <text>По номеру телефона</text><div>
+
+                            <input type="text" id="find_by_phone">
+                        </div>
+                    </div>
+                    <div>
+                        <text> По адресу</text><div>
+
+                            <input type="text" id="find_adres">
+                        </div>
+
+                    </div>
+                    <button id="button_find">Поиск</button>
+                </div>
+                <div class="data_user">
+                    <div>
+                        <text> ФИО клиента</text><div>
+
+                            <input type="text" id="firstname_user" readonly  >
+                        </div>
+                    </div>
+                    <div>
+                        <text>Адрес</text><div>
+
+                            <input type="text" id="adres_user" readonly >
+                        </div>
+                    </div>
+                    <div>
+                        <text>Номер телефона</text><div>
+
+                            <input type="text" id="user_phone" readonly>
+                        </div>
+                    </div>
+                    <div>
+                        <text>Баланс</text><div>
+
+                            <input type="text" id="balance" readonly>
+                        </div>
+                    </div>
+                    <div>
+                        <text>Наличие неполадок</text><div>
+
+                            <input type="text" id="errors" >
+                        </div>
+                    </div>
+                    <div>
+                        <text>Коментарии</text><div>
+
+                            <textarea name="" id=""></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           <div class="employees">
+               <div class="Moders">
+                
+                    <div class="Moders_bar"><text>Модерация</text></div>
+                    <div class="inf-container">
+                        <div class="workersonline_moders">Модераторов в работе:0 <inf></inf></div>
+                        <div class="cout_day_moders"> Количество выполненых заявок:0 <inf></inf></div>
+                        <div class="cout_mounth_moders">Выполненные заявки за месяц:0 <inf></inf></div>
+                        <table class="table-inf">
+                            <tr>
+                                <td class="id_table">ID</td>
+                                <td>ФИО</td>
+                                <td>Должность</td>
+                                <td>Заявок в работе</td>
+                                <td>Статус</td>
+                                <td>Логин</td>
+                            </tr>
+                            
+                    
+                   </table>
+                    
+                    </div>
+                   
+                </div>   
+    
+           
+               
+           <div class="Salers">
+                <div class="Salers_bar"><text>Продажи</text></div>
+                <div class="inf-container">
+                   <div class="workersonline">Сотрудников в работе:0 <inf></inf></div>
+                   <div class="cout_day">Количество выполненых заявок:0<inf></inf></div>
+                   <div class="cout_mounth">Выполненные заявки за месяц:0 <inf></inf></div>
+                   
+                   <table class="table-inf">
+                    <tr>
+                    <td class="id_table">ID</td>
+                    <td>ФИО</td>
+                    <td>Должность</td>
+                    <td>Заявок в работе</td>
+                    <td>Статус</td>
+                    <td>Логин</td>
+                    </tr>
+                    
+                   </table>
+                </div>
+            </div>   
+       </div>
+           </div>
+    {%endblock%}
+</body>
+</html>
