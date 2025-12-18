@@ -17,12 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path , include
 from django.conf.urls.static import static
-import settings
+from . import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('Meowcrm/',include('crm.urls')),
     path('user/',include('user.urls')),
-    path('main/',include('main.urls'))
+    path('',include('main.urls')),
+    path('API',include('API.urls'))
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

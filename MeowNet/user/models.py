@@ -18,16 +18,10 @@ class Worker(models.Model):
 #  доделать юзера
 class UserModel(AbstractBaseUser):
     
-    ROLE_CHOICES = (
-        (1,'Admin'),
-        (2,'User'),
-        (3,'Tech_support'),
-        (4,'Seller')
-    )
+  
     
     
-    UserRole = models.Choices(choices=ROLE_CHOICES,
-                              default = 4)
+    UserRole = models.IntegerField()
     number_user_id = models.PositiveIntegerField(primary_key=True)
     user_access  = models.OneToOneField(Worker , 
                                         on_delete=models.CASCADE,

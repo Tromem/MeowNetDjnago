@@ -1,10 +1,12 @@
+
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     {%block link%}
     {%endblock%}
-    <link rel="stylesheet" href="{{url_for('static',filename='css/maintitle.css')}}">
+    <link rel="stylesheet" href={% static 'css/maintitle.css'%}>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -27,7 +29,7 @@
 
                 <div class="bglogo"> 
                     <div class="Meow">{%block logolabel%} MeowNet {%endblock%}</div>
-                    <img src="{{url_for('static',filename='img/Net.png')}}" alt="">
+                    <img src="{% static 'img/Net.png'%}" alt="">
                     
                 </div>
             </a>

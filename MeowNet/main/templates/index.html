@@ -1,6 +1,7 @@
 {%extends 'main.html'%}
+{%load static %}
 {%block link%} 
-    <link rel="stylesheet" href="{% static 'css/support.css'%}">
+    <link rel="stylesheet" href="{% static 'css/support.css' %}">
     <link rel="stylesheet" href="{% static 'css/order.css'%}">
     <link rel="stylesheet" href="{% static 'css/index.css'%}">
     <link rel="stylesheet" href="{% static 'css/cards.css'%}">
@@ -9,7 +10,7 @@
 {%block content%}
     
         <!-- сделать картинки что бы выводились -->
-        <div class="backgroundimagecat"><img src="{%url 'img/'%}" alt=""></div>
+        <div class="backgroundimagecat"><img src="{%static 'img/backgroundcat.png'%}" alt=""></div>
         <div class="tarif">
             <div class="parent-decor-text-tarif">
                  <div class="decor-text-tarif">Тарифы</div>
@@ -33,7 +34,7 @@
                     </div>
                     
                     <div class="tarif-speed-word">
-                        <img src="{{url_for('static', filename='img/Cpu.png')}}" alt="">
+                        <img src="{%static 'img/Cpu.png'%}" alt="">
                         <div class="tarif-speed-word-text">Высокоскоростной интернет </div>
                      </div>
                     <hr>
@@ -56,7 +57,7 @@
                     </div>
                     
                     <div class="tarif-speed-word">
-                        <img src="{{url_for('static', filename='img/Cpu.png')}}" alt="">
+                        <img src="{%static 'img/Cpu.png'%}" alt="">
                         <div class="tarif-speed-word-text">Высокоскоростной интернет </div>
                      </div>
                     <hr>
@@ -79,7 +80,7 @@
                     </div>
                     
                     <div class="tarif-speed-word">
-                        <img src="{{url_for('static', filename='img/Cpu.png')}}" alt="">
+                        <img src="{%static 'img/Cpu.png'%}" alt="">
                         <div class="tarif-speed-word-text">Высокоскоростной интернет </div>
                      </div>
                     <hr>
@@ -97,11 +98,11 @@
                
                 
             </div>
-            <img src="{{url_for('static',filename='img/lapa2.png')}}" class="lapa2">
-            <img src="{{url_for('static',filename='img/lapa1.png')}}" class="lapa1" >
+            <img src="{%static 'img/lapa2.png' %}" class="lapa2">
+            <img src="{%static 'img/lapa1.png'%}"  class="lapa1" >
             <div class="arrow">
-                <img src="{{url_for('static',filename='img/arrow.png')}}" id="left-arrow">
-                <img src="{{url_for('static',filename='img/arrow.png')}}" id="right-arrow"></div>
+                <img src="{%static 'img/arrow.png'%}"  id="left-arrow">
+                <img src="{%static 'img/arrow.png'%}"  id="right-arrow"></div>
 
             <div class="button-tarif">
 
@@ -168,7 +169,7 @@
                 <div class="text-order-name-tarif-pos">Тариф бадабумчик</div></div>
             </div>
             
-            <div class="order-type-tarif"><img src="{{url_for('static', filename='img/Cpu.png')}}" alt=""> <div class="text-inif-tarif">Высокоскоростной интернет</div></div>
+            <div class="order-type-tarif"><img src="{%static 'img/Cpu.png'%}"> <div class="text-inif-tarif">Высокоскоростной интернет</div></div>
         </div>
         
     </div>
