@@ -3,4 +3,4 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 def main(req):
-    return render(req,template_name='main.html')
+    return render(req,template_name='index.html')
