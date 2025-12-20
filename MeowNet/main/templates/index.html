@@ -22,13 +22,14 @@
             
             <div class="cards-container">
                 
+                {%for i in tarif%}
 
 
                 <div class="card">
 
                     <div class="tarif-type"><div class="tarif-type-text">Интернет</div></div>
                     <div>
-                        <div class="tarif-name"><div class="tarif-name-text">Осенний период</div></div>
+                        <div class="tarif-name"><div class="tarif-name-text">{{i.Tarif_name}}</div></div>
                         
                         <hr>
                     </div>
@@ -39,19 +40,21 @@
                      </div>
                     <hr>
                     <div class="tarif-inf">
-                    
-                        <div class="prise"> <div class="prise-text">500 руб</div> </div>
-                        <div class="speed"> <div class="speed-text">100 Мбит/c</div></div>
-                
+                       
+                        <div class="prise"> <div class="prise-text">{{i.price}}руб</div> </div>
+                        <div class="speed"> <div class="speed-text">{{i.speed}}Мбит/c</div></div>
+                       
                     </div>
                     
                     <div class="button-buy"><div class="button-buy-text">Купить</div></div>
                 </div>
+                {%endfor%}
+                {%for i in actions%}
                 <div class="card">
-
+                     
                     <div class="tarif-type"><div class="tarif-type-text">Интернет</div></div>
                     <div>
-                        <div class="tarif-name"><div class="tarif-name-text">Легендарная скорость</div></div>
+                        <div class="tarif-name"><div class="tarif-name-text">{{i.Tarif_name}}</div></div>
                         
                         <hr>
                     </div>
@@ -62,39 +65,15 @@
                      </div>
                     <hr>
                     <div class="tarif-inf">
-                    
-                        <div class="prise"> <div class="prise-text">1500 руб</div> </div>
-                        <div class="speed"> <div class="speed-text">1000 Мбит/c</div></div>
-                
+                       
+                        <div class="prise"> <div class="prise-text">{{i.price}}руб</div> </div>
+                        <div class="speed"> <div class="speed-text">{{i.speed}}Мбит/c</div></div>
+                       
                     </div>
-                    
+                   
                     <div class="button-buy"><div class="button-buy-text">Купить</div></div>
                 </div>
-                <div class="card">
-
-                    <div class="tarif-type"><div class="tarif-type-text">Интернет</div></div>
-                    <div>
-                        <div class="tarif-name"><div class="tarif-name-text">Осенние мегапродажи</div></div>
-                        
-                        <hr>
-                    </div>
-                    
-                    <div class="tarif-speed-word">
-                        <img src="{%static 'img/Cpu.png'%}" alt="">
-                        <div class="tarif-speed-word-text">Высокоскоростной интернет </div>
-                     </div>
-                    <hr>
-                    <div class="tarif-inf">
-                    
-                        <div class="prise"> <div class="prise-text">1800 руб</div> </div>
-                        <div class="speed"> <div class="speed-text">2000 Мбит/c</div></div>
-                
-                    </div>
-                    
-                    <div class="button-buy"><div class="button-buy-text">Купить</div></div>
-                </div>
-               
-                
+                {%endfor%}
                
                 
             </div>

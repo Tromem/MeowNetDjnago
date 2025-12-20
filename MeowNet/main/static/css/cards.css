@@ -127,8 +127,9 @@
 }
 .speed-text{
     padding-top: 2px;
-    font-size: 16px;
+    font-size: 12px;
     text-decoration: dashed black;
+    margin-top:15px ;
 }
 .button-buy-text{
     user-select: none;

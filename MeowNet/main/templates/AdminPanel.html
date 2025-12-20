@@ -17,9 +17,106 @@
     {%endblock%}
 
     {%block content%}
+    <div class="admin-panel"> 
         <div class="leftbar">
-            <div class="elements"></div>
-        </div>
+            <div class="icons">
+                <div class="icon-conteiner">
+                    <button class="Supporters-button">
+
+                </button></div>
+                <div class="icon-conteiner">
+                    <button class="Sellers-button">
+
+                </button></div>
+                <div class="icon-conteiner">
+                    <button class="users-in-button">
+
+                </button></div>
+                <div class="icon-conteiner">
+                    <button class="stats-button">
+
+                </button></div>
+                <div class="icon-conteiner">
+                    <button class="new-users-button">
+
+                </button></div>
+                <div class="icon-conteiner">
+                    <button id="settings-button" class="settings-button">
+
+                </button></div>
+
+            </div>
+            <div id="settings" class="settings">
+                <div class="elements-in-settings">
+                    <div>
+                        <button class="general">Общие</button>
+                    </div>
+                    <div>
+                        <button class="tarifs">Тарифы</button>
+                    </div>
+                    <div>
+                        <button class="emploers">Сотрудники</button>
+                    </div>
+                    <div>
+                        <button class="data-for-employers">База знаний</button>
+                    </div>
+                    <div>
+                        <button class="news">Новости для сотрудников</button>
+                    </div>
+                    <div>
+                        <button class="integrations">Интеграции</button>
+                    </div>
+                    
+                </div>
+            </div>
+            </div>
+
+        <div class="data-table">
+            <div class="container-in-table">
+                <div style="display: flex;">
+                    <div class="inf-in-table"><text>Сотрудники технической поддержки</text></div>
+                    <div class="buttons-table">
+                        <button class="delete-user"></button>
+                        <button class="plus-user"></button>
+                </div>
+                </div>
+            </div>
+            <div class="table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ФИО</th>
+                            <th>Должность</th>
+                            <th>Статус</th>
+                            <th>Логин</th>
+                            <th>ID</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>1234</th>
+                            <th>2424</th>
+                            <th>32424</th>
+                            <th>42424</th>
+                            <th>52424</th>
+                            
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            </div>
+    
+    </div>  
+        <script src="{%static 'js/opensettings.js' %}"> </script>
     {%endblock%}
 </body>
 </html>

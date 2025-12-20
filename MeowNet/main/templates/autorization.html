@@ -1,4 +1,5 @@
 {%extends 'main.html'%}
+{%load static%}
 {%block link%}
 <link rel="stylesheet" href="{%static 'css/login.css'%}">
 {%endblock%}
@@ -20,7 +21,7 @@
         <div class="user-legal"> 
             <text> Нажимая кнопку “Войти”,вы принимаете условия пользовательского соглашения</text></div>
         <hr>
-            <div class="forgotpassword"><text>Забыли пароль?</text> </div>
+            <div class="forgotpassword"><text><a href="">Забыли пароль?</a></text> </div>
     </div>
         
     </div>
