@@ -1,23 +1,36 @@
+# Python
+*.pyc
+__pycache__/
+.env/
+venv/
+env/
+pip-wheel-metadata/
+.Python
+build/
+develop-eggs/
+dist/
+eggs/
+lib/
+parts/
+sdist/
+var/
+wheels/
+share/
+*.egg-info/
+.installed.cfg
+
 # Django-specific files
 *.log
 *.pot
-*.pyc
-__pycache__/
-local_settings.py
-db.sqlite3
-media/ # Or wherever user-uploaded files are stored
+local_settings.py  # or the file where you keep your secrets/local config
+db.sqlite3 # if you are using SQLite locally
+media/ # collected user-uploaded files (can be large)
 
-# Virtual Environment
-.env
-venv/
-env/
-
-# IDE-specific files (e.g., PyCharm)
+# IDE-specific files (e.g., PyCharm, VS Code)
 .idea/
+.vscode/
+*.swp
 
-# Other common files
+# OS-specific files
 .DS_Store
 Thumbs.db
-.coverage
-.tox/
-.eggs/
