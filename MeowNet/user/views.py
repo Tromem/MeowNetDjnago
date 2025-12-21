@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.contrib.auth.decorators import login_required
 def auth(req):
     
@@ -16,6 +16,10 @@ def Support(req):
 def Sales(req):
     
    return render(req,'Salesdepartment.html')
-
+@login_required
 def Admin(req):
-    return render(req,'AdminPanel.html')
+   if (req.user.user_acces != 3):
+      return redirect('')
+   
+
+   return render(req,'AdminPanel.html')

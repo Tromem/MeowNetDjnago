@@ -50,6 +50,7 @@
                 </div>
                 {%endfor%}
                 {%for i in actions%}
+                {%if i.in_archive != True%}
                 <div class="card">
                      
                     <div class="tarif-type"><div class="tarif-type-text">Интернет</div></div>
@@ -73,6 +74,7 @@
                    
                     <div class="button-buy"><div class="button-buy-text">Купить</div></div>
                 </div>
+                {%endif%}
                 {%endfor%}
                
                 

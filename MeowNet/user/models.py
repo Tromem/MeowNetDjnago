@@ -9,21 +9,24 @@ from django.contrib.auth.models import AbstractBaseUser
 
 #  доделать юзера
 class UserModel(AbstractBaseUser):
+    id = models.IntegerField(primary_key=True, verbose_name='Айди')
+    username = models.CharField(max_length=150, unique=True ,verbose_name='Логин')
+    settings = models.CharField(max_length=70  ,verbose_name='Настройки')# Настройки ввиде символов которые будет считывать js
+    user_last_name = models.CharField(max_length=150 ,verbose_name="ФИО")
+    address = models.CharField(max_length=300 ,verbose_name='Адрес подключения')
+    paper_data = models.CharField(max_length=10 ,verbose_name='Паспортные данные')
+    cout_applications = models.IntegerField(null=True ,blank=True, verbose_name='Все выполненые заявки')
+    cout_applications_in_work = models.IntegerField(null=True ,blank=True ,verbose_name='Все заявки в работе')
+    in_work = models.BooleanField(null=True ,blank=True ,verbose_name="Состояние смены") 
+    start_of_shift = models.DateTimeField(null=True ,blank=True, verbose_name="Начало смены") # Начало смены
+    end_of_shift = models.DateTimeField(null=True ,blank=True) #Конец смены
+    works_day = models.IntegerField(null=True ,blank=True)  #Рабочие дни в месяц
+    work_hours = models.IntegerField(null=True ,blank=True) #секунды в часы  
+    user_acces = models.IntegerField(null=True ,blank=True)
+    userhash = models.CharField(max_length=128 ,unique=True)
+    numberphone = models.CharField(max_length=13)
     
-    UserRole = models.IntegerField()
-    number_user_id = models.PositiveIntegerField(primary_key=True)
-    settings = models.CharField(max_length=70)
-    user_last_name = models.CharField(max_length=150)
-    address = models.CharField(max_length=300)
-    paper_data = models.CharField(max_length=10)
-    cout_applications = models.IntegerField(null=True)
-    cout_applications_in_work = models.IntegerField(null=True)
-    in_work = models.BooleanField(null=True) 
-    start_of_shift = models.DateTimeField(null=True) # Начало смены
-    end_of_shift = models.DateTimeField(null=True) #Конец смены
-    works_day = models.IntegerField(null=True)  #Рабочие дни в месяц
-    work_hours = models.IntegerField(null=True) #секунды в часы  
-    user_acces = models.IntegerField(default=0)
 
+    USERNAME_FIELD = 'username'
 
 
