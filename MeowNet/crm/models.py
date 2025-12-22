@@ -1,6 +1,5 @@
 from django.db import models
 from main.models import tarif
-from user.models import UserModel
 from django.db.models.signals import pre_save
 from django.dispatch import receiver
 
@@ -17,11 +16,11 @@ class Application_from_user(models.Model):
     application_status = models.IntegerField()
     comment = models.TextField( null=True, blank=True)
     data_create = models.DateTimeField(auto_now_add=False, auto_now=True ,verbose_name="Когда создали заявку")
-    FromOrder = models.OneToOneField(UserModel, on_delete=models.CASCADE, null=True, blank=True ,verbose_name="Модель от кого пришел")
+    FromOrder = models.OneToOneField('user.UserModel', on_delete=models.CASCADE, null=True, blank=True ,verbose_name="Модель от кого пришел")
     user = models.CharField(null=True, blank=True, max_length=50, verbose_name='Фио если нет модели')
     phone = models.CharField(null=True, blank=True, max_length=15, verbose_name="Номер если нет модели")
     adres = models.CharField(null=True, blank=True, max_length=100, verbose_name='Адрес без модели')
-    order = models.ForeignKey(UserModel, on_delete=models.CASCADE, verbose_name='Кому заказ принадлежит', related_name='applications' ,null=True, blank=True)
+    order = models.ForeignKey('user.UserModel', on_delete=models.CASCADE, verbose_name='Кому заказ принадлежит', related_name='applications' ,null=True, blank=True)
     tariffield = models.ForeignKey(tarif,on_delete=models.CASCADE,verbose_name='Выбраный тариф',null=True,blank=True)
 
 @receiver(pre_save,sender=Application_from_user)

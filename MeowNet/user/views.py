@@ -37,3 +37,14 @@ def Admin(req):
    
 
    return render(req,'AdminPanel.html')
+
+@login_required
+def testing_room(req):
+   if ( req.user.user_acces != 5):
+      if(req.user.is_superuser == True ):
+         return render(req,'testing.html')
+
+      return redirect('main')
+   
+
+   return render(req,'testing.html')

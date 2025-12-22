@@ -1,6 +1,7 @@
 const button = document.getElementById('settings-button');
+
 const settings = document.getElementById('settings');
-settings.style.display = "none";
+    settings.style.display = "none";
 
 button.addEventListener('click',function(){
     
@@ -10,7 +11,7 @@ button.addEventListener('click',function(){
     
     }else{
         settings.style.display = "none";
-        console.log(settings.style.display)
+        
     }
     
     

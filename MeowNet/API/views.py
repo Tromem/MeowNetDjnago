@@ -10,16 +10,18 @@ from user.models import UserModel
 
 @csrf_exempt
 def create_user(req):
+
     if req.method == 'POST':
         data = json.loads(req.body)
         name = data.get('username')
         password = data.get('password')
         id = data.get('id')
-        print(req.user)
+        user_acces = data.get('access')
+        print(user_acces)
         rawdata=  name + password
         userhash = hashlib.sha256(bytes(rawdata,'UTF-8')).hexdigest()
 
-        newuser = UserModel.objects.create(username = name,password=password,id_userlog = id,settings ='132',userhash=userhash)
-        newuser.save
+        newuser = UserModel.objects.create(username = name,password=password,id_userlog = id,settings ='132',userhash=userhash ,user_acces =user_acces)
+        newuser.save()
 
         return JsonResponse({'name': name})

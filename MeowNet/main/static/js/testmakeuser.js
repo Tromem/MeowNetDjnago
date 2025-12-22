@@ -1,13 +1,24 @@
+const button1 = document.getElementById('confrum');
 
-
-const button = document.getElementById('confrum')
-
-button.addEventListener('click',function(){
-    username = document.getElementById('username').value;
-    password = document.getElementById('password').value;
-    id = document.getElementById('id').value;
+button1.addEventListener('click',function(){
+    let username = document.getElementById('username').value;
+    let password = document.getElementById('password').value;
+    let id = document.getElementById('id').value;
+    let tech = document.getElementById('tech').checked;
+    let sales = document.getElementById('sales').checked;
+    let access;
     
-    fetch('/API/API-CREATE-WORKER/',{
+    if(tech && sales){
+        document.getElementById('textinf').textContent = 'Выберите что то одно';
+        access = null;
+
+    }else if(tech){
+        access = 1;
+    }else if(sales){
+        access = 2;
+    }
+   if(access != null || access != undefined){
+     fetch('/API/API-CREATE-WORKER/',{
         method:'POST',
         headers:{
             'Content-Type': 'application/json'
@@ -16,10 +27,14 @@ button.addEventListener('click',function(){
         body:JSON.stringify({
             'username':username,
             'password':password,
-            'id':id
+            'id':id,
+            'access':access
         })
     }).then(response => response.json())
     .then(data =>console.log(data))
     .catch(error => console.error(error));
+   }
+
+   
 })
 

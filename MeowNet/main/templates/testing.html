@@ -1,25 +1,21 @@
-{%extends 'foremployer.html'%}
+{%extends 'AdminPanel.html'%}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>{%block title%}Административная панель{%endblock%}</title>
-    {%block link%}
-    <link rel="stylesheet" href="{% static 'css/admin.css' %}">
-    {%endblock%}
+    <title>{%block title%}Тестировка{%endblock%}</title>
+   
 
 </head>
 <body>
-    {%block logolabel%} MeowAdm {%endblock%}
+    {%block logolabel%} MeowCRM {%endblock%}
     {%block bar%} 
-    {%endblock%}
-
-    {%block content%}
     
-    <div class="admin-panel"> 
+    {%endblock%}
+    {%block content%}
+     <div class="admin-panel"> 
         <div class="leftbar">
             <div class="icons">
                 <div class="icon-conteiner">
@@ -75,57 +71,22 @@
                     
                 </div>
             </div>
+                
             </div>
-
-        <div class="data-table">
-            <div class="container-in-table">
-                <div style="display: flex;">
-                    <div class="inf-in-table"><text>Сотрудники технической поддержки</text></div>
-                    <div class="buttons-table">
-                        <button class="delete-user"></button>
-                        <button class="plus-user"></button>
+            <div>
+                        
+                    <div><input id="username" type="text" placeholder='username'></div>
+                    <div><input id ='password'type="text" placeholder='password'></div>
+                    <div><input id="id" type="text"placeholder='id'></div>
+                    <div><input type="checkbox" id="tech" value="2"> Техническая поддержка</input></div>
+                    <div><input type="checkbox" id="sales" value="1"> Продажи</input></div>
+                    
+                    <button id="confrum">Создать сотрудника</button>
+                    <div id="textinf"></div>
                 </div>
-                </div>
-            </div>
-            <div class="table">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ФИО</th>
-                            <th>Должность</th>
-                            <th>Статус</th>
-                            <th>Логин</th>
-                            <th>ID</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th>1234</th>
-                            <th>2424</th>
-                            <th>32424</th>
-                            <th>42424</th>
-                            <th>52424</th>
-                            
-                        </tr>
-                        <tr>
-                            <th>1</th>
-                            <th>2</th>
-                            <th>3</th>
-                            <th>4</th>
-                            <th>5</th>
-                            
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            
-            </div>
-    
-    </div>  
     <script src="{%static 'js/opensettings.js' %}"> </script>   
-    
+    <script src="{%static 'js/testmakeuser.js' %}"></script>
     {%endblock%}
+    
 </body>
 </html>
-
-

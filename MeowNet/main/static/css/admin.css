@@ -64,6 +64,10 @@ button{
 .settings-button{
   background-image: url(../img/settings.png);
 }
+
+#testing-button{
+  background-image: url(../img/qlementine-icons_test-16.png);
+}
 .icons button{
   width: 40px;
   height: 40px;
