@@ -48,7 +48,11 @@
         </div>
         <div class="number"><div class="phone">Горячая линия: 8(916)000 43-00</div></div>
         <div class="rightbar">
-            <div class="login-account"><a href="/user/auth">Войти | Зарегестрироваться</a></div>
+            {%if user.username%}
+                <div class="login-account"><a href="/user/auth/profile">{{user.username}}</a></div>
+            {%else%}
+                <div class="login-account"><a href="/user/auth">Войти | Зарегестрироваться </a></div>
+            {%endif%}
             <div class="support"><div class="text">Техническая поддержка</div></div>
         </div>
         

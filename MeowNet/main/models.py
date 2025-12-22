@@ -4,10 +4,10 @@ from django.db import models
 
 class TypeTarif(models.Model):
     typetarif = models.CharField(max_length=80)
+    def __str__(self):
+        return self.typetarif
 
 class tarif( models.Model):
-    
-    
 
     Tarif_name = models.CharField(max_length=100)
     price = models.IntegerField() # В рублях 
@@ -20,6 +20,7 @@ class tarif( models.Model):
     typetarif = models.ForeignKey(TypeTarif,on_delete=models.CASCADE)
     tv_chanels = models.IntegerField()
 
-
+    def __str__(self):
+        return self.Tarif_name
 
     

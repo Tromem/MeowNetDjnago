@@ -1,5 +1,6 @@
 
 {%extends 'main.html'%}
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {%block title%} Ваш профиль {%endblock%}
     {%block link%} 
-    <link rel="stylesheet" href="{{url_for('static',filename='css/profile.css')}}">
+    <link rel="stylesheet" href="{%static 'css/profile.css'%}">
     {%endblock%}
 </head>
 <body>
@@ -37,7 +38,7 @@
                     <div class="tarif-name">
                         <div class="content-block">
     
-                            <div class="imgtarif"><img src="{{url_for('static',filename='img/Cpu.png')}}" alt=""></div>
+                            <div class="imgtarif"><img src="{%static 'img/Cpu.png' %}" alt=""></div>
                             <div class="tarif-login-and-type">
                                 <div class="type-tarif">Домашний интернет</div>
                                 <div class="login-tarif">Логин <inf>@FSDFasdasda</inf></div>
