@@ -138,7 +138,8 @@ button{
 }
 .user-profile-inf{
     font-size: 22px;
-    margin-left: 55px;
+    margin-bottom: 30px;
+    margin-top: 15px;
 }
 .first-name ,.number-phone ,.adress{
     margin-top: 10px;

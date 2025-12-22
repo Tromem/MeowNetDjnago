@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render , redirect
 from .models import tarif
 
 
@@ -12,3 +12,6 @@ def main(req):
         'tarif':Get_tarif
     }
     return render(req,template_name='index.html',context=data)
+
+
+    

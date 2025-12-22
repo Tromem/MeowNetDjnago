@@ -16,13 +16,15 @@
             <div><button class="number-phone-user">Логин</button></div>
     </div>
         <div class="databar">
+            <form method="POST" >
+                {% csrf_token %}
+                <input  name = 'username'type="text" placeholder="Логин" id="login" >
+                <input  name='password' type="password" placeholder="Пароль" id="password">
             
-            <input type="text" placeholder="0-0-0-0-0" >
-            <input type="password" placeholder="password">
         </div>
         
         <div ><button class="confrum-button">Продолжить</button></div>
-        
+        </form>
         <div class="user-legal"> 
             <text> Нажимая кнопку “Войти”,вы принимаете условия пользовательского соглашения</text></div>
         <hr>

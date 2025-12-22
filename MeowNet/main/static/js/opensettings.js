@@ -1,11 +1,16 @@
 const button = document.getElementById('settings-button');
+const settings = document.getElementById('settings');
+settings.style.display = "none";
 
 button.addEventListener('click',function(){
-    const settings = document.getElementById('settings');
-    if (settings.style.display != "none"){
-        settings.style.display = "none";
-    }else{
+    
+    if (settings.style.display == "none"){
         settings.style.display = "block";
+        
+    
+    }else{
+        settings.style.display = "none";
+        console.log(settings.style.display)
     }
     
     

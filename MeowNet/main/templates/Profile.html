@@ -22,16 +22,21 @@
             
         </div>
         <div>
-            <div class="user-id-text">Лицевой счет <inf>  №1234567</inf></div>
+            <div class="user-id-text">Лицевой счет <inf>  №{{user.id_userlog}}</inf></div>
             <div class="container-other">
     
                 <div class="balanse-text">
                         <div class="text-inf">Баланс на 05.05.2025 в 15:00</div>
-                        <div class="balasne">5000 руб.</div>
+                        <div class="balasne">{{user.balance}}руб.</div>
+                        <div class="user-profile-inf">
+                    <div class="first-name">Фио: <inf>{{user.user_last_name}}</inf></div>
+                    <div class="number-phone">Номер телефона: <inf>{{user.numberphone}}</inf></div>
+                    <div class="adress">Адрес:<inf>{{user.address}}</inf></div>
+            </div>    
+                        {%if user.user_tarif%}
                         <div class="otherinf">
-                            <div class="type-pay">Система оплаты:<inf>Кредитная</inf></div>
-                            <div class="auto-pay">Автопополнение:<inf>Не настроено</inf></div>
-                            <div class="delivery-inf">Доставка счёта:<inf>личный кабинет</inf></div>
+                            <div class="type-pay">Следующее списание:<inf>11.11.2025</inf></div>
+                            <div class="auto-pay">Сумма платежа:{{user.user_tarif.price}}руб.<inf></inf></div>
                             <button>Управлять счетом</button>
                         </div>
                     </div>
@@ -40,24 +45,22 @@
     
                             <div class="imgtarif"><img src="{%static 'img/Cpu.png' %}" alt=""></div>
                             <div class="tarif-login-and-type">
-                                <div class="type-tarif">Домашний интернет</div>
-                                <div class="login-tarif">Логин <inf>@FSDFasdasda</inf></div>
+                                <div class="type-tarif">{{user.user_tarif.typetarif}}</div>
+                                <div class="login-tarif">Логин <inf>@{{user.username}}</inf></div>
                             </div>
                         </div>
                         <div class="container-more">
                             <div class="status-tarif">Статус услуги:<inf>Активная</inf></div>
-                            <div class="status">Тариф:<inf>Безлимитный интернет 1000Мбит/c</inf></div>
-                            <div class="bonuses">Отсуствуют</div>
+                            <div class="status">Тариф:<inf>{{user.user_tarif.Tarif_name}}  {{user.user_tarif.speed}}Мбит/c</inf></div>
+                            <div class="bonuses">Скидочный период: Отсуствует</div>
                             <div class="button">
                                 <button>Управлять услугой</button>
                         </div>
                         </div>
+                    
                     </div>
-                    <div class="user-profile-inf">
-                    <div class="first-name">Фио: <inf>Николай Николаевич Николаев</inf></div>
-                    <div class="number-phone">Номер телефона: <inf>+799999999999</inf></div>
-                    <div class="adress">Адрес:<inf>Владивосток ул. Латте 12г Кв 15</inf></div>
-            </div>    
+                    {%endif%}
+                    
             </div>
         </div>
 

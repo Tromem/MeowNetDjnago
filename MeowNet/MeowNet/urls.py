@@ -24,6 +24,6 @@ urlpatterns = [
     path('Meowcrm/',include('crm.urls')),
     path('user/',include('user.urls')),
     path('',include('main.urls')),
-    path('API',include('API.urls'))
+    path('API/',include('API.urls'))
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
