@@ -25,6 +25,8 @@ SECRET_KEY = 'django-insecure-__*v=i%6xr%9hu5p+gz5$o2h^jija+(06=9$t%nv&g07-lu%m7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+LOGIN_URL = 'authlogin'
+
 ALLOWED_HOSTS = []
 #Возраст куки в секундах
 SESSION_COOKIE_AGE = 3600

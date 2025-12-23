@@ -18,7 +18,7 @@ class UserManager(BaseUserManager):
         return self.create_user(username, password, **extra_fields)
 
 # Добавить сюда должности и уровни их доступа
-class Emlpoee:
+class Emlpoyers:
     pass
 
 #  доделать юзера
