@@ -1,7 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser ,PermissionsMixin
 from django.contrib.auth.models import BaseUserManager
-
+from django.db.models.signals import pre_save
+from django.dispatch import receiver
+from random import randint
 
 class UserManager(BaseUserManager):
     def get_by_natural_key(self, username):
@@ -51,4 +53,16 @@ class UserModel(AbstractBaseUser, PermissionsMixin):
     objects = UserManager()
 
 
-    
+@receiver(pre_save,sender=UserModel)
+def makeId(sender, instance, **kwargs):
+    if not instance.id_userlog:
+        while True:
+            new_id = str(randint(12345678999, 999999999999))
+            if not sender.objects.filter(id_userlog=new_id).exists():
+                instance.id_userlog = new_id
+                break
+            
+            
+ 
+
+        
