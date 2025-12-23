@@ -6,7 +6,7 @@ from .models import UserModel
 def auth(req):
     
    if req.POST:
-      
+
       username = req.POST['username']
       password = req.POST['password']
       user = authenticate(req,username=username,password = password)
@@ -19,7 +19,7 @@ def auth(req):
 
 @login_required(login_url='authlogin')
 def Profile(req,):
-   if req.user.is_superuser or req.user:
+   if req.user.is_superuser or req.user.user_acces >=4:
       return redirect('/user/admin')
    return render(req,'Profile.html')
 

@@ -3,7 +3,6 @@ const button1 = document.getElementById('confrum');
 button1.addEventListener('click',function(){
     let username = document.getElementById('username').value;
     let password = document.getElementById('password').value;
-    let id = document.getElementById('id').value;
     let tech = document.getElementById('tech').checked;
     let sales = document.getElementById('sales').checked;
     let access;
@@ -27,7 +26,6 @@ button1.addEventListener('click',function(){
         body:JSON.stringify({
             'username':username,
             'password':password,
-            'id':id,
             'access':access
         })
     }).then(response => response.json())

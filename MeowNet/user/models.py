@@ -4,6 +4,7 @@ from django.contrib.auth.models import BaseUserManager
 from django.db.models.signals import pre_save
 from django.dispatch import receiver
 from random import randint
+import hashlib
 
 class UserManager(BaseUserManager):
     def get_by_natural_key(self, username):
@@ -61,8 +62,13 @@ def makeId(sender, instance, **kwargs):
             if not sender.objects.filter(id_userlog=new_id).exists():
                 instance.id_userlog = new_id
                 break
-            
-            
+@receiver(pre_save,sender=UserModel)
+def make_hash(sender,instance, **kwargs):
+    if not instance.userhash:
+        rawdata = instance.username + instance.password
+        userhash = hashlib.sha256(bytes(rawdata,'UTF-8')).hexdigest()
+        instance.userhash = userhash
+
  
 
         
