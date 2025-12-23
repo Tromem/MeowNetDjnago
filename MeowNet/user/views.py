@@ -32,11 +32,10 @@ def Sales(req):
    return render(req,'Salesdepartment.html')
 @login_required
 def Admin(req):
-   
+   Users = UserModel.objects.filter(user_acces=2)
+   data = {'employers':Users}
    if ( req.user.user_acces >= 4  ):
       
-      Users = UserModel.objects.filter(user_acces=2)
-      data = {'employers':Users}
       if(req.user.is_superuser == True ):
          return render(req,'AdminPanel.html',data)
       else:

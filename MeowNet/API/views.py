@@ -20,10 +20,10 @@ def create_user(req):
         id = data.get('id')
         user_acces = data.get('access')
         print(user_acces)
-        rawdata=  name + password
+        
         
 
-        newuser = UserModel.objects.create(username = name,password=password,id_userlog = id,settings ='132',userhash=userhash ,user_acces =user_acces)
+        newuser = UserModel.objects.create(username = name,password=password,id_userlog = id,settings ='132' ,user_acces =user_acces)
         newuser.save()
 
         return JsonResponse({'name': name})
