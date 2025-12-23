@@ -17,8 +17,9 @@ class UserManager(BaseUserManager):
         extra_fields.setdefault('is_superuser', True)
         return self.create_user(username, password, **extra_fields)
 
-
-
+# Добавить сюда должности и уровни их доступа
+class Emlpoee:
+    pass
 
 #  доделать юзера
 class UserModel(AbstractBaseUser, PermissionsMixin):
@@ -31,12 +32,12 @@ class UserModel(AbstractBaseUser, PermissionsMixin):
     paper_data = models.CharField(max_length=10 ,verbose_name='Паспортные данные')
     cout_applications = models.IntegerField(null=True ,blank=True, verbose_name='Все выполненые заявки')
     cout_applications_in_work = models.IntegerField(null=True ,blank=True ,verbose_name='Все заявки в работе')
-    in_work = models.BooleanField(null=True ,blank=True ,verbose_name="Состояние смены") 
+    in_work = models.BooleanField(null=True ,blank=True ,verbose_name="Состояние смены",default=False) 
     start_of_shift = models.DateTimeField(null=True ,blank=True, verbose_name="Начало смены") # Начало смены
     end_of_shift = models.DateTimeField(null=True ,blank=True) #Конец смены
     works_day = models.IntegerField(null=True ,blank=True)  #Рабочие дни в месяц
     work_hours = models.IntegerField(null=True ,blank=True) #секунды в часы  
-    user_acces = models.IntegerField(null=True ,blank=True)
+    user_acces = models.IntegerField(null=True ,blank=True,default=0)
     userhash = models.CharField(max_length=128 ,unique=True)
     numberphone = models.CharField(max_length=13)
     balance = models.IntegerField(default=0)

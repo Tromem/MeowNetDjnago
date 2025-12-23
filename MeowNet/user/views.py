@@ -1,14 +1,16 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate , login ,logout
+from .models import UserModel
 
 def auth(req):
     
    if req.POST:
+      
       username = req.POST['username']
       password = req.POST['password']
       user = authenticate(req,username=username,password = password)
-      print(user)
+      
       if user is not None:
          login(req,user=user)
          return redirect('profile')  
@@ -17,7 +19,8 @@ def auth(req):
 
 @login_required(login_url='authlogin')
 def Profile(req,):
-
+   if req.user.is_superuser or req.user:
+      return redirect('/user/admin')
    return render(req,'Profile.html')
 
 def Support(req):
@@ -29,14 +32,18 @@ def Sales(req):
    return render(req,'Salesdepartment.html')
 @login_required
 def Admin(req):
-   if ( req.user.user_acces != 4):
+   
+   if ( req.user.user_acces >= 4  ):
+      
+      Users = UserModel.objects.filter(user_acces=2)
+      data = {'employers':Users}
       if(req.user.is_superuser == True ):
-         return render(req,'AdminPanel.html')
-
-      return redirect('main')
+         return render(req,'AdminPanel.html',data)
+      else:
+         return redirect('main')
    
 
-   return render(req,'AdminPanel.html')
+   return render(req,'AdminPanel.html',data)
 
 @login_required
 def testing_room(req):

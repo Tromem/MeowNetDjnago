@@ -99,20 +99,16 @@
                         </tr>
                     </thead>
                     <tbody>
+                        {%for i in  employers%}
                         <tr>
-                            <th>1234</th>
-                            <th>2424</th>
-                            <th>32424</th>
-                            <th>42424</th>
-                            <th>52424</th>
+                            <th>{{i.user_last_name}}</th>
+                            <th>{{i.user_acces}}</th>
+                            <th>{{i.in_work}}</th>
+                            <th>{{i.username}}</th>
+                            <th>{{i.id}}</th>
                             
                         </tr>
-                        <tr>
-                            <th>1</th>
-                            <th>2</th>
-                            <th>3</th>
-                            <th>4</th>
-                            <th>5</th>
+                        {%endfor%}
                             
                         </tr>
                     </tbody>

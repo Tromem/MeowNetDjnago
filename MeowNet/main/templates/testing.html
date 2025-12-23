@@ -6,7 +6,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{%block title%}Тестировка{%endblock%}</title>
-   
+   {%block link%}
+   <link rel="stylesheet" href="{%static 'css/testing.css'%}">
+   <link rel="stylesheet" href="{% static 'css/admin.css' %}">
+   {%endblock%}
 
 </head>
 <body>
@@ -73,15 +76,22 @@
             </div>
                 
             </div>
-            <div>
-                        
-                    <div><input id="username" type="text" placeholder='username'></div>
-                    <div><input id ='password'type="text" placeholder='password'></div>
-                    <div><input id="id" type="text"placeholder='id'></div>
-                    <div><input type="checkbox" id="tech" value="2"> Техническая поддержка</input></div>
-                    <div><input type="checkbox" id="sales" value="1"> Продажи</input></div>
+            <div class='makeuser'>
+                    <div class="minimum-data">
+                        <div><input id="username" type="text" placeholder='username'></div>
+                        <div><input id ='password'type="text" placeholder='password'></div> 
+                        <div><input id="id" type="text"placeholder='id'></div>
+                    </div>    
                     
-                    <button id="confrum">Создать сотрудника</button>
+                    <div class="checkbox-testing-make-user">
+                         <div><input type="checkbox" id="tech" value="2"> Техническая поддержка</input></div>
+                        <div><input type="checkbox" id="sales" value="1"> Продажи</input></div>
+                    </div>
+                   
+                    <div class="button-test-container">
+                            <button id="confrum">Создать сотрудника</button>
+                    </div>
+                  
                     <div id="textinf"></div>
                 </div>
     <script src="{%static 'js/opensettings.js' %}"> </script>   

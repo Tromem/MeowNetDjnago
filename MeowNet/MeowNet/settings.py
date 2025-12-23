@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 #Возраст куки в секундах
-SESSION_COOKIE_AGE = 900
+SESSION_COOKIE_AGE = 3600
 # Application definition
 
 INSTALLED_APPS = [
