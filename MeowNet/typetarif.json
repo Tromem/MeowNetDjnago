@@ -1,0 +1,37 @@
+[
+  {
+    "model": "main.typetarif",
+    "pk": 1,
+    "fields": {
+      "typetarif": "Интернет"
+    }
+  },
+  {
+    "model": "main.typetarif",
+    "pk": 2,
+    "fields": {
+      "typetarif": "Интернет + ТВ"
+    }
+  },
+  {
+    "model": "main.typetarif",
+    "pk": 3,
+    "fields": {
+      "typetarif": "Только ТВ"
+    }
+  },
+  {
+    "model": "main.typetarif",
+    "pk": 4,
+    "fields": {
+      "typetarif": "Комбинированный"
+    }
+  },
+  {
+    "model": "main.typetarif",
+    "pk": 5,
+    "fields": {
+      "typetarif": "VIP-интернет"
+    }
+  }
+]
