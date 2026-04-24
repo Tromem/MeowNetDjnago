@@ -1,0 +1,66 @@
+{%extends 'foremployer.html'%}
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск лицевого счета клиента</title>
+    {%block link%}
+    <link rel="stylesheet" href="{% static 'css/stylesuserinf.css' %}">
+    {%endblock%}
+</head>
+<body>
+    {%block content%}
+    <div class="container">
+        <h1>Поиск лицевого счета клиента</h1>
+        
+      
+        <div class="search-form">
+            <label for="accountNumber">Введите лицевой счет:</label>
+            <input type="text" id="accountNumber" name="accountNumber" placeholder="Номер лицевого счета" required>
+            <button id="find">Найти</button>
+        </div>
+
+      
+        <div id="accountDetails" class="account-details" style="display:none;">
+            <h2>Информация о клиенте </h2> <button id="requestInstallerBtn" class="request-installer-btn">Заявка на вызов монтажника</button>
+            
+        </div>
+    </div>
+    
+   <div id="installerModal" class="modal">
+    <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
+        
+        <h3 style="text-align: center;">Проверьте правильность данных!</h3>
+        <form id="installerForm" class="modal-form">
+            <label for="installerName">ФИО клиента:</label>
+            <input type="text" id="installerName" name="installerName" class="input-field" required>
+            <label for="adres">Адрес клиента:</label>
+            <input type="text" id="adres" name="adres" class="input-field" required>
+            <label for="installerPhone">Номер телефона:</label>
+            <input type="text" id="installerPhone" name="installerPhone" class="input-field" required>
+
+            <label for="installerDescription">Коментарии:</label>
+            <textarea id="installerDescription" name="installerDescription" rows="4" class="input-field" ></textarea>
+            <select name="problem" id="problem">
+
+                {%for i in typeproblem %}
+                <option value="{{i.id}}">
+                     {{i.name_problem}}
+                </option>
+               
+                {%endfor%}
+            </select>
+            <button type="submit" class="submit-btn">Отправить заявку</button>
+        </form>
+    </div>
+</div>
+    
+    <script src="{%static 'js/callmontages.js'%}"></script>
+    <script src="{% static 'js/finduser.js'%}"></script>
+    {%endblock%}
+</body>
+</html>

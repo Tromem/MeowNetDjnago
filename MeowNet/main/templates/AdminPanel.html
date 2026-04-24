@@ -9,6 +9,7 @@
     <title>{%block title%}Административная панель{%endblock%}</title>
     {%block link%}
     <link rel="stylesheet" href="{% static 'css/admin.css' %}">
+    <link rel="stylesheet" href="{%static 'css/message.css'%}">
     {%endblock%}
 
 </head>
@@ -18,22 +19,24 @@
     {%endblock%}
 
     {%block content%}
-    
+    {%block Message%}
+        <div id="Message">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda repudiandae </div>
+    {%endblock%}
+    {%block leftpanel%}
     <div class="admin-panel"> 
         <div class="leftbar">
             <div class="icons">
                 <div class="icon-conteiner">
-                    <button class="Supporters-button">
-
-                </button></div>
+                    <a href="{% url 'managerpanel'%}"><button class="Supporters-button"></button></a>
+            </div>
+            <div class="icon-conteiner">
+                    <a href="{% url 'find_adres'%}"><button class="find-home-button"></button></a>
+            </div>
+                 
                 <div class="icon-conteiner">
-                    <button class="Sellers-button">
+                   <a href="{% url 'users-stat'%}"> <button class="users-in-button"> </button></a>
 
-                </button></div>
-                <div class="icon-conteiner">
-                    <button class="users-in-button">
-
-                </button></div>
+               </div>
                 <div class="icon-conteiner">
                     <button class="stats-button">
 
@@ -47,9 +50,7 @@
 
                 </button></div>
                 <div class="icon-conteiner">
-                    <a href="{%url 'test'%}"><button id="testing-button"></button></a> 
-
-                </button></div>
+                    <a href="{%url 'test'%}"><button id="testing-button"></button></a> </button></div>
 
             </div>
             <div id="settings" class="settings">
@@ -66,9 +67,7 @@
                     <div>
                         <button class="data-for-employers">База знаний</button>
                     </div>
-                    <div>
-                        <button class="news">Новости для сотрудников</button>
-                    </div>
+                    
                     <div>
                         <button class="integrations">Интеграции</button>
                     </div>
@@ -76,15 +75,24 @@
                 </div>
             </div>
             </div>
-
+            <script src="{%static 'js/opensettings.js' %}"> </script> 
+    {%endblock%}
+        {%block tableEmp%}
         <div class="data-table">
             <div class="container-in-table">
                 <div style="display: flex;">
-                    <div class="inf-in-table"><text>Сотрудники технической поддержки</text></div>
-                    <div class="buttons-table">
-                        <button class="delete-user"></button>
-                        <button class="plus-user"></button>
-                </div>
+                    <div class="inf-in-table" id="inf-in-table" >
+                        <text>Сотрудники</text>
+                        <select id="roleFilter"  class="roleFilter">
+                            <option value="">Все</option>
+                            <option value="2">Техническая поддержка</option>
+                            <option value="1">Продажи</option>
+                            <option value="3">Монтажник</option>
+                            <option value="4">Младший Менеджер</option>
+                            <option value="5">Старший Менеджер</option>
+                        </select>
+</div>
+                   
                 </div>
             </div>
             <div class="table">
@@ -100,10 +108,17 @@
                     </thead>
                     <tbody>
                         {%for i in  employers%}
-                        <tr>
-                            <th>{{i.user_last_name}}</th>
-                            <th>{{i.user_acces}}</th>
-                            <th>{{i.in_work}}</th>
+                        <tr id="tr-{{i.id}}">
+                            <th>{%if i.user_last_name %}{{i.user_last_name}}{%else%}Имя отсуствует{%endif%}</th>
+                            <th><select name="swap-user-select" id="swap-user-select-{{i.id}}" class="swap-user-select">
+                                    {%if i.user_acces == 2 %}<option value="2" selected>Техническая поддержка</option>{%else%}<option value="2">Техническая поддержка</option>{%endif%}
+                                    {%if i.user_acces == 1 %}<option value="1" selected>Продажи</option>{%else%}<option value="1">Продажи</option>{%endif%}
+                                    {%if i.user_acces == 3 %}<option value="3" selected>Монтажник</option>{%else%}<option value="3">Монтажник</option>{%endif%}
+                                    {%if i.user_acces == 4 %}<option value="4" selected>Младший Менеджер</option>{%else%}<option value="4">Младший Менеджер</option>{%endif%}
+                                    {%if i.user_acces == 5 %}<option value="5" selected>Старший Менеджер</option>{%else%}<option value="5">Старший Менеджер</option>{%endif%}
+                                </select><button class="button-submit-swap" type="submit" value="{{i.id}}">✔</button> </th>
+                            
+                            <th>{%if i.in_work %} Активен{%else%}Офлайн{%endif%}</th>
                             <th>{{i.username}}</th>
                             <th>{{i.id}}</th>
                             
@@ -117,8 +132,11 @@
             
             </div>
     
-    </div>  
-    <script src="{%static 'js/opensettings.js' %}"> </script>   
+    </div>
+    <script src="{%static 'js/swaproles.js'%}"></script>  
+    <script src="{%static 'js/filter.js'%}"></script>
+
+    {%endblock%}
     
     {%endblock%}
 </body>

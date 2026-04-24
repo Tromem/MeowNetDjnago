@@ -23,4 +23,20 @@ class tarif( models.Model):
     def __str__(self):
         return self.Tarif_name
 
+
+class typeproblem(models.Model):
+    
+    OPTION_1 = 'opt1'
+    OPTION_2 = 'opt2'
+    OPTION_3 = 'opt3'
+    MY_CHOICES = [
+        (OPTION_1, 'Сложные тех. неполадки'),
+        (OPTION_2, 'Средние тех. неполадки'),
+        (OPTION_3, 'Легкие тех. неполадки'),
+    ]
+
+    name_problem = models.CharField(max_length=500)
+    difficulity = models.CharField(choices=MY_CHOICES,max_length=60,default=OPTION_1)
+    def __str__(self):
+        return self.name_problem
     

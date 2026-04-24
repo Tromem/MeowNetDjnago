@@ -1,0 +1,142 @@
+html{
+    overflow-y: hidden;
+}
+.bar{
+  position: relative;
+ 
+}
+.admin-panel{
+  display: flex;
+}
+.leftbar{
+  height: 100%;
+  width: 261px;
+  display: flex;
+}
+.icons{
+  height: 100vh;
+  display:block ;
+  min-width: 83px;
+  background-color: rgba(184, 128, 251, 1);
+}
+.settings{
+  background-color:rgba(177, 112, 255, 1) ;
+  display: none;
+}
+.settings button{
+  background: none;
+  color: white;
+  padding-bottom:21px ;
+  padding-left: 0px;
+  font-size: 20px;
+  
+}
+button{
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+.elements-in-settings{
+  text-align: center;
+}
+.Supporters-button{
+ background-image: url(../img/support.png);
+ width: 40px;
+ height: 30px;
+ background-size:cover;
+}
+.Sellers-button{
+  background-image: url(../img/sellers.png);
+  
+}
+.users-in-button{
+  background-image: url(../img/mdi_user.png);
+  width:  50px !important;  
+}
+.stats-button{
+  background-image: url(../img/akar-icons_statistic-up.png);
+  
+}
+.new-users-button{
+  background-image: url(../img/new.png);
+  width:  50px !important;  
+}
+.settings-button{
+  background-image: url(../img/settings.png);
+}
+
+#testing-button{
+  background-image: url(../img/qlementine-icons_test-16.png);
+}
+.icons button{
+  width: 40px;
+  height: 40px;
+  background-size:cover;
+  
+  
+}
+.icon-conteiner{
+  padding-bottom: 21px;
+}
+.icons{
+  text-align: center;
+}
+
+.icons,.elements-in-settings{
+  padding-top: 40px;
+}
+ .icons button:hover ,  .elements-in-settings button:hover{
+ transform: scale(1.1);
+
+}
+.data-table{
+  width: 1636px;
+  height: 811px;
+  
+}
+th{
+  width: 300px;
+  height: 50px;
+}
+thead th{
+  background-color: rgba(249, 249, 249, 1);
+  color:rgba(128, 123, 123, 1) ;
+}
+tbody th{
+  border-bottom: 1px solid #ddd;;
+  text-align:20px ;
+}
+table{
+  border-collapse: collapse;
+}
+.inf-in-table{
+  font-size: 30px;
+}
+.buttons-table{
+  display: flex;
+  background-color:rgb(221, 129, 233) ;
+  width: 127px;
+  height: 45px;
+  border-radius:16px ;
+  margin-bottom: 9px;
+  margin-left: 75px;
+}
+.delete-user{
+  width: 40px;
+   height: 40px;
+  background-image: url(../img/delete.png);
+  background-size:cover;
+  margin-left: 18px;
+
+}
+.plus-user{
+  width: 40px;
+  height: 40px;
+  background-image: url(../img/add_button.png);
+  background-size:cover;
+  margin-left: 15px;
+  margin-right: 18px;
+}
+.data-table{
+  margin-top: 50px;
+}

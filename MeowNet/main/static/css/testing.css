@@ -1,5 +1,7 @@
-.makeuser{
-    border: 1px solid black;
+
+    
+.makeuser ,.deleteuser{
+    text-align: center;
     width:  350px;
     height: 250px;
     text-align: left;
@@ -7,21 +9,26 @@
     margin: 20px;
     
 }
-.minimum-data input {
+.data input ,.data select {
     width: 250px;
     height: 20px;
     margin-top: 20px;
 
     
 }
-.makeuser button{
+.deleteuser select{
+ width: 250px;
+height: 50px;   
+}
+.makeuser button, .deleteuser button{
     background-color: rgb(166, 56, 209);
     color: white;
     border-radius: 8px;
-    width: 100px;
-    height: 20px;
+    width: 150px;
+    height: 30px;
+    margin-top: 15px;
 }
-.button-test-container{
+.button-container{
     text-align: center;
 }
 .minimum-data{

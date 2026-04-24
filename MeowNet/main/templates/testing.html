@@ -9,93 +9,73 @@
    {%block link%}
    <link rel="stylesheet" href="{%static 'css/testing.css'%}">
    <link rel="stylesheet" href="{% static 'css/admin.css' %}">
+    <link rel="stylesheet" href="{%static 'css/message.css'%}">
    {%endblock%}
 
 </head>
 <body>
-    {%block logolabel%} MeowCRM {%endblock%}
+   
     {%block bar%} 
     
     {%endblock%}
     {%block content%}
-     <div class="admin-panel"> 
-        <div class="leftbar">
-            <div class="icons">
-                <div class="icon-conteiner">
-                    <button class="Supporters-button">
-
-                </button></div>
-                <div class="icon-conteiner">
-                    <button class="Sellers-button">
-
-                </button></div>
-                <div class="icon-conteiner">
-                    <button class="users-in-button">
-
-                </button></div>
-                <div class="icon-conteiner">
-                    <button class="stats-button">
-
-                </button></div>
-                <div class="icon-conteiner">
-                    <button class="new-users-button">
-
-                </button></div>
-                <div class="icon-conteiner">
-                    <button id="settings-button" class="settings-button">
-
-                </button></div>
-                <div class="icon-conteiner">
-                    <a href="{%url 'test'%}"><button id="testing-button"></button></a> 
-
-                </button></div>
-
-            </div>
-            <div id="settings" class="settings">
-                <div class="elements-in-settings">
-                    <div>
-                        <button class="general">Общие</button>
-                    </div>
-                    <div>
-                        <button class="tarifs">Тарифы</button>
-                    </div>
-                    <div>
-                        <button class="emploers">Сотрудники</button>
-                    </div>
-                    <div>
-                        <button class="data-for-employers">База знаний</button>
-                    </div>
-                    <div>
-                        <button class="news">Новости для сотрудников</button>
-                    </div>
-                    <div>
-                        <button class="integrations">Интеграции</button>
-                    </div>
-                    
-                </div>
-            </div>
+             {%block leftpanel%} {{ block.super }} {%endblock%}
+             {%block Message%} {{ block.super }} {%endblock%}
                 
-            </div>
-            <div class='makeuser'>
-                    <div class="minimum-data">
-                        <div><input id="username" type="text" placeholder='username'></div>
-                        <div><input id ='password'type="text" placeholder='password'></div> 
-                    </div>    
-                    
-                    <div class="checkbox-testing-make-user">
-                         <div><input type="checkbox" id="tech" value="2"> Техническая поддержка</input></div>
-                        <div><input type="checkbox" id="sales" value="1"> Продажи</input></div>
+            <div id="makecontainer">
+
+                <div class='makeuser'>
+                   <div style="font-size: 18px;"> Создание нового пользователя</div>   
+                    <div class="data">
+                            <div><input id="username" type="text" placeholder='Логин'></div>
+                            <div><input id ='password'type="password" placeholder='Пароль'></div> 
+                            <div><input id ='user-last-name'type="text" placeholder='ФИО'></div> 
+                            <div>
+                                
+                                <select name="makeuser-select" id="makeuser-select">
+                                    <option value="2">Техническая поддержка</option>
+                                    <option value="1">Продажи</option>
+                                    <option value="3">Монтажник</option>
+                                    <option value="4">Младший Менеджер</option>
+                                    <option value="5">Старший Менеджер</option>
+                                </select>
+                                
+                            </div>
+                        </div>    
+                        
+                       
+                        <div class="button-container">
+                                <button id="confrum">Создать сотрудника</button>
+                        </div>
+                      
+                        <div id="textinf"></div>
+                        <hr>
                     </div>
-                   
-                    <div class="button-test-container">
-                            <button id="confrum">Создать сотрудника</button>
+                <div class="deleteuser">
+                    Удаление пользователя
+                    <div class="data">
+                        <div class="custom-select">
+                            <select name="deleteuser-select" id="deleteuser-slect" size="12">
+                                 {%for i in  employers%}
+                                    {%if i.username != user.username%}
+                                 <option value="{{i.id}}" >
+                                    {%if i.username%}{{i.username}}{%else%}Без имени{%endif%}
+                                </option>
+                                {%endif%}
+                                 {%endfor%}
+                            </select>
+                        </div>
                     </div>
-                  
-                    <div id="textinf"></div>
+                    <div class="button-container">
+                        <button id="delete-button">Удалить сотрудника</button>
+                    </div>
+                    <hr>
                 </div>
-    <script src="{%static 'js/opensettings.js' %}"> </script>   
+            </div>
+      
     <script src="{%static 'js/testmakeuser.js' %}"></script>
+    <script src="{%static 'js/deleteuser.js'%}"></script>
     {%endblock%}
-    
+   
 </body>
 </html>

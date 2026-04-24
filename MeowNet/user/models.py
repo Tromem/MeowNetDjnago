@@ -20,14 +20,14 @@ class UserManager(BaseUserManager):
         extra_fields.setdefault('is_superuser', True)
         return self.create_user(username, password, **extra_fields)
 
-# Добавить сюда должности и уровни их доступа
-class Emlpoyers:
-    pass
 
-#  доделать юзера
+class Emlpoyers:
+    employer = models.CharField(max_length=50)
+    access = models.IntegerField()
+
 class UserModel(AbstractBaseUser, PermissionsMixin):
     
-    id_userlog = models.CharField(max_length=12, unique=True, verbose_name='Айди')
+    id_userlog = models.CharField(max_length=12, unique=True, verbose_name='ID')
     username = models.CharField(max_length=150, unique=True, verbose_name='Логин')
     settings = models.CharField(max_length=70  ,verbose_name='Настройки',blank=True,null=True)# Настройки ввиде символов которые будет считывать js
     user_last_name = models.CharField(max_length=150 ,verbose_name="ФИО")

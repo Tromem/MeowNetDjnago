@@ -4,17 +4,15 @@
 <link rel="stylesheet" href="{%static 'css/login.css'%}">
 {%endblock%}
 {%block title%} Авторизация {%endblock%}
-
+{%block logolabel%} MeowCRM {%endblock%}
 {%block content%}
+{%block bar%}{%endblock%}
 <div class="login">
     <div class="log-container">
-
-        <div class="logoAuth">MeowNet</div>
+        <img src="{% static 'img/Net.png'%}" alt="">
+        <div class="logoAuth">MeowCRM</div>
         <div class="text-login"><text>Вход в личный кабинет </text></div>
-        <div class="choice">
-            <div><button class="User-id"> Лицевой счет</button></div>
-            <div><button class="number-phone-user">Логин</button></div>
-    </div>
+        
         <div class="databar">
             <form method="POST" >
                 {% csrf_token %}
@@ -26,9 +24,9 @@
         <div ><button class="confrum-button">Продолжить</button></div>
         </form>
         <div class="user-legal"> 
-            <text> Нажимая кнопку “Войти”,вы принимаете условия пользовательского соглашения</text></div>
+            <text > Нажимая кнопку “Войти”,вы принимаете условия пользовательского соглашения</text></div>
         <hr>
-            <div class="forgotpassword"><text><a href="">Забыли пароль?</a></text> </div>
+            <div class="forgotpassword" title="Для восстановления пароля обратитесь к администратору!"><text><a href="">Забыли пароль?</a></text> </div>
     </div>
         
     </div>

@@ -1,0 +1,137 @@
+
+.order{
+    position: fixed;
+    width: 916px;
+    height: 538px;
+    top: 200px;
+    right: 50vh;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    background-color: white;
+    border-radius: 4px;
+    
+}
+.bar-order{
+    font-family:'RubikMono' ;
+    font-size: 20px;
+    width: 916px;
+    height: 56px;
+    background-color: rgba(170, 57, 222, 1);
+    color: white;
+    border-radius: 4px;
+}
+.container-order{
+    display: flex;
+    width: 861px;
+    height: 261px;
+    margin-left: 40px;
+}
+.input-blocks-order input{
+    width: 515px;
+    height: 47px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    font-size: 16px;
+    border: none;
+    outline: none;
+    margin-bottom: 30px;
+    font-size: 24px;
+    border-radius: 8px;
+    
+}
+.input-blocks-order{
+    height:361px ;
+    width:515px ;
+    
+}
+.order-inf-tarif{
+    margin-top: 29px;
+    margin-left: 15px;
+    width: 332px;
+    height: 258px;
+    background-color: rgba(221, 118, 195, 1);
+}
+.order-button{
+    user-select: none;
+    position: absolute;
+    width: 673px;
+    height: 101px;
+    background-color: rgba(170, 57, 222, 1);
+    color: white;
+    bottom:5px;
+    margin-top: 20px;
+    right:118px ;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 3px;
+    border: none;
+    
+}
+.order-button-text{
+    user-select: none;
+    margin-top: 1px;
+    font-size: 48px;
+}
+.order-button:hover{
+    background-color: rgba(217, 159, 237, 0.76);
+}
+.order-tarif-bar{
+    font-family:'RubikMono' ;
+    width: 332px;
+    height: 56px;
+    background-color:rgba(233, 168, 229, 1) ; 
+    color: white;
+    text-align: center;
+}
+.text-order-tarif-bar{
+    padding-top:16px ;
+}
+.text-order-name-tarif{
+    padding-top:10px ;
+    font-family:'RubikMono' ;
+    color: white;
+    display: flex;
+}
+.order-name-tarif{
+    
+    background-color: rgba(217, 159, 237, 1);
+    margin-top: 13px;
+    margin-left:24px ;
+    text-align: center;
+    width: 280px;
+    height: 74px;
+}
+.text-order-name-tarif-pos{
+    margin-left: 26px;
+}
+.order-type-tarif img{
+    margin-top: 2px;
+    margin-left: 10px;
+}
+.order-type-tarif{
+    user-select: none;
+    display: flex;
+    font-family:'RubikMono' ;
+    margin-left: 22px;
+    margin-top:12px ;
+    width: 280px;
+    height: 74px;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    background-color:rgba(217, 159, 237, 1) ;
+}
+.text-inif-tarif{
+    padding-top:17px ;
+}
+.button-text{
+    font-family:'RubikMono' ;
+    font-size: 46px;
+    padding-top:20px ;
+}
+.text-blocks-order-inf{
+    font-family:'RubikMono' ;
+}
+.text-bar-order{
+    margin-left: 45px;
+    padding-top: 15px;
+}
