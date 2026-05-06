@@ -1,8 +1,13 @@
 from django.shortcuts import render,redirect
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required 
 from django.contrib.auth import authenticate , login ,logout
+from django.views.decorators.csrf import csrf_exempt
 from .models import UserModel
 from main.models import typeproblem
+from crm.models import city, adres ,Home 
+from main.models import tarif
+
+
 
 # Модули доступа
 # 5 - максимальный доступ к црм
@@ -80,10 +85,31 @@ def userinf(req):
    else:
       return redirect('/')
 
+
+
 @login_required
 def find_adres(req):
    if ( req.user.user_acces >= 2 or req.user.is_superuser ):
-      return render(req,'findadres.html')
+      cities = city.objects.all()
+      homes = Home.objects.all()
+      adress = adres.objects.all()
+      typeInternet = tarif.objects.all()
+      data = {
+         'city':cities,
+         "home":homes,
+         'adres':adress,
+         'tarif':typeInternet
+      }
+      
+      return render(req,'findadres.html',data)
    
    else:
       return redirect('/')
+   
+def employer(req):
+      user = req.user
+      applications = user.applications.all()
+      data = {
+         'app':applications
+      }
+      return render(req,'workerPanel.html',data)

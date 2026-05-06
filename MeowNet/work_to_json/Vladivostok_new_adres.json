@@ -1,0 +1,7607 @@
+[
+    {
+        "model": "crm.adres",
+        "pk": 1,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Абрекская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 2,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Абрикосовая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 3,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Абрикосовый"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 4,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Августовского"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 5,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Авиаторов"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 6,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Авраменко"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 7,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Авроровская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 8,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Адмирала Горшкова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 9,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Адмирала Кузнецова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 10,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Адмирала Макарова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 11,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Адмирала Макарова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 12,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Адмирала Смирнова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 13,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Адмирала Угрюмова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 14,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Адмирала Фокина"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 15,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Адмирала Юмашева"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 16,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Азовская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 17,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Айвазовского"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 18,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Академика Воронова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 19,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Академика Комарова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 20,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Академика Крушанова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 21,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Академический"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 22,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Аквамариновая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 23,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Аксаковская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 24,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Александра Грина"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 25,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Александровича"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 26,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Алеутская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 27,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Аллилуева"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 28,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Алтайская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 29,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Альбатросовая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 30,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Алябьева"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 31,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Американская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 32,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Аметистовая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 33,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Амундсена"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 34,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Амурская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 35,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Аникушина"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 36,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Анисимова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 37,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Анны Щетининой"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 38,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Анучинская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 39,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Анютинская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 40,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Апухтина"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 41,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Аральская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 42,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Аренского"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 43,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Арктическая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 44,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Арсенальная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 45,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Арсеньева"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 46,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Артековская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 47,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Артёмовская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 48,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Архангельская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 49,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Астрономический"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 50,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Багратиона"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 51,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Байдукова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 52,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Байкальская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 53,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Бакинская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 54,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Бакунина"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 55,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Балтийская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 56,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Балтовская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 57,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Баляева"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 58,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Баневура"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 59,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Баратынского"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 60,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Барбарисовая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 61,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Баркасная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 62,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Барклая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 63,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Барсовая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 64,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Бархатная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 65,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Басаргина"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 66,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Батарейная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 67,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Батумская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 68,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Башидзе"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 69,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Бежецкая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 70,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Безымянный"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 71,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Белинского"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 72,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Беломорская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 73,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Беляева"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 74,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Белякова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 75,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Береговая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 76,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Березовая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 77,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Беринга"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 78,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Беркутовая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 79,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Бестужева"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 80,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Бетховена"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 81,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Бианки"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 82,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Бийская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 83,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Биологический"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 84,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Большекаменская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 85,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Борисенко"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 86,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Бородинская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 87,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Босфора"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 88,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Братская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 89,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Брестская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 90,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Брестский"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 91,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Бринера"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 92,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Брусничная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 93,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Брюллова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 94,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Брюсова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 95,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Брянская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 96,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Буковая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 97,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Бульварная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 98,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Бурачка"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 99,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Буреинская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 100,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Буссе"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 101,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Вавилова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 102,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Васильковая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 103,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Васнецова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 104,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Ватутина"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 105,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Венюкова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 106,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Вересковая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 107,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Верещагина"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 108,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Верещагина"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 109,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Вертинского"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 110,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Вертолетная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 111,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Верхнепортовая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 112,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Верхнеславянская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 113,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Верхняя"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 114,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Весенняя"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 115,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Ветвистая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 116,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Ветеранов"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 117,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Взлётная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 118,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Вилкова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 119,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Виноградная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 120,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Виноградный"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 121,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. ВИР"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 122,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "СТ Вировец"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 123,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Вишневая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 124,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Владикавказская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 125,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ш. Военное"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 126,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Вознесенская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 127,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Вокзальная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 128,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Волгоградская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 129,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Волжская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 130,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Волкова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 131,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Волнистая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 132,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Володарского"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 133,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Волочаевская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 134,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Волховская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 135,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Воровского"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 136,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Воронежская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 137,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Воропаева"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 138,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "СТ Восток-2"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 139,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Восточная 1-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 140,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Восточная 2-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 141,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Восточная 3-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 142,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Восточная 4-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 143,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Восточная 5-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 144,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Восточная 6-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 145,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пр-т Восточный"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 146,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Восточный 3-й"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 147,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Вострецова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 148,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "СНТ Восход"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 149,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Восьмая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 150,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Врубеля"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 151,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Всеволода Сибирцева"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 152,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Встречная 1-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 153,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Встречная 3-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 154,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Вторая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 155,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Выселковая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 156,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Высокая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 157,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Высоковольтная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 158,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Высотная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 159,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Вязовая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 160,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Гагаринского"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 161,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Гамарника"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 162,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Гарнизонная 3-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 163,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Гаршина"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 164,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Гассе"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 165,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Гастелло"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 166,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Гвардейская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 167,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Географический"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 168,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Героев Варяга"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 169,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Героев Тихоокеанцев"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 170,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Героев Хасана"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 171,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Героев-Даманцев"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 172,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Главная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 173,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Главный"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 174,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Глинки"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 175,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Гоголя"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 176,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Голицына"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 177,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Голубичная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 178,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Горийская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 179,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Горицветная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 180,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Горная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 181,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Горького"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 182,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Гражданская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 183,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Гражданская 1-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 184,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Гражданская 2-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 185,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Грекова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 186,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Грибоедова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 187,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Гризодубовой"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 188,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Грозовая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 189,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Громова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 190,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Грушевая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 191,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Грязелечебница"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 192,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Гульбиновича"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 193,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Гусарский"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 194,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Давыдова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 195,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Дальзаводская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 196,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Дальнегорская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 197,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Дальняя"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 198,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Дачная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 199,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Дачная 1-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 200,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Дачный"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 201,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Двенадцатая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 202,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Двинская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 203,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Девятая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 204,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Дежнёва"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 205,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Демьяна Бедного"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 206,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Деревенская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 207,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Державина"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 208,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Десантная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 209,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Десятая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 210,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Джамбула"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 211,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Днепровская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 212,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Днепровский"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 213,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Днепропетровская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 214,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Добровольского"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 215,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Докучаева"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 216,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Донская СДПК Дальзавод"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 217,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Достоевского"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 218,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Дубовая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 219,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Ежевичная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 220,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Елецкая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 221,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Елочная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 222,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Енисейская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 223,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Есенина"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 224,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Жариковская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 225,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Железнодорожная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 226,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Железнодорожный"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 227,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Жигура"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 228,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Жуковского"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 229,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Журавлиная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 230,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Завойко"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 231,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Загородная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 232,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Залесная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 233,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Западная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 234,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Запорожская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 235,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Заречная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 236,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Заречная 1-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 237,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Захарова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 238,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Звонкий"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 239,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Зейская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 240,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Зеленая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 241,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Зеленый"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 242,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Зеленый Бульвар"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 243,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "СНТ Зеленый Угол"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 244,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Земляничная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 245,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Зои Космодемьянской"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 246,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Ивановская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 247,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Ивовая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 248,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Извилистая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 249,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Изюбриевая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 250,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Ильичёва"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 251,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Ильменская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 252,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Иманская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 253,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "с-р имени Игнатьева"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 254,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Импортная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 255,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Инженерная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 256,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Инженерный"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 257,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Интернациональная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 258,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Иркутская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 259,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Иртышская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 260,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Иртышский"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 261,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Исторический"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 262,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Ишимская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 263,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Казакевича"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 264,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Казанская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 265,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Калинина"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 266,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Калининградская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 267,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Калиновая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 268,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Каляева"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 269,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Камская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 270,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Камский"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 271,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Канатный"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 272,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Канская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 273,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Капитана Шефнера"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 274,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Каплунова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 275,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Капонирная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 276,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Карамзина"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 277,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Карбышева"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 278,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Карла Либкнехта"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 279,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Карпинского"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 280,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Карская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 281,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Карьерная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 282,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Карьерный"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 283,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Карякинская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 284,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Каспийская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 285,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Катерная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 286,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Каштановая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 287,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Квартальный"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 288,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Керченская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 289,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Киевская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 290,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Кизиловая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 291,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Кизлярская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 292,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Кипарисовая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 293,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Кирова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 294,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Клавдии Шульженко"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 295,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Клевера"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 296,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Клыкова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 297,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Ключ 3-й"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 298,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Ключ 4-й"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 299,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Ключ 5-й"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 300,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Ключевая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 301,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Ковальчука"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 302,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Колесника"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 303,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Командорская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 304,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Комитетская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 305,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Коммунаров"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 306,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Коммуны"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 307,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Комсомольская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 308,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Корабельная Набережная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 309,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Корнилова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 310,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Короленко"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 311,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Короткая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 312,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Космонавтов"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 313,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Котельникова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 314,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Кочубея"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 315,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Краева"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 316,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Крамского"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 317,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Красноармейский"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 318,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пр-т Красного Знамени"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 319,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Краснодонская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 320,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Краснозаводская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 321,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Краснознаменный"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 322,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Круговая 1-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 323,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Круговая 2-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 324,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Круговая 3-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 325,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Крутая 1-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 326,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Крутая 2-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 327,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Крыгина"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 328,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Крылатый"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 329,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Крылова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 330,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Кубанская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 331,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Куинджи"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 332,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Куйбышева"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 333,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Курильская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 334,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Курортная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 335,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Курчатова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 336,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Кутузова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 337,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Ладожская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 338,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Ладыгина"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 339,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Лазо"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 340,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Лазовская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 341,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Лазурная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 342,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Ландышевая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 343,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Ланинский"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 344,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Лаптева"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 345,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Левитана"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 346,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Левобережная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 347,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Лейтенанта Шмидта"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 348,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Леонова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 349,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Лесная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 350,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Лесная 1-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 351,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Лесная 2-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 352,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Лесная 3-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 353,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Лесной"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 354,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Лесопитомник"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 355,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "СТ Лиман"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 356,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Линейная 1-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 357,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Линейная 2-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 358,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Линейная 3-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 359,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Липовая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 360,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Лиственничная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 361,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Листопадная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 362,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Ломаная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 363,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Ломоносова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 364,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Лоскутова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 365,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Лоцманская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 366,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Луговая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 367,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Лукоморье"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 368,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Лунная СТ Лиман"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 369,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Луцкого"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 370,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "СТ Луч"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 371,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Лучистая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 372,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Лянчихинская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 373,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Маака"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 374,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Магнитогорская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 375,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Майкова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 376,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Майора Филипова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 377,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Майская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 378,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Маковского"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 379,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Маковского"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 380,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Максимовича"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 381,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Малика"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 382,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Малиновая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 383,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Маньчжурская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 384,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Маргаритова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 385,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Марины Расковой"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 386,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Марченко"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 387,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Математический"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 388,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Матросова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 389,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Матросская 1-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 390,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Матросская 2-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 391,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Матросская 3-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 392,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Матросская 4-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 393,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Матросская 5-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 394,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Матросская 6-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 395,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Матросская 7-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 396,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Махалина"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 397,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Маяковского"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 398,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "СТ Медик"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 399,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Медовая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 400,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Междугородняя"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 401,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Мельниковская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 402,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Менделеева"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 403,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Металлистов"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 404,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Металлургическая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 405,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Метельная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 406,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Мехлиса"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 407,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Мечникова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 408,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Милоградовская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 409,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Минеральная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 410,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Минеров"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 411,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Минная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 412,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Мира"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 413,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Михайловского"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 414,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Мичуринская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 415,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Мичуринский"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 416,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Могилёвская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 417,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Можайская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 418,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Можжевеловая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 419,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Монтажная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 420,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Мопровская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 421,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Мордовцева"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 422,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Мореходная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 423,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Морозова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 424,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Морская 1-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 425,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Московская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 426,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Муравьёва-Амурского"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 427,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Мурманская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 428,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Мусоргского"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 429,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Мыс Кунгасный"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 430,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Мыс Чумака"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 431,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Мысовая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 432,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Набережная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 433,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Надарова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 434,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Надибаидзе"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 435,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Нарвская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 436,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пр-т Народный"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 437,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Нахимова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 438,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Находкинская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 439,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Небесный"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 440,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Невельского"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 441,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Невская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 442,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Нежинская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 443,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Нейбута"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 444,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Некрасовская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 445,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Некрасовский"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 446,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Нектарная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 447,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Неманская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 448,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Нерчинская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 449,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Нестерова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 450,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Нефтеветка"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 451,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Нижнепортовая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 452,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Низинная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 453,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Никитина"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 454,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Никифорова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 455,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Новгородский"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 456,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Новицкого"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 457,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Новожилова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 458,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Новоивановская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 459,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Облачный"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 460,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Облепиховая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 461,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Обручева"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 462,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Объездной"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 463,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Овражная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 464,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Овчинникова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 465,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Огарева"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 466,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Одесская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 467,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Озерная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 468,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Окатовая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 469,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пр-т Океанский"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 470,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Октябрьская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 471,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Олега Кошевого"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 472,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Ольховая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 473,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Опаловая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 474,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Опорная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 475,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "СТ Орбита"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 476,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Орбитальная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 477,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Островского"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 478,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Острогорная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 479,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пр-т Острякова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 480,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Отлогая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 481,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Отрадная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 482,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Охотская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 483,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Очаковская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 484,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Павленко"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 485,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Паллады"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 486,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Пальчевского"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 487,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Панфилова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 488,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Парашютная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 489,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Паровозная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 490,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Партизанская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 491,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пр-т Партизанский"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 492,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Парусная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 493,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Пархоменко"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 494,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Пархоменко"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 495,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Пасечная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 496,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "СТ Патриот-6"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 497,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Патрокл"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 498,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Паустовского"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 499,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Пацаева"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 500,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Пейзажная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 501,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Первая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 502,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Перекопский"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 503,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Персиковая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 504,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Пестеля"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 505,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Петра Великого"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 506,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Печорская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 507,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Пилотажный"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 508,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Пионерская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 509,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Пирогова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 510,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Писаревская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 511,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Пихтовая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 512,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Планерная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 513,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Плеханова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 514,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Плещеева"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 515,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Пограничная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 516,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Подгорная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 517,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Подъемная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 518,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Пожарского"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 519,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Полевая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 520,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Полезный"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 521,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Поленова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 522,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Полетаева"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 523,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Полетаева"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 524,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Полины Осипенко"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 525,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Полковника Фесюна"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 526,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Пологая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 527,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Полонского"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 528,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Полтавская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 529,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Полярная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 530,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Попутная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 531,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Посадская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 532,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Поселковая 1-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 533,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Поселковая 2-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 534,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Поселковая 3-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 535,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Поселковый"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 536,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Постышева"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 537,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Посьетская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 538,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Потийская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 539,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Почтовая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 540,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Почтовый"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 541,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Пояркова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 542,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Правобережная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 543,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Прапорщика Комарова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 544,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Пржевальского"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 545,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Прибрежная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 546,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Приветливая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 547,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Пригородная 1-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 548,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Пригородная 2-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 549,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Пригородная 3-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 550,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Пригородная 4-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 551,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Призовая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 552,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Приморская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 553,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "СНТ Приморский Садовод"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 554,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Приходько"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 555,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Причальная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 556,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Пришвина"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 557,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Промежуточная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 558,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Промысловая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 559,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Промышленная 1-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 560,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Промышленная 2-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 561,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Проселочная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 562,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Просторная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 563,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Профессора Куренцова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 564,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Профессора Шапкина"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 565,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Проходная 1-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 566,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Проходная 2-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 567,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Проходная 3-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 568,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Проходная 4-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 569,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Проходная 5-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 570,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Пугачева"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 571,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Пушкинская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 572,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Пятая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 573,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Пятнадцатая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 574,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Рабочая 10-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 575,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Рабочая 13-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 576,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Рабочая 9-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 577,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Радарный"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 578,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Радио"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 579,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Радио"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 580,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Радиостанция"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 581,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Радостная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 582,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Радужная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 583,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Радужный"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 584,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Раевского"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 585,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Разина"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 586,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Ракетная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 587,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Ракитная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 588,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "СТ Рассвет"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 589,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Рассветная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 590,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Расула Гамзатова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 591,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Режицкая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 592,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Рейдовая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 593,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Репина"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 594,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Республики"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 595,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Речная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 596,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Решетникова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 597,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Рионская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 598,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Рифовая СНТ Зеленый Угол"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 599,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Роберта Баха"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 600,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Родниковый"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 601,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Розничная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 602,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Розовая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 603,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Розовый"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 604,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Рокадная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 605,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Рокотова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 606,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Ромашковая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 607,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Рубиновая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 608,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Рубинштейна"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 609,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Руднева"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 610,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Русская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 611,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Рыбацкая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 612,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Рыбацкий"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 613,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Рылеева"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 614,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Рюриковская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 615,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Сабанеева"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 616,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Саврасова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 617,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Садгородская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 618,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Садовая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 619,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Салтыкова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 620,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Самаргинская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 621,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Самарская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 622,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Саперная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 623,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Саратовская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 624,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Сафонова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 625,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Сахалинская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 626,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Сахарный Ключ"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 627,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Свердлова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 628,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Светланская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 629,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Светланский"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 630,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Связи"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 631,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Севастопольская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 632,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Северная 3-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 633,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Северо-Суйфунская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 634,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Североморская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 635,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Севская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 636,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Седьмая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 637,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Сельская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 638,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Семёновская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 639,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Семирадского"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 640,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Серова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 641,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Сеульская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 642,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Сибирская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 643,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Сигнальная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 644,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Симбирская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 645,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Синичкина"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 646,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Сипягина"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 647,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Сиреневая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 648,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Скатная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 649,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Славянская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 650,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Сливовая СТ Лиман"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 651,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Слуцкого"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 652,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Случевского"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 653,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Смоленская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 654,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Снеговая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 655,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Советская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 656,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Соколиный"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 657,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Сокольничий"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 658,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Солнечная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 659,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "СТ Солнечное"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 660,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Соловьиная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 661,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Сопочная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 662,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Сосновая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 663,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Софьи Перовской"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 664,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Сочинская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 665,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Союзная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 666,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Спиридонова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 667,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Спокойная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 668,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Спортивная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 669,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "СТ Спутник"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 670,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "СТ Спутник-2"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 671,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Стальского"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 672,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Станичная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 673,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Станционная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 674,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Станюковича"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 675,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Старцева"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 676,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Стравинского"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 677,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Стрелковая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 678,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Стрелковый"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 679,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Стрелочная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 680,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Стрелочный"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 681,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Стрельникова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 682,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "СТ Строитель"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 683,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "СТ Строитель-1"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 684,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Строительная 2-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 685,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Строительная 3-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 686,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Сурикова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 687,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Суханова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 688,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Счастливая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 689,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Таганрогская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 690,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Таёжная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 691,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Талалихина"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 692,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Таманская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 693,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Тамбовская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 694,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Танеева"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 695,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Танкерная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 696,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Татарская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 697,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Тверская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 698,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Тёплая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 699,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Терешковой"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 700,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Террасная 4-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 701,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Террасная 5-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 702,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Тетюхинская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 703,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Тигровая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 704,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Тимирязева"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 705,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Тисовая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 706,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Тихвинская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 707,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Тихоокеанская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 708,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Тобольская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 709,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Токаревская Кошка"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 710,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Токаревский маяк"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 711,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Толбухина"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 712,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Толстого"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 713,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Томская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 714,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Тополевая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 715,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Траловая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 716,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Трамвайная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 717,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Трансформаторная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 718,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Третья"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 719,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Тринадцатая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 720,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Трудовой"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 721,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Трудовых Резервов"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 722,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Тунгусская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 723,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Тургенева"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 724,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Турмалиновая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 725,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Тухачевского"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 726,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "СТ Тюльпан"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 727,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Тюменская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 728,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Тютчева"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 729,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Уборевича"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 730,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Ужгородская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 731,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Узбекская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 732,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Ульяновская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 733,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Уральская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 734,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Урицкого"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 735,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Успенского"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 736,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Уссурийская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 737,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Уткинская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 738,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Учительская СТ Учитель"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 739,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Уютная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 740,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Фадеева"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 741,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Фазановая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 742,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Фанерная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 743,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Фанерный"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 744,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Фанзавод"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 745,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Фастовская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 746,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Федеративная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 747,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Феодосийская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 748,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Фета"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 749,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Фиалковая СТ Учитель"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 750,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Фигурная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 751,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Фирсова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 752,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Флотская 1-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 753,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Флотская 4-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 754,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Фонвизина"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 755,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Фонтанная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 756,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Фортовая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 757,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Фруктовая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 758,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Хабаровская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 759,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Хабаровский"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 760,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Харьковская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 761,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Хасанский"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 762,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Хвойная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 763,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Херсонская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 764,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Хивинская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 765,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Холмистая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 766,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Хорольская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 767,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Художественная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 768,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Хуторская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 769,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Цветочная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 770,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пл. Центральная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 771,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Центральная 1-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 772,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Центральная 2-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 773,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Центральная 3-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 774,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Центральная 4-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 775,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Центральная 5-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 776,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Цимлянская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 777,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "СНТ Чайка"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 778,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Чайковского"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 779,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Чапаева"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 780,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Часовитина"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 781,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Черёмуховая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 782,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Черкавского"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 783,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Черниговская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 784,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Черноморская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 785,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Черноморская Советский район"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 786,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Чернышевского"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 787,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Черняховского"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 788,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Четвертая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 789,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Четырнадцатая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 790,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Чехова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 791,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Читинская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 792,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Чкалова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 793,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Чукотская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 794,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Чуркинский"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 795,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Шахтерская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 796,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Шахтовая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 797,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Шахтовый"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 798,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Шевелева"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 799,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Шевченко"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 800,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Шевченко"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 801,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Шелковичная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 802,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Шепеткова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 803,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Шестая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 804,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Шилкинская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 805,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Шишкина"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 806,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Шкипера Гека"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 807,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Школьный"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 808,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Шкотовская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 809,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Шкотовский"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 810,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Шоссейная 1-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 811,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Шоссейная 2-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 812,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Шоссейная 3-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 813,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Шошина"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 814,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Штилевая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 815,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Штормовая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 816,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Шуйская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 817,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Щедрина"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 818,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Щитовая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 819,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Щорса"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 820,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Экипажная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 821,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "СНТ Энергетик"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 822,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "СНТ Юбилей"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 823,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "СНТ Юбилейное"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 824,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "СНТ Юбилейное-2"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 825,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Южная 3-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 826,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Южно-Уральская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 827,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Яблоневая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 828,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Яблочкова"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 829,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Ягодная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 830,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Якорная Бухта"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 831,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Якутская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 832,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Ялтинская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 833,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Янковского"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 834,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Ярославская"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 835,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Ярошенко"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 836,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Ясеневая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 837,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Ясная"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 838,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пер. Ясный"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 839,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. Яхтовая"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 840,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. 11-я"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 841,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. 20 лет ВЛКСМ"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 842,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. 40 лет ВЛКСМ"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 843,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. 50 лет ВЛКСМ"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 844,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "ул. 60 лет ВЛКСМ"
+        }
+    },
+    {
+        "model": "crm.adres",
+        "pk": 845,
+        "fields": {
+            "from_city": 1,
+            "index": "123456",
+            "name_adres": "пр-т 100-летия Владивостока"
+        }
+    }
+]

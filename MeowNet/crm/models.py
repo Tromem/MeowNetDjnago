@@ -43,11 +43,60 @@ class Application_from_user(models.Model):
     user = models.CharField(null=True, blank=True, max_length=50, verbose_name='Фио если нет модели')
     phone = models.CharField(null=True, blank=True, max_length=15, verbose_name="Номер если нет модели")
     adres = models.CharField(null=True, blank=True, max_length=100, verbose_name='Адрес без модели')
-    order = models.OneToOneField('user.UserModel', on_delete=models.CASCADE, verbose_name='Кому заказ принадлежит', related_name='applications' ,null=True, blank=True)
+    order = models.ForeignKey('user.UserModel', on_delete=models.CASCADE, verbose_name='Кому заказ принадлежит', related_name='applications' ,null=True, blank=True)
     tariffield = models.ForeignKey(tarif,on_delete=models.CASCADE,verbose_name='Выбраный тариф',null=True,blank=True)
     type_manager_take = models.CharField(max_length=60,choices=MY_CHOICES_manager,default=OPTION_3)
-    problem = models.ForeignKey('main.typeproblem',null=True,blank=True,on_delete=models.CASCADE)
+    pasport = models.CharField(max_length=10,null=True, blank=True)
+    Desired_date = models.DateTimeField(null=True, blank=True, verbose_name='Желаемая дата подключения')
+    
+class city(models.Model):
+    city_name = models.CharField(max_length=50)
+   
+    def __str__(self):
+        return self.city_name
+class adres(models.Model):
+    name_adres = models.CharField(max_length=60)
+    index = models.CharField(max_length=30)
+    from_city = models.ForeignKey(city,  on_delete=models.CASCADE)
+    def __str__(self):
+        return self.name_adres
 
+class Home(models.Model):
+    
+    fttx = 'fttx'
+    PON = 'PON'
+    Adsl = 'DSL'
+    Not_have = 'None'
+
+    Choises_tech_oport = [
+        (fttx,'fttx'),
+        (PON,'PON'),
+        (Adsl,'Adsl'),
+        (Not_have,'Нтхв')
+    ]
+   
+    
+    ports = models.IntegerField()
+    number_home = models.CharField(max_length=5)
+    tech_opportunity = models.CharField(choices=Choises_tech_oport,default=fttx)
+    adres_name = models.ForeignKey(adres,on_delete=models.CASCADE)
+    problem = models.ForeignKey('main.typeproblem',null=True,blank=True,on_delete=models.CASCADE)
+    def __str__(self):
+        return self.number_home
+    
+
+class full_adres(models.Model):
+    floor = models.IntegerField()
+    Apartment = models.CharField(max_length=10)
+    home = models.ForeignKey(Home,models.CASCADE)
+
+
+@receiver(pre_save,sender=Home)
+def check_tech(sender,instance, **kwargs):
+    if instance.ports > 0:
+        instance.Technical_feasibility = True
+    else : instance.Technical_feasibility = False
+        
 
 @receiver(pre_save,sender=Application_from_user)
 def makeId(sender,instance, **kwargs):

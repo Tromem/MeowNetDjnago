@@ -1,0 +1,90 @@
+[
+  {
+    "model": "main.typeproblem",
+    "pk": 1,
+    "fields": {
+      "name_problem": "Магистральный кабель поврежден",
+      "difficulity": "opt1"
+    }
+  },
+  {
+    "model": "main.typeproblem",
+    "pk": 2,
+    "fields": {
+      "name_problem": "Сбой оборудования на центральной станции",
+      "difficulity": "opt1"
+    }
+  },
+  {
+    "model": "main.typeproblem",
+    "pk": 3,
+    "fields": {
+      "name_problem": "Перебои в электропитании узлов сети",
+      "difficulity": "opt1"
+    }
+  },
+  {
+    "model": "main.typeproblem",
+    "pk": 4,
+    "fields": {
+      "name_problem": "Масштабные аварии в центре данных",
+      "difficulity": "opt1"
+    }
+  },
+  {
+    "model": "main.typeproblem",
+    "pk": 5,
+    "fields": {
+      "name_problem": "Низкое качество сигнала из-за интерференции",
+      "difficulity": "opt2"
+    }
+  },
+  {
+    "model": "main.typeproblem",
+    "pk": 6,
+    "fields": {
+      "name_problem": "Неправильная настройка оборудования",
+      "difficulity": "opt2"
+    }
+  },
+  {
+    "model": "main.typeproblem",
+    "pk": 7,
+    "fields": {
+      "name_problem": "Нагрузка на локальный сегмент сети",
+      "difficulity": "opt2"
+    }
+  },
+  {
+    "model": "main.typeproblem",
+    "pk": 8,
+    "fields": {
+      "name_problem": "Повреждение пользовательского кабеля",
+      "difficulity": "opt3"
+    }
+  },
+  {
+    "model": "main.typeproblem",
+    "pk": 9,
+    "fields": {
+      "name_problem": "Временные технические работы провайдера",
+      "difficulity": "opt3"
+    }
+  },
+  {
+    "model": "main.typeproblem",
+    "pk": 10,
+    "fields": {
+      "name_problem": "Проблемы с настройкой Wi-Fi",
+      "difficulity": "opt3"
+    }
+  },
+  {
+    "model": "main.typeproblem",
+    "pk": 11,
+    "fields": {
+      "name_problem": "Неисправность блока питания роутера",
+      "difficulity": "opt3"
+    }
+  }
+]

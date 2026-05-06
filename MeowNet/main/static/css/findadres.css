@@ -1,0 +1,270 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+/* Панель информации */
+.panelinf {
+    background-color: #ffffff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.panelinf div {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.panelinf div:last-child {
+    margin-bottom: 0;
+}
+
+/* Стиль для поля ввода */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select,
+textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Стиль для таблицы */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 16px;
+}
+
+table th {
+    padding: 10px;
+    background-color: #f4f4f4;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #ddd;
+}
+
+/* Кнопка для заявки на подключение */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Стиль для блока формы заявки */
+.request-form {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+#find-adres {
+    width: 250px;
+    height: 40px;
+    margin-left: 30px;
+}
+
+.request-form h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.request-form .form-group {
+    margin-bottom: 15px;
+}
+
+.form-group-2 {
+    display: flex;
+}
+
+.form-group-2 input {
+    width: 60px;
+    height: 40px;
+}
+
+#apartment {
+    margin-left: 10px;
+}
+
+.request-form label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+}
+
+.request-form input[type="text"],
+.request-form input[type="tel"],
+.request-form input[type="email"],
+.request-form select,
+.request-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.request-form input[type="text"]:focus,
+.request-form input[type="tel"]:focus,
+.request-form input[type="email"]:focus,
+.request-form select:focus,
+.request-form textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.request-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.request-form button:hover {
+    background-color: #45a049;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    /* Уменьшаем отступы для формы */
+    .request-form {
+        padding: 15px;
+    }
+
+    /* Уменьшаем шрифт заголовков в форме */
+    .request-form h3 {
+        font-size: 18px;
+    }
+
+    /* Уменьшаем размер шрифта в таблице */
+    table td, table th {
+        font-size: 14px;
+    }
+
+    /* Вводные поля занимают 100% ширины */
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    select,
+    textarea {
+        width: 100%;
+    }
+
+    /* Настроим кнопку на мобильных устройствах */
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    /* Блок с адресом будет гибким */
+    #find-adres {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    /* Группировка input-ов на мобильных */
+    .form-group-2 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-group-2 input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #apartment {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Дополнительная настройка для маленьких экранов */
+    .container {
+        width: 95%;
+        padding: 5px;
+    }
+
+    .request-form h3 {
+        font-size: 16px;
+    }
+
+    .request-form input[type="text"],
+    .request-form input[type="tel"],
+    .request-form input[type="email"],
+    .request-form select,
+    .request-form textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+#request-form{
+    visibility: hidden;
+    
+}

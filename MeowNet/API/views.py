@@ -15,8 +15,12 @@ from django.core import serializers
 from django.contrib.auth.decorators import login_required
 from datetime import datetime
 from main.models import typeproblem
+from crm.models import *
+from django.db.models import Q
+
 
 @csrf_exempt
+@login_required
 def create_user(req):
    if req.user.is_superuser or req.user.user_acces == 5:
     if req.method == 'POST':
@@ -93,9 +97,12 @@ def get_user_by_id_username(req):
 
 
                   }
-                  return  JsonResponse(response)
+                  
+                  return  JsonResponse(response,status=200)
             except UserModel.DoesNotExist:
-               return JsonResponse({'error':'Модель не найдена!'})
+               return JsonResponse({
+                  'status':'error',
+                  'message':'Пользователь не найден!'},status=404)
           
    
 @csrf_exempt
@@ -150,6 +157,7 @@ def swap_role(req):
       return JsonResponse({"error":'Доступ запрещен!'})
 
 @csrf_exempt
+@login_required
 def post_aplication(req):
  if req.method == 'POST':
    jsonbody= json.loads(req.body)
@@ -183,5 +191,84 @@ def post_aplication(req):
                                                   )
    new_app_without_user.save()
    return JsonResponse({'conf':'Запрос получен'})
+   
+@csrf_exempt
+@login_required
+def get_adres(req):
+   if req.user.is_superuser or req.user.user_acces > 1:
+      if req.method == 'POST':
+
+         data = json.loads(req.body) 
+         adres_ = data.get('adres')
+         city_ = data.get('city')
+         
+         if city_ and adres_:
+            get_adres_pos = adres.objects.filter(Q(name_adres__icontains=adres_), from_city=city_)
+         else:
+            get_adres_pos = adres.objects.none()
+         
+         
+         return JsonResponse({'response':list(get_adres_pos.values())},safe=False)
+   
+@login_required
+@csrf_exempt
+def get_inf_api(req):
+      if req.user.is_superuser or req.user.user_acces > 1:
+         if req.method == 'POST':
+            
+            data = json.loads(req.body)
+            citys = data.get('city')
+            
+            adress_name = data.get('adres')
+            
+            try:
+               adress = adres.objects.get(name_adres=adress_name,from_city=citys)
+            
+            except adres.DoesNotExist:
+               return JsonResponse({'error':'Адрес не найден'})
+            
+            house = data.get('house')
+            try:
+               find_house = Home.objects.get(number_home=house,adres_name=adress.id)
+            
+            except Home.DoesNotExist:
+               return JsonResponse({"error":"Адрес не найден"})
+            
+           
+            return JsonResponse({'response':serializers.serialize('json',[find_house]),'problem':find_house.problem}, safe=False, json_dumps_params={'ensure_ascii': False})
+@login_required
+@csrf_exempt         
+def make_app(req):
+   
+   body = json.loads(req.body)
+   description = body.get('description')
+   name = body.get('name')
+   phone = body.get('phone')
+   adress = body.get('adres')
+   OPTION = body.get('OPTION')
+   connection_type_json = body.get('connection_type')
+   try:
+      conn_type = tarif.objects.get(id=connection_type_json)
+   except tarif.DoesNotExist:
+      return JsonResponse({'error':'Не найден тариф'}) 
+   # try:
+   new_app_without_user = Application_from_user.objects.create(application_status='opt3',
+                                                  tariffield = conn_type ,
+                                                  comment = description,
+                                                  data_create = datetime.now(),
+                                                  FromOrder = req.user,
+                                                  user=name,
+                                                  phone=phone,
+                                                  adres=adress,
+                                                  type_manager_take = OPTION,
+                                                  
+                                                  
+                                                  
+                                                  )
+   new_app_without_user.save()
+   return JsonResponse({'response':'Заявка создана!'})
+   # except:
+   #    return JsonResponse({'error':'У вас есть незаполненые поля!'})
+   
    
 

@@ -1,20 +1,116 @@
-{%extends 'foremployer.html'%}
+{% extends 'foremployer.html' %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Поиск адреса</title>
-{%block link%}
-
-<link rel="stylesheet" href="{%static 'css/findadres.css'%}" />
-{%endblock%}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Поиск адреса</title>
+    {% block link %}
+    <link rel="stylesheet" href="{% static 'css/findadres.css' %}" />
+    {% endblock %}
 </head>
 <body>
-{%block content%}
+    {% block content %}
+    <div class="container">
+        <div class="panelinf">
+            <div class="user-info">
+                <p><strong>Пользователь:</strong> {{ user.username }}</p>
+                <p><strong>ID:</strong> {{ user.id_userlog }}</p>
+            </div>
+        </div>
 
-{%endblock%}
+        <div class="search-form">
+            <div class="form-group">
+                <label for="city">Город</label>
+                <select id="city">
+                    {%for i in city%}
+                        <option value="{{i.id}}">{{i.city_name}}</option>
+                    {%endfor%}
+                </select>
+            </div>
 
+            <div class="form-group">
+                <label for="street">Улица</label>
+                <input list="results-container" type="text" id="street" placeholder="Введите улицу" />
+                <datalist class="results-container" id="results-container"></datalist>
+            </div>
+
+            <div class="form-group-2">
+                <input type="text" id="house" placeholder="дом" />
+                <input type="text" id="apartment" placeholder="кв" required />
+                <button id="find-adres">Проверить адрес</button>
+            </div>
+            <div class="errors" id="errors" style="color: red;">
+
+            </div>
+
+            <div class="address-info" id="address-info" style="visibility: hidden;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ТХВ</th>
+                            <th>Тип подключения</th>
+                            <th>Тех. неполадки</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="techsupp">None</td>
+                            <td id="type-connect">None</td>
+                            <td id="tech-inf">None</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+                
+            <div class="request-form" id="request-form">
+                <h3>Сделать заявку на подключение интернета</h3>
+                
+                   
+                    <div class="form-group">
+                        <label for="name">ФИО</label>
+                        <input type="text" id="name" name="name" placeholder="Введите ФИО" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Телефон</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Введите телефон" required />
+                    </div>
+
+                    <div class="form-group">
+                        
+                       
+
+                    <div class="form-group">
+                        <label for="connection_type">Тип подключения</label>
+                        <select id="connection_type" name="connection_type" required>
+                            <option value="">Выберите тип подключения</option>
+                            {%for i in tarif%}
+                            <option value="{{i.id}}">{{i.Tarif_name}}|{{i.typetarif.typetarif}}</option>
+                            {%endfor%}
+
+                            
+                            
+                            
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Дополнительные комментарии</label>
+                        <textarea id="description" name="description" rows="4" placeholder="Опишите, если есть дополнительные пожелания или проблемы" ></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <button  id="make-new-app">Отправить заявку</button>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'js/find_adres.js'%}"></script>
+    <script src="{% static 'js/find_inf.js'%}"></script>
+    <script src="{%static 'js/new_application.js'%}"></script>
+    {% endblock %}
 </body>
 </html>

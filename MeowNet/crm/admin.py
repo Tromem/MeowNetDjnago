@@ -7,3 +7,6 @@ from main.models import *
 admin.site.register(Application_from_user)
 admin.site.register(UserModel)
 admin.site.register(tarif)
+admin.site.register(Home)
+admin.site.register(adres)
+admin.site.register(city)
