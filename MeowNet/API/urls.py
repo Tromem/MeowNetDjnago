@@ -17,6 +17,7 @@ urlpatterns = [
     path('API-LOGOUT/',views.logout_view,name='logout'),
     path('API-FIND-APP/',views.find_app),
     path('API-UPDATE-APLICATION/<int:pk>/',views.update_application),
-    path('API-MakeUser/',views.make_new_user)
+    path('API-MakeUser/',views.make_new_user),
+    path('API-ADD-tarif/',views.add_form)
    
 ]

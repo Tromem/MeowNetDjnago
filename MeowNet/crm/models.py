@@ -54,6 +54,8 @@ class Application_from_user(models.Model):
     is_active = models.BooleanField(default=True)
     problem = models.ForeignKey('main.typeproblem',null=True,blank=True,on_delete=models.CASCADE)
     
+    
+    
 class city(models.Model):
     city_name = models.CharField(max_length=50)
    
@@ -113,3 +115,8 @@ def makeId(sender,instance, **kwargs):
             last_id_obj = 0
         new_id_int = last_id_obj + 1
         instance.id = str(new_id_int).zfill(4)
+
+class Logs(models.Model):
+    text = models.CharField(max_length=500)
+    who = models.ForeignKey('user.UserModel',on_delete=models.SET_NULL, null=True ,blank=True)
+    when = models.DateTimeField(auto_now_add=True)

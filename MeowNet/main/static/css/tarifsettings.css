@@ -1,0 +1,66 @@
+/* Общие блоки */
+.make-tarif, .edit-tarif, .delete-tarif {
+    text-align: center;
+    width: 400px;
+    min-height: auto;
+    text-align: left;
+    border-radius: 16px;
+    margin: 20px auto;
+}
+
+.data input, .data select {
+    width: 250px;
+    height: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 4px 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.data input:focus, .data select:focus {
+    border-color: blueviolet;
+    box-shadow: 0 0 6px rgba(138,43,226,0.3);
+}
+
+.make-tarif button, .edit-tarif button, .delete-tarif button {
+    background-color: rgb(56, 166, 209);
+    color: white;
+    border-radius: 8px;
+    width: 180px;
+    height: 35px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.make-tarif button:hover, .edit-tarif button:hover, .delete-tarif button:hover {
+    background-color: rgb(40, 140, 190);
+}
+
+.button-container {
+    text-align: center;
+}
+
+h3 {
+    color: blueviolet;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Адаптивка */
+@media(max-width: 768px){
+    .make-tarif, .edit-tarif, .delete-tarif{
+        width: 90%;
+        margin: 15px auto;
+    }
+    .data input, .data select{
+        width: 100%;
+        font-size: 14px;
+    }
+    .make-tarif button, .edit-tarif button, .delete-tarif button{
+        width: 100%;
+        font-size: 16px;
+    }
+}

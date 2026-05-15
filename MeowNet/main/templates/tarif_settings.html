@@ -1,0 +1,91 @@
+{% extends 'AdminPanel.html' %}
+{% load static %}
+
+{% block bar %}
+{% endblock %}
+
+{%block link%}
+<link rel="stylesheet" href="{%static 'css/tarifsettings.css'%}">
+<link rel="stylesheet" href="{% static 'css/admin.css' %}">
+    <link rel="stylesheet" href="{%static 'css/message.css'%}">
+{%endblock%}
+{% block content %}
+<div class="admin-content">
+            {%block leftpanel%} {{ block.super }} {%endblock%}
+             {%block Message%} {{ block.super }} {%endblock%}
+    <!-- Добавление нового тарифа -->
+    <div class="make-tarif">
+        <h3>Добавить новый тариф</h3>
+        <form method="POST" action=>
+            {% csrf_token %}
+            <div class="data">
+                <input type="text" name="Tarif_name" placeholder="Название тарифа" required>
+                <input type="number" name="price" placeholder="Цена (руб)" required>
+                <input type="number" name="price_to_connect" placeholder="Цена подключения" required>
+                <input type="number" name="discounts" placeholder="Скидка (%)">
+                <input type="date" name="time_to_end_discount" placeholder="Дата окончания акции">
+                <input type="number" name="Mounts_discount" placeholder="Длительность акции (дн)">
+                <input type="number" name="speed" placeholder="Скорость (Мбит/с)" required>
+                <input type="number" name="tv_chanels" placeholder="Количество каналов">
+                <select name="typetarif" required>
+                    {% for type in type %}
+                        <option value="{{ type.id }}">{{ type.typetarif }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="button-container">
+                <button >Добавить тариф</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Редактирование существующего тарифа -->
+    <div class="edit-tarif">
+        <h3>Редактировать тариф</h3>
+        <form method="POST" action="">
+            {% csrf_token %}
+            <select name="tarif_id" required>
+                {% for tarif in tarif %}
+                    <option value="{{ tarif.id }}">{{ tarif.Tarif_name }}</option>
+                {% endfor %}
+            </select>
+            <div class="data">
+                <input type="text" name="Tarif_name" placeholder="Название тарифа">
+                <input type="number" name="price" placeholder="Цена (руб)">
+                <input type="number" name="price_to_connect" placeholder="Цена подключения">
+                <input type="number" name="discounts" placeholder="Скидка (%)">
+                <input type="date" name="time_to_end_discount" placeholder="Дата окончания акции">
+                <input type="number" name="Mounts_discount" placeholder="Длительность акции (дн)">
+                <input type="number" name="speed" placeholder="Скорость (Мбит/с)">
+                <input type="number" name="tv_chanels" placeholder="Количество каналов">
+                <select name="typetarif">
+                    {% for type in type %}
+                        <option value="{{ type.id }}">{{ type.typetarif }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="button-container">
+                <button type="submit">Сохранить изменения</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Удаление тарифа -->
+    <div class="delete-tarif">
+        <h3>Удалить тариф</h3>
+        <form method="POST" action="">
+            {% csrf_token %}
+            <select name="tarif_id" required>
+                {% for tarif in tarif %}
+                    <option value="{{ tarif.id }}">{{ tarif.Tarif_name }}</option>
+                {% endfor %}
+            </select>
+            <div class="button-container">
+                <button type="submit">Удалить тариф</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+<script src="{%static 'js/tarifworker.js'%}"></script>
+{% endblock %}

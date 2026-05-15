@@ -8,7 +8,12 @@ from main.models import typeproblem
 from crm.models import city, adres ,Home 
 from main.models import tarif
 import datetime  
-
+from django.shortcuts import render, redirect, get_object_or_404
+from django.urls import reverse
+from main.models import TypeTarif ,tarif 
+from django.views.decorators.csrf import csrf_exempt
+from crm.views import Logger_decorator 
+from crm.models import Logs
 
 # Модули доступа
 # 5 - максимальный доступ к црм
@@ -124,12 +129,26 @@ def employer(req):
       }
       return render(req,'workerPanel.html',data)
 
+
 def tarif_settings(req):
-   return render(req,'tafif_settings.html')
+   data = {
+      'type':TypeTarif.objects.all(),
+      'tarif':tarif.objects.all()
+           }
+   
+   return render(req,'tarif_settings.html',data)
 def all_settings(req):
+   
    return render(req,'allsettings.html')
 @login_required
 def services(req):
    return render(req,'servieces.html')
-def settingsprofile(req):
-   return render(req,'settingsprofile.html')
+  
+def base(req):
+   if req.user.user_acces >= 4:
+      Logger = Logs.objects.all()
+      data = {'logs':Logger}
+      return render(req,'baseinf.html',data)
+   else: return redirect('profile') 
+   
+  

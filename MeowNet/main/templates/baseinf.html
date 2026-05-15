@@ -1,0 +1,48 @@
+{%extends 'AdminPanel.html'%}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en"  >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block title%}Административная панель{%endblock%}</title>
+    {%block link%}
+    <link rel="stylesheet" href="{% static 'css/admin.css' %}">
+    {%endblock%}
+
+</head>
+<body>
+    {%block logolabel%} MeowAdm {%endblock%}
+    {%block bar%} 
+    
+    {%endblock%}
+    {%block content%}
+    {%block leftpanel%} {{ block.super }} {%endblock%}
+    
+   <table id="base-table"  >
+                    <thead>
+                        <tr>
+                            <th>Когда</th>
+                            <th>Логин</th>
+                            <th>ID</th>
+                            <th style="width: 400px;">Информация</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        {%for i in  logs%}
+                        <tr></tr>
+                        <th>{{i.when}}</th>
+                        <th>{{i.who}}</th>
+                        <th>{{i.id}}</th>
+                        <th>{{i.text}}</th>
+                            
+                        </tr>
+                        {%endfor%}
+                            
+                        
+                    </tbody>
+                </table>
+    {%endblock%}
+</body>
+</html>

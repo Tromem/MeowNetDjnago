@@ -21,10 +21,12 @@ from django.db.models import Q
 from django.contrib.auth import logout
 from django.shortcuts import redirect
 from datetime import datetime
+from crm.views import Logger_decorator
 from user import password_generator
 
 @csrf_exempt
 @login_required
+@Logger_decorator
 def create_user(req):
    if req.user.is_superuser or req.user.user_acces == 5:
     if req.method == 'POST':
@@ -122,6 +124,7 @@ def getcards(req):
 
 @csrf_exempt
 @login_required
+@Logger_decorator
 def delete_user(req):
    if req.user.is_superuser or req.user.user_acces == 5:
       if req.method =='POST':
@@ -144,6 +147,7 @@ def delete_user(req):
    
 @csrf_exempt
 @login_required
+@Logger_decorator
 def swap_role(req):
    if req.user.is_superuser or req.user.user_acces == 5:
       jsonBody =json.loads(req.body)
@@ -189,7 +193,7 @@ def post_aplication(req):
    if not req.user.is_authenticated:
       user = None 
    else: user = req.user
-   print(opt)
+   
    new_app_without_user = Application_from_user.objects.create(
                                                   comment = description,
                                                   data_create = datetime.now(),
@@ -208,6 +212,7 @@ def post_aplication(req):
    
 @csrf_exempt
 @login_required
+@Logger_decorator
 def get_adres(req):
    if req.user.is_superuser or req.user.user_acces > 1:
       if req.method == 'POST':
@@ -251,7 +256,8 @@ def get_inf_api(req):
            
             return JsonResponse({'response':serializers.serialize('json',[find_house]),'problem':find_house.problem}, safe=False, json_dumps_params={'ensure_ascii': False})
 @login_required
-@csrf_exempt         
+@csrf_exempt 
+@Logger_decorator        
 def make_app(req):
    
    body = json.loads(req.body)
@@ -286,6 +292,7 @@ def make_app(req):
    
 @login_required
 @csrf_exempt
+@Logger_decorator
 def change_name(req):
    if req.user.is_superuser or req.user.user_acces <= 4:
       body = req.body
@@ -305,6 +312,7 @@ def change_name(req):
 
 @login_required
 @csrf_exempt
+@Logger_decorator
 def change_password(req):
    if req.user.is_superuser or req.user.user_acces <= 4:
       
@@ -482,12 +490,16 @@ def update_application(req,pk):
       app.user = data.get('user', app.user)
       app.phone = data.get('phone', app.phone)
       app.application_status = data.get('application_status', app.application_status)
+      
+
       if not data.get('date_create') == '':
          app.Desired_date = data.get('date_create', app.Desired_date)
      
       app.pasport = data.get('pasport', app.pasport)
       app.adres = data.get('adres', app.adres)
       app.comment = data.get('comment', app.comment)
+      
+
       
       try:
          get_tarif = tarif.objects.get(Tarif_name=data.get('tariffield', app.tariffield))         
@@ -530,6 +542,10 @@ def make_new_user(req):
    
 
    
-
-
+def add_form(req):
+   print(req.POST['Tarif_name'] )
+def delete_form(req):
+   pass
+def redact_form(req):
+   pass
 

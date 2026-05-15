@@ -11,7 +11,9 @@ urlpatterns = [
     path('manager-panel/adres',views.find_adres,name='find_adres'),
     path('agent-panel/',views.employer,name='epmloyer'),
     path('manager-panel/settings/tarifs',views.tarif_settings,name='TarifSettings'),
-    path('manager-panel/settings/AllSettings',views.all_settings,name='Allsettings')
+    path('manager-panel/settings/AllSettings',views.all_settings,name='Allsettings'),
+    path('manager-panel/settings/base',views.base, name='base')
+   
     
   
 ]
