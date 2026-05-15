@@ -5,8 +5,9 @@ import hashlib
 from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
 import json
+from django.forms.models import model_to_dict
 from user.models import UserModel
-from crm.models import Application_from_user
+from crm.models import Application_from_user ,tarif
 from django.contrib.auth.hashers import make_password
 from django.contrib.auth import authenticate
 from user.models import UserModel
@@ -17,7 +18,10 @@ from datetime import datetime
 from main.models import typeproblem
 from crm.models import *
 from django.db.models import Q
-
+from django.contrib.auth import logout
+from django.shortcuts import redirect
+from datetime import datetime
+from user import password_generator
 
 @csrf_exempt
 @login_required
@@ -157,7 +161,6 @@ def swap_role(req):
       return JsonResponse({"error":'Доступ запрещен!'})
 
 @csrf_exempt
-@login_required
 def post_aplication(req):
  if req.method == 'POST':
    jsonbody= json.loads(req.body)
@@ -168,25 +171,36 @@ def post_aplication(req):
    adres = jsonbody.get('adres')
    opt =jsonbody.get('opt')
    problem = jsonbody.get('problem')
-   if problem:
+   tarif_field = jsonbody.get('tarif')
+   
+   if not (problem == None):
       try:
          get_type_problem = typeproblem.objects.get(id=problem)
       except typeproblem.DoesNotExist:
          return JsonResponse({'error':'Модель не найдена, ошибка!'})
    else:
       get_type_problem = None
-
-
-   new_app_without_user = Application_from_user.objects.create(application_status='opt3',
+   if tarif_field:
+      try:
+         get_tarif = tarif.objects.get(id=tarif_field)
+      except tarif.DoesNotExist:
+         return JsonResponse({"error":"Тариф не найден"})
+   print(get_type_problem)
+   if not req.user.is_authenticated:
+      user = None 
+   else: user = req.user
+   print(opt)
+   new_app_without_user = Application_from_user.objects.create(
                                                   comment = description,
                                                   data_create = datetime.now(),
-                                                  FromOrder = req.user,
+                                                  FromOrder = user,
                                                   user=name,
                                                   phone=phone,
                                                   adres=adres,
-                                                  tariffield = None,
+                                                  tariffield = get_tarif,
                                                   type_manager_take = opt,
                                                   problem = get_type_problem
+                                                  
                                                   
                                                   )
    new_app_without_user.save()
@@ -245,13 +259,15 @@ def make_app(req):
    name = body.get('name')
    phone = body.get('phone')
    adress = body.get('adres')
+   get_city = city.objects.get(id=adress[0])
+   full_adres =get_city.city_name + " " +adress[1:-1]
    OPTION = body.get('OPTION')
    connection_type_json = body.get('connection_type')
    try:
       conn_type = tarif.objects.get(id=connection_type_json)
    except tarif.DoesNotExist:
       return JsonResponse({'error':'Не найден тариф'}) 
-   # try:
+   print(full_adres)
    new_app_without_user = Application_from_user.objects.create(application_status='opt3',
                                                   tariffield = conn_type ,
                                                   comment = description,
@@ -259,7 +275,7 @@ def make_app(req):
                                                   FromOrder = req.user,
                                                   user=name,
                                                   phone=phone,
-                                                  adres=adress,
+                                                  adres=full_adres,
                                                   type_manager_take = OPTION,
                                                   
                                                   
@@ -267,8 +283,253 @@ def make_app(req):
                                                   )
    new_app_without_user.save()
    return JsonResponse({'response':'Заявка создана!'})
-   # except:
-   #    return JsonResponse({'error':'У вас есть незаполненые поля!'})
    
+@login_required
+@csrf_exempt
+def change_name(req):
+   if req.user.is_superuser or req.user.user_acces <= 4:
+      body = req.body
+      data = json.loads(body)
+      NewLastName = data.get('newlastName')
+      Login = data.get('login')
+      try:
+         find_user = UserModel.objects.get(id=Login)
+         find_user.user_last_name = NewLastName
+         find_user.save()
+         return JsonResponse({'response':'Имя было успешно изменено!'})
+      except UserModel.DoesNotExist:
+         
+         return JsonResponse({'error':'Пользователь не найден!'})
+  
+   else: JsonResponse({"error":'Ошибка доступа!'})
+
+@login_required
+@csrf_exempt
+def change_password(req):
+   if req.user.is_superuser or req.user.user_acces <= 4:
+      
+      body = req.body
+      print(body)
+      data = json.loads(body)
+      NewPassord = data.get('newpassword')
+      login = data.get('login')
+      
+      CodedPassword = make_password(NewPassord)
+      
+      try:
+         
+         find_user = UserModel.objects.get(id=login)
+         print(find_user)
+         find_user.password = CodedPassword
+         find_user.save()
+         return JsonResponse({'response':'Пароль был успешно изменен!'})
+      except UserModel.DoesNotExist:
+         return JsonResponse({'error':'Пользователь не найден!'})
+      
+
    
+   else:return JsonResponse({"error":'Ошибка доступа!'})
+
+
+@login_required
+@csrf_exempt
+def work_shift(req):
+   
+   user = req.user
+   statuswork = user.in_work
+   
+   if statuswork == False:
+      user.in_work = True
+      user.save()
+
+   else:
+
+      check = check_user_app(req)
+      print(check)
+      if not check:
+         return JsonResponse({'error':'У вас есть незакрытые заявки!'})
+      else: 
+         apps = Application_from_user.objects.filter(order = req.user)
+         for i in apps:
+            i.order = None
+            i.save()
+         user.in_work = False
+         user.save()
+         return JsonResponse({'status':'200'},status=200)
+   return JsonResponse({'status':'200'},status=200)
+@login_required
+@csrf_exempt
+def get_new_app(req):
+   user = req.user 
+   if check_user_app(req) == False:
+      return JsonResponse({'error':'У вас есть незакрытые заявки!'})
+   elif get_apps(req) == False:
+      out_apps(req)
+      return JsonResponse({"notfound":'Сейчас нет доступных заявок!'})
+   else:
+      out_apps(req)
+      get_apps(req)
+      user_new_apss = user.applications.all()
+      serial_apps = serializers.serialize('json',user_new_apss)
+      cooked = json.loads(serial_apps)
+      print(cooked)
+      return JsonResponse({'apps':cooked}, safe=False, json_dumps_params={'ensure_ascii': False})
+
+def check_user_app(req):
+   user = req.user
+   user_app = user.applications.all()
+   for i in user_app:
+      if i.application_status == 'opt3':
+         
+         return False
+   return True
+# Модули доступа
+# 5 - максимальный доступ к црм
+# 4 - Менеджер по сотрудникам
+# 3 - Технический работник по подключению 
+# 2 -отдел технической поддержки
+# 1 - отдел продаж 
+# 0 - доступ запрещен
+def get_apps(req):
+   print(req.user.user_acces)
+   if req.user.user_acces > 3:
+      return False
+   types_emp = {
+      2:'opt1',
+      3:'opt2',
+      1:'opt3'
+   }
+   user_app_acces =types_emp[req.user.user_acces] 
+   
+   none_applications = Application_from_user.objects.filter(order__isnull=True,application_status='opt3',type_manager_take=user_app_acces)
+    
+   if none_applications:
+         if len(none_applications) >= 2:
+            none_applications[0].order = req.user
+            none_applications[1].order = req.user
+            none_applications[0].first_owner_order == req.user
+            none_applications[1].first_owner_order == req.user
+            
+            none_applications[0].save()
+            none_applications[1].save()                    
+         else:
+            none_applications[0].order = req.user
+            none_applications[0].first_owner_order == req.user
+            none_applications[0].save()
+   else: return False
+         
+   return True
+
+def out_apps(req):
+   user = req.user
+   user_app = user.applications.all()
+   if user_app:
+      for i in user_app:
+         i.order = None
+         i.save()
+
+def logout_view(request):
+    logout(request) 
+    return redirect('/') 
+@csrf_exempt
+def find_app(req):
+   id_req  = json.loads(req.body).get('id')
+   types_emp = {
+      'opt1':2,
+      'opt2':3,
+      'opt3':1,
+      'opt4':4
+   }
+  
+   app = Application_from_user.objects.get(id=id_req)
+
+   user_app_acces = types_emp[app.type_manager_take]
+   if(not req.user.user_acces == user_app_acces ):
+      return JsonResponse({'error':'Заявка не по вашему уровню доступа!'})
+   if (not app.order == None):
+      return JsonResponse({'error':'Сейчас заявка принадлежит другому пользователю!'})
+  
+   response = model_to_dict(app)
+   response['data_create'] = app.data_create
+   response['pk'] = app.pk
+   date_create = app.data_create
+   tariff = tarif.objects.get(id = response['tariffield'])
+   response['tariffield'] = tariff.Tarif_name
+   print(response)
+   app.order = req.user
+   app.save()
+   return JsonResponse({'app':response},safe=False, json_dumps_params={'ensure_ascii': False})
+
+@login_required
+def update_application(req,pk):
+   try:
+         pk_Key =str(pk)
+         pk_Key = pk_Key.zfill(4)
+         app = Application_from_user.objects.get(id=pk_Key)
+   except Application_from_user.DoesNotExist:
+         return JsonResponse({"error":"Заявка не найдена!"}) 
+   types_emp = {
+      2:'opt1',
+      3:'opt2',
+      1:'opt3',
+      4:'opt4'
+   }
+   if (req.method == 'POST' 
+       and types_emp[req.user.user_acces] == app.type_manager_take or req.user.user_acces >=4):
+      
+      data = json.loads(req.body)
+      
+      app.user = data.get('user', app.user)
+      app.phone = data.get('phone', app.phone)
+      app.application_status = data.get('application_status', app.application_status)
+      if not data.get('date_create') == '':
+         app.Desired_date = data.get('date_create', app.Desired_date)
+     
+      app.pasport = data.get('pasport', app.pasport)
+      app.adres = data.get('adres', app.adres)
+      app.comment = data.get('comment', app.comment)
+      
+      try:
+         get_tarif = tarif.objects.get(Tarif_name=data.get('tariffield', app.tariffield))         
+         app.tariffield = get_tarif
+      except tarif.DoesNotExist:
+         return JsonResponse({'error':'Тариф не найден'})
+      app.save()
+      return JsonResponse({'status':'200'})
+
+@login_required
+@csrf_exempt
+def make_new_user(req):
+   idapp = json.loads(req.body).get('id')
+   app = Application_from_user.objects.get(id=idapp)
+   password = password_generator.password_generator()
+   
+   new_password=make_password(password)
+   print(app.user)
+   login = password_generator.login_generator(app.user)
+   print(password)
+   print(login)
+   try:
+      tariff = tarif.objects.get(Tarif_name=app.tariffield)
+   except tarif.DoesNotExist:
+      return JsonResponse({'error':'Тариф не найден'})
+   try:
+           find_user = UserModel.objects.get(username=login)
+           return JsonResponse({'error':f'Пользователь с именем {login} уже существует'})
+   except:
+            app.is_active = False
+            app.save()
+            New_user = UserModel.objects.create(address=app.adres,                      
+      password=new_password,username=login,
+      paper_data=app.pasport,
+      balance=0,Date_of_last_write_off=datetime.now(),
+      user_tarif=tariff,
+      numberphone=app.phone,user_last_name=app.user)
+            New_user.save()
+   return JsonResponse({'status':'200'})
+   
+
+   
+
+
 

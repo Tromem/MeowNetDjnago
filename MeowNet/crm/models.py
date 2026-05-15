@@ -10,6 +10,7 @@ class Application_from_user(models.Model):
     OPTION_1 = 'opt1'
     OPTION_2 = 'opt2'
     OPTION_3 = 'opt3'
+    OPTION_4 = 'opt4'
     
     OPTION_1_status = 'opt1'
     OPTION_2_status = 'opt2'
@@ -22,6 +23,7 @@ class Application_from_user(models.Model):
         (OPTION_1, 'Техническая поддержка'),
         (OPTION_2, 'Монтажник'),
         (OPTION_3, 'Продажи'),
+        (OPTION_4,'Менеджер')
     ]
 
     MY_CHOICES_status = [
@@ -39,15 +41,18 @@ class Application_from_user(models.Model):
     application_status = models.CharField(choices=MY_CHOICES_status,max_length=50,default=OPTION_3_status)
     comment = models.TextField( null=True, blank=True)
     data_create = models.DateTimeField(auto_now_add=False, auto_now=True ,verbose_name="Когда создали заявку")
-    FromOrder = models.ForeignKey('user.UserModel', on_delete=models.CASCADE, null=True, blank=True ,verbose_name="Модель от кого пришел")
+    FromOrder = models.ForeignKey('user.UserModel', on_delete=models.SET_NULL, null=True, blank=True ,verbose_name="Модель от кого пришел")
     user = models.CharField(null=True, blank=True, max_length=50, verbose_name='Фио если нет модели')
     phone = models.CharField(null=True, blank=True, max_length=15, verbose_name="Номер если нет модели")
     adres = models.CharField(null=True, blank=True, max_length=100, verbose_name='Адрес без модели')
-    order = models.ForeignKey('user.UserModel', on_delete=models.CASCADE, verbose_name='Кому заказ принадлежит', related_name='applications' ,null=True, blank=True)
-    tariffield = models.ForeignKey(tarif,on_delete=models.CASCADE,verbose_name='Выбраный тариф',null=True,blank=True)
+    order = models.ForeignKey('user.UserModel', on_delete=models.SET_NULL, verbose_name='Кому заказ принадлежит', related_name='applications' ,null=True, blank=True)
+    first_owner_order = models.ForeignKey('user.UserModel', on_delete=models.SET_NULL, verbose_name='Кто первый взял заявку', related_name='first_applications' ,null=True, blank=True)
+    tariffield = models.ForeignKey(tarif,on_delete=models.SET_NULL,verbose_name='Выбраный тариф',null=True,blank=True)
     type_manager_take = models.CharField(max_length=60,choices=MY_CHOICES_manager,default=OPTION_3)
     pasport = models.CharField(max_length=10,null=True, blank=True)
     Desired_date = models.DateTimeField(null=True, blank=True, verbose_name='Желаемая дата подключения')
+    is_active = models.BooleanField(default=True)
+    problem = models.ForeignKey('main.typeproblem',null=True,blank=True,on_delete=models.CASCADE)
     
 class city(models.Model):
     city_name = models.CharField(max_length=50)

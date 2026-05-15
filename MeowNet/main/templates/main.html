@@ -14,12 +14,6 @@
 </head>
 <body>
     <div>
-      <script>
-      document.addEventListener('dragstart', function(event) {
-        if (event.target.tagName === 'IMG') {
-            event.preventDefault();
-  }
-});</script>
         
 
     </div>
@@ -37,12 +31,10 @@
         </div>
         {%block bar%}
         <div class="maininf"><div class="techblocks">
-            <div class="text">Город</div>
+            
         </div>
         <div>
-            <div class="techblocks">
-                <div class="text">     Техническая возможность     </div>
-            </div>
+            
         </div>
 
         </div>
@@ -53,7 +45,7 @@
             {%else%}
                 <div class="login-account"><a href="/user/auth">Войти | Зарегестрироваться </a></div>
             {%endif%}
-            <div class="support"><div class="text">Техническая поддержка</div></div>
+            
         </div>
         
         {%endblock%}
@@ -72,3 +64,9 @@
 
 </body>
 </html>
+      <script>
+      document.addEventListener('dragstart', function(event) {
+        if (event.target.tagName === 'IMG') {
+            event.preventDefault();
+  }
+});</script>

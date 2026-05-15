@@ -1,162 +1,120 @@
-{%extends 'main.html'%}
-{%load static %}
-{%block link%} 
-    <link rel="stylesheet" href="{% static 'css/support.css' %}">
-    <link rel="stylesheet" href="{% static 'css/order.css'%}">
-    <link rel="stylesheet" href="{% static 'css/index.css'%}">
-    <link rel="stylesheet" href="{% static 'css/cards.css'%}">
-{%endblock%}
-{%block title%} Гланая страница {%endblock%}
-{%block content%}
-    
-       
-        <div class="backgroundimagecat"><img src="static/img/backgroundcat.png" alt=""></div>
-        <div class="tarif">
-            <div class="parent-decor-text-tarif">
-                 <div class="decor-text-tarif">Тарифы</div>
-            </div>
-            <div class="tarifbuttons">
-                <div class="internetbutton"><div class="text-button">Интернет</div></div>
-                <div class="tvbutton"><div class="text-button">Телевидение</div></div>
-            </div>
-            
-            <div class="cards-container">
-                
-                {%for i in tarif%}
+{% extends 'main.html' %}
+{% load static %}
 
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/cards.css' %}">
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
 
-                <div class="card">
+{% block title %}Главная страница{% endblock %}
 
-                    <div class="tarif-type"><div class="tarif-type-text">Интернет</div></div>
-                    <div>
-                        <div class="tarif-name"><div class="tarif-name-text">{{i.Tarif_name}}</div></div>
-                        
-                        <hr>
-                    </div>
-                    
-                    <div class="tarif-speed-word">
-                        <img src="{%static 'img/Cpu.png'%}" alt="">
-                        <div class="tarif-speed-word-text">Высокоскоростной интернет </div>
-                     </div>
-                    <hr>
-                    <div class="tarif-inf">
-                       
-                        <div class="prise"> <div class="prise-text">{{i.price}}руб</div> </div>
-                        <div class="speed"> <div class="speed-text">{{i.speed}}Мбит/c</div></div>
-                       
-                    </div>
-                    
-                    <div class="button-buy"><div class="button-buy-text">Купить</div></div>
+{% block content %}
+
+<!-- Модальное окно для покупки -->
+<div id="buy-modal" class="modal">
+    <div class="modal-content" id="modal-content">
+        <span id="modal-close" class="modal-close">&times;</span>
+
+        <!-- Карточка тарифа внутри модального окна -->
+        <div class="modal-card">
+            <header class="modal-card-header">
+                <span class="modal-card-type"></span>
+                <h3 class="modal-card-name"></h3>
+            </header>
+            <div class="modal-card-content">
+                <div class="modal-card-speed">
+                    <img src="{% static 'img/Cpu.png' %}" alt="Скорость">
+                    <span class="modal-card-speed-text"></span>
                 </div>
-                {%endfor%}
-                {%for i in actions%}
-                {%if i.in_archive != True%}
-                <div class="card">
-                     
-                    <div class="tarif-type"><div class="tarif-type-text">Интернет</div></div>
-                    <div>
-                        <div class="tarif-name"><div class="tarif-name-text">{{i.Tarif_name}}</div></div>
-                        
-                        <hr>
+                <div class="modal-card-price"></div>
+            </div>
+        </div>
+
+        <!-- Форма покупки -->
+        <div id="buy-form" class="modal-form">
+            <label for="user-name">Ваше имя:</label>
+            <input type="text" id="user-name" name="user-name" required placeholder="Введите имя">
+
+            <label for="user-phone">Номер телефона:</label>
+            <input type="text" id="user-phone" name="user-phone" required placeholder="Введите номер">
+            <label for="Adres-user">Адрес</label>
+            <input type="text" id="Adres-user" name="Adres-user" required placeholder="Введите адрес">
+
+
+            <button type="submit" class="modal-buy-btn" id="modal-buy-btn"  >Подтвердить</button>
+        </div>
+    </div>
+</div>
+
+<section class="tarif-section">
+    <h1 class="tarif-title">Тарифы</h1>
+
+    <!-- Контейнер карточек и лап -->
+    <div class="cards-wrapper-container">
+        <div class="cards-wrapper">
+            {% for t in tarif %}
+            <article class="card filter-internet"> 
+                <header class="card-header">
+                    <span class="card-type">Интернет</span>
+                    <h3 class="card-name">{{ t.Tarif_name }}</h3>
+                </header>
+                <div class="card-content">
+                    <div class="card-speed">
+                        <img src="{% static 'img/Cpu.png' %}" alt="Скорость">
+                        <span>{{ t.speed }} Мбит/с</span>
                     </div>
-                    
-                    <div class="tarif-speed-word">
-                        <img src="{%static 'img/Cpu.png'%}" alt="">
-                        <div class="tarif-speed-word-text">{{i.typetarif.typetarif}} </div>
-                     </div>
-                    <hr>
-                    <div class="tarif-inf">
-                       
-                        <div class="prise"> <div class="prise-text">{{i.price}}руб</div> </div>
-                        <div class="speed"> <div class="speed-text">{{i.speed}}Мбит/c</div></div>
-                       
-                    </div>
-                   
-                    <div class="button-buy"><div class="button-buy-text">Купить</div></div>
+                    <div class="card-price">{{ t.price }} руб</div>
                 </div>
-                {%endif%}
-                {%endfor%}
-               
-                
-            </div>
-            <img src="{%static 'img/lapa2.png' %}" class="lapa2">
-            <img src="{%static 'img/lapa1.png'%}"  class="lapa1" >
-            <div class="arrow">
-                <img src="{%static 'img/arrow.png'%}"  id="left-arrow">
-                <img src="{%static 'img/arrow.png'%}"  id="right-arrow"></div>
+                <footer>
+                    <button class="card-buy-btn"value="{{t.id}}">Купить</button>
+                </footer>
+            </article>
+            {% endfor %}
 
-            <div class="button-tarif">
-
-            </div>
+            {% for a in actions %}
+            {% if not a.in_archive %}
+            <article class="card filter-{{ a.typetarif.typetarif|lower }}"> 
+                <header class="card-header">
+                    <span class="card-type">{{ a.typetarif.typetarif }}</span>
+                    <h3 class="card-name">{{ a.Tarif_name }}</h3>
+                </header>
+                <div class="card-content">
+                    <div class="card-speed">
+                        <img src="{% static 'img/Cpu.png' %}" alt="Скорость">
+                        <span>{{ a.speed }} Мбит/с</span>
+                    </div>
+                    {%if a.tv_chanels > 60%}
+                    <div class="card-speed">
+                        <img src="{% static 'img/Cpu.png' %}" alt="Скорость">
+                        <span>{{ a.tv_chanels }} Каналов</span>
+                    </div>
+                    {%endif%}
+                    <div class="card-price">{{ a.price }} руб</div>
+                </div>
+                <footer>
+                    <button class="card-buy-btn" value="{{a.id}}">Купить</button>
+                </footer>
+            </article>
+            {% endif %}
+            {% endfor %}
         </div>
-               
-    <div class="description">
-       <div class="text-content-description">
-        MeowNet — современный и надежный интернет-провайдер, предлагающий высокоскоростное и стабильное подключение к сети для частных пользователей и бизнеса. Мы стремимся обеспечить наших клиентов качественным интернетом с минимальными задержками и максимальной скоростью, используя передовые технологии и индивидуальный подход.
-        Наши преимущества:
-    
-        🟢Широкий выбор тарифных планов для дома и офиса
-        🟢Высокая скорость передачи данных и стабильное соединение
-        🟢Круглосуточная техническая поддержка
-        🟢Простое подключение и удобное управление услугами через личный кабинет
-        🟢Конкурентные цены и прозрачные условия
-        
-        Миссия MeowNet — сделать интернет доступным и комфортным для каждого, обеспечивая надежную связь и качественный сервис.
 
-       </div> 
+        <!-- Лапы -->
+        <img src="{% static 'img/lapa1.png' %}" class="lapa lapa1">
+        <img src="{% static 'img/lapa2.png' %}" class="lapa lapa2">
     </div>
-   
-    <!-- <div class="support-window">
-        <div class="bar-support">
-            <div class="text-bar-support">
-                Техническая поддержка
-            </div>
-        </div>
-        <div class="inputs-support">
-            <div class="text-support-content"> ФИО </div>
-            <input type="text" id="FirstName-support">
-            <div class="text-support-content"> Номер телефона</div>
-            <input type="text" id="Numberphone-support">
-            <div class="text-support-content">Описание проблемы</div>
-            <textarea id="Report-support"></textarea>
-        </div>
-        <div class="images-and-buttons">
-            <label for="image-hidden-1" id="image-1">Добавить изображение</label><label for="image-hidden-2" id="image-2">Добавить изображение</label>
-            <input type="file" id="image-hidden-1" ><input type="file" id="image-hidden-2" >
-            <button id="close">Отменить</button><button id="submit">Отправить</button>
-        </div>
-    </div> -->
-    
+</section>
 
-   <div class="order">
-    <div class="bar-order"> <div class="text-bar-order">Заказать подключение</div></div>
-    <div class="container-order">
-        <div class="input-blocks-order">
-            <div class="text-blocks-order-inf">Город</div>
-            <input type="text" id="City">
-            <div class="text-blocks-order-inf">Адрес</div>
-            <input type="text" id="Adres">
-            <div class="text-blocks-order-inf">ФИО</div>
-            <input type="text" id="FirstName">
-            <div class="text-blocks-order-inf">Номер телефона</div>
-            <input type="text" id="NumberOfPhoneUser">
-        </div>
-        
-        <div class="order-inf-tarif">
-            <div class="order-tarif-bar"><div class="text-order-tarif-bar">Название тарифа</div></div>
-            
-            <div class="order-name-tarif"><div class="text-order-name-tarif">
-                
-                <div class="text-order-name-tarif-pos">Тариф бадабумчик</div></div>
-            </div>
-            
-            <div class="order-type-tarif"><img src="{%static 'img/Cpu.png'%}"> <div class="text-inif-tarif">Высокоскоростной интернет</div></div>
-        </div>
-        
-    </div>
-        <button class="order-button"><div class="button-text">Подключиться</div></button>
-   </div>
-
-   
-  
-{%endblock%}
+<section class="description-section">
+    <p>MeowNet — современный и надежный интернет-провайдер, предлагающий высокоскоростное подключение для дома и бизнеса. Наши преимущества:</p>
+    <ul>
+        <li>🟢 Широкий выбор тарифов для дома и офиса</li>
+        <li>🟢 Высокая скорость передачи данных и стабильное соединение</li>
+        <li>🟢 Круглосуточная техническая поддержка</li>
+        <li>🟢 Простое подключение и управление услугами через личный кабинет</li>
+        <li>🟢 Конкурентные цены и прозрачные условия</li>
+    </ul>
+    <p>Миссия MeowNet — сделать интернет доступным и комфортным для каждого, обеспечивая надежную связь и качественный сервис.</p>
+</section>
+<script src="{%static "js/modal.js"%}"></script>
+{% endblock %}

@@ -21,9 +21,9 @@ from . import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('Meowcrm/',include('crm.urls')),
-    path('',include('user.urls')),
-    path('main-legacy',include('main.urls')),
+    # path('',include('crm.urls')),
+    path('Meowcrm/',include('user.urls')),
+    path('',include('main.urls')),
     path('API/',include('API.urls'))
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

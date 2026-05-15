@@ -5,6 +5,9 @@ html{
   position: relative;
  
 }
+.content{
+  display: flex;
+}
 .admin-panel{
   display: flex;
 }
@@ -69,9 +72,11 @@ button{
 .settings-button{
   background-image: url(../img/settings.png);
 }
-
+#exit-button{
+  background-image: url(../img/icomoon-free_exit.png);
+}
 #testing-button{
-  background-image: url(../img/qlementine-icons_test-16.png);
+  background-image: url(../img/material-symbols_work.png);
 }
 .icons button{
   width: 40px;

@@ -3,10 +3,11 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate , login ,logout
 from django.views.decorators.csrf import csrf_exempt
 from .models import UserModel
+from crm.models import Application_from_user
 from main.models import typeproblem
 from crm.models import city, adres ,Home 
 from main.models import tarif
-
+import datetime  
 
 
 # Модули доступа
@@ -39,15 +40,22 @@ def auth(req):
 def Profile(req):
    if req.user.is_superuser or req.user.user_acces >=4:
       return redirect('managerpanel')
+   elif req.user.user_acces > 0 and req.user.user_acces < 4:
+      return redirect('epmloyer')
+
+   if not req.user.Date_of_new_write_off == None:
+      if req.user.Date_of_new_write_off >= datetime.date.today():    
+         user = req.user
+         if user.balance >= user.user_tarif.price:
+            user.balance = user.balance - user.user_tarif.price
+            user.user_tarif_balance = True
+            user.save()
+         else:
+            user.user_tarif_balance = False
+            user.save()
+      
    return render(req,'Profile.html')
 
-def Support(req):
-
-   return render(req,'Support.html')
-
-def Sales(req):
-    
-   return render(req,'Salesdepartment.html')
 
 
 @login_required
@@ -62,19 +70,19 @@ def Admin(req):
 
 
 @login_required
-def testing_room(req):
+def settings_emp(req):
    Users = UserModel.objects.all()
    data = {'employers':Users}
   
-   if ( req.user.user_acces != 5):
+   if ( req.user.user_acces == 5 or req.user.is_superuser):
       if(req.user.is_superuser == True ):
          
-         return render(req,'testing.html',data)
+         return render(req,'empsettings.html',data)
 
       return redirect('main')
    
 
-   return render(req,'testing.html',data)
+   return render(req,'empsettings.html',data)
 
 
 @login_required
@@ -109,7 +117,19 @@ def find_adres(req):
 def employer(req):
       user = req.user
       applications = user.applications.all()
+      AppEmp = Application_from_user.objects.filter(order=None,application_status='opt5',is_active=True)
       data = {
-         'app':applications
+         'app':applications,
+         'AdmApp':AppEmp
       }
       return render(req,'workerPanel.html',data)
+
+def tarif_settings(req):
+   return render(req,'tafif_settings.html')
+def all_settings(req):
+   return render(req,'allsettings.html')
+@login_required
+def services(req):
+   return render(req,'servieces.html')
+def settingsprofile(req):
+   return render(req,'settingsprofile.html')

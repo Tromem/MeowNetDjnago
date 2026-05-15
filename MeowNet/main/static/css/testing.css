@@ -1,5 +1,34 @@
 
-    
+    .changepassword {
+    text-align: center;
+    width: 350px;
+    height: auto;
+    text-align: left;
+    border-radius: 16px;
+    margin: 20px;
+}
+
+.changepassword .data input,
+.changepassword .data select {
+    width: 250px;
+    height: 20px;
+    margin-top: 20px;
+}
+
+.changepassword select {
+    width: 250px;
+    height: 50px;
+}
+
+.changepassword button {
+    background-color: rgb(56, 166, 209); /* другой цвет, чтобы выделять */
+    color: white;
+    border-radius: 8px;
+    width: 150px;
+    height: 30px;
+    margin-top: 15px;
+}
+
 .makeuser ,.deleteuser{
     text-align: center;
     width:  350px;
@@ -16,12 +45,41 @@
 
     
 }
+.edituser {
+    text-align: center;
+    width: 350px;
+    height: auto;
+    text-align: left;
+    border-radius: 16px;
+    margin: 20px;
+}
+
+.edituser .data input,
+.edituser .data select {
+    width: 250px;
+    height: 20px;
+    margin-top: 20px;
+}
+
+.edituser select {
+    width: 250px;
+    height: 50px;
+}
+
+.edituser button {
+    background-color: rgb(56, 166, 209); /* зеленый для изменения данных */
+    color: white;
+    border-radius: 8px;
+    width: 150px;
+    height: 30px;
+    margin-top: 15px;
+}
 .deleteuser select{
  width: 250px;
 height: 50px;   
 }
 .makeuser button, .deleteuser button{
-    background-color: rgb(166, 56, 209);
+    background-color:  rgb(56, 166, 209);
     color: white;
     border-radius: 8px;
     width: 150px;

@@ -16,9 +16,9 @@
     <div class="main-container">
         
         <div class="user-bar">
-            <div class="Main-inf"><button>Лицевой счет</button></div>
-            <div class="services"><button>Услуги</button></div>
-            <div class="changing-profile"><button>Изменение профиля</button></div>
+            <a href="{%url 'profile'%}"><div class="Main-inf"><button>Лицевой счет</button></div></a>
+            <a href="{%url 'services'%}"><div class="services"><button>Услуги</button></div></a>
+           <a href="{%url 'settings'%}"> <div class="changing-profile"><button>Изменение профиля</button></div></a>
             
         </div>
         <div>
@@ -35,9 +35,11 @@
             </div>    
                         {%if user.user_tarif%}
                         <div class="otherinf">
-                            <div class="type-pay">Следующее списание:<inf>11.11.2025</inf></div>
+                            <div class="type-pay">Следующее списание:<inf>{{user.Date_of_new_write_off}}</inf></div>
                             <div class="auto-pay">Сумма платежа:{{user.user_tarif.price}}руб.<inf></inf></div>
-                            <button>Управлять счетом</button>
+                            
+                            <a href="{%url 'logout'%}"><button id="exit-button">Выйти из профиля</button></a> </button>
+                            <button>Пополнить счет</button>
                         </div>
                     </div>
                     <div class="tarif-name">
@@ -50,7 +52,7 @@
                             </div>
                         </div>
                         <div class="container-more">
-                            <div class="status-tarif">Статус услуги:<inf>Активная</inf></div>
+                            <div class="status-tarif">Статус услуги:<inf id="tarif-act">{{user.user_tarif_active}}</inf></div>
                             <div class="status">Тариф:<inf>{{user.user_tarif.Tarif_name}}  {{user.user_tarif.speed}}Мбит/c</inf></div>
                             <div class="bonuses">Скидочный период: Отсуствует</div>
                             <div class="button">
@@ -67,6 +69,7 @@
         
     </div>    
 
+    <script src="{%static 'js/check_tar.js'%}"></script>
 
     {%endblock%}    
 </body>

@@ -9,6 +9,14 @@ urlpatterns = [
     path('API-POST-Application/',views.post_aplication),
     path('API-GET-ADRES/',views.get_adres),
     path('API-GET-TECH-INF/',views.get_inf_api),
-    path('API-MAKE-APP-FROM-SELLER/',views.make_app)
+    path('API-MAKE-APP-FROM-SELLER/',views.make_app),
+    path('API-Change-Name/',views.change_name),
+    path('API-Change-Password-worker/',views.change_password),
+    path('API-Change-work-shift/',views.work_shift),
+    path('API-GET-NEW-APP/',views.get_new_app),
+    path('API-LOGOUT/',views.logout_view,name='logout'),
+    path('API-FIND-APP/',views.find_app),
+    path('API-UPDATE-APLICATION/<int:pk>/',views.update_application),
+    path('API-MakeUser/',views.make_new_user)
    
 ]

@@ -37,10 +37,7 @@
                    <a href="{% url 'users-stat'%}"> <button class="users-in-button"> </button></a>
 
                </div>
-                <div class="icon-conteiner">
-                    <button class="stats-button">
-
-                </button></div>
+                
                 <div class="icon-conteiner">
                     <button class="new-users-button">
 
@@ -50,27 +47,29 @@
 
                 </button></div>
                 <div class="icon-conteiner">
-                    <a href="{%url 'test'%}"><button id="testing-button"></button></a> </button></div>
+                    <a href="{%url 'epmloyer'%}"><button id="testing-button"></button></a> </button></div>
+                <div class="icon-conteiner">
+                    <a href="{%url 'logout'%}"><button id="exit-button"></button></a> </button></div>
 
             </div>
             <div id="settings" class="settings">
                 <div class="elements-in-settings">
                     <div>
-                        <button class="general">Общие</button>
+                       <a href="{%url 'Allsettings'%}"> <button class="general">Общие</button></a> 
                     </div>
                     <div>
-                        <button class="tarifs">Тарифы</button>
+                          <a href="{%url 'TarifSettings'%}"><button class="tarifs">Тарифы</button></a> 
                     </div>
                     <div>
-                        <button class="emploers">Сотрудники</button>
+                        <a href="{%url 'emp'%}"><button id="employers">Сотрудники</button></a> 
+
                     </div>
                     <div>
                         <button class="data-for-employers">База знаний</button>
                     </div>
                     
-                    <div>
-                        <button class="integrations">Интеграции</button>
-                    </div>
+                    
+
                     
                 </div>
             </div>

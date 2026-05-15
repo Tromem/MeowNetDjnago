@@ -1,136 +1,292 @@
-.content{
-    
-    align-items: center;
-    justify-content: center;
+/* ==========================
+   Основные контейнеры
+   ========================== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    background: #f5f5f5;
+    color: #333;
+}
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
-}
-.container-main{
-    display: inline-block
-    
-}
-.backgroundimagecat{
-    left: 9%;
-    position: relative;
-    pointer-events: none;
-    z-index: 1;
-    top:100px ;
-    filter: blur(5px);
-    border-radius: 5px;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
 }
 
-.tarif{
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+/* Содержимое окна */
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px 30px;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
     position: relative;
-    z-index: 5;
-    margin-bottom: 10%;
-    width: 1310px;
-    height: 722px;
-    top: -400px;
-    left: 15%;
-    background-color: rgb(255, 255, 255);
-    border-radius: 4px;
-    overflow: hidden;
+    animation: fadeIn 0.3s ease-out;
 }
-.description{
-    position: relative;
-    left: 93px;
-    font-size: 26px;
-    text-align: left;
-    
-    width:1734px;
-    height: 540px;
-    border-radius: 5px;
-    overflow: hidden;
-    box-sizing: border-box;
+
+/* Закрывающий крестик */
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Карточка внутри модального окна */
+.modal-card {
+    background: linear-gradient(145deg, #d47cd6, #e98fe9);
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+    color: #fff;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.modal-card-header {
+    text-align: center;
     margin-bottom: 10px;
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
-    top: -15px;
-    white-space: pre-line;
-    
-    
-    
 }
-.text-content-description{
-    max-width: 1700px;
-    position: relative;
-    top: 15px;
-    left: 25px;
-    font-weight: 15;
-    
+
+.modal-card-type {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
 }
-.parent-decor-text-tarif{
-    font-size: 72px;
-    font-family:'RubikMono';
-    padding-top: 15px;
+
+.modal-card-name {
+    font-size: 1.5rem;
+    font-weight: 700;
 }
-.decor-text-tarif{
-    user-select: none;
-    margin-top: 36px;
-    text-align: center;
-}
-.parent-decor-text-tarif{
-    
-    width: 1310px;
-    height: 158px;
-}
-.tarifbuttons{
-    position: relative;
+
+.modal-card-content {
     display: flex;
-    width: 305px;
-    height: 78px;
-    left: 520px;
-    text-align: center;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.internetbutton , .tvbutton{
-    text-align: center;
-    user-select: none;
-    height: 48px;
-    font-size: 20px;
-    background-color: rgb(250, 250, 250);
-    border-radius: 3px;
-    margin-left: 5px;
-    width: 140px;
+.modal-card-speed {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+}
+
+.modal-card-speed img {
+    width: 24px;
+    height: 24px;
+}
+
+.modal-card-price {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* Форма внутри модального окна */
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.modal-form label {
+    font-weight: 600;
+}
+
+.modal-form input {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.modal-form input:focus {
+    border-color: #ff9800;
+    box-shadow: 0 0 8px rgba(255,152,0,0.5);
+}
+
+/* Кнопка подтверждения */
+.modal-buy-btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #ff9800;
+    border: none;
+    border-radius: 12px;
     cursor: pointer;
+    transition: background 0.3s;
 }
 
-.internetbutton:hover , .tvbutton:hover{
-    
-    background-color:rgba(217, 217, 217, 0.84);
-    
+.modal-buy-btn:hover {
+    background-color: #ffb300;
 }
 
-.internetbutton .text-button , .tvbutton .text-button{
+/* Анимация появления */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.tarif-section {
+    max-width: 1200px;
+    overflow: hidden;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
     position: relative;
-    top:10px;
-    
 }
 
-.lapa2{
+.tarif-title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+/* ==========================
+   Кнопки фильтра тарифов
+   ========================== */
+.tarif-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.tarif-btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: #e0e0e0;
+    color: #333;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.tarif-btn.active,
+.tarif-btn:hover {
+    background: #ff9800;
+    color: #fff;
+}
+
+/* ==========================
+   Лапы и стрелки
+   ========================== */
+.lapa {
     position: absolute;
     z-index: 1;
-    top:380px;
-}
-.lapa1{
-    position: absolute;
-    top: -30px;
-    z-index: 1;
-    left: 950px;
+    opacity: 0;
 }
 
-
-#left-arrow{
-    position: absolute;
-    top: 361px;
-    cursor: pointer;
-    z-index: 20;
+.lapa1 {
+    top: -50px;
+    right: 0;
+    animation: slideLapa1 1s forwards;
 }
-#right-arrow{
+
+.lapa2 {
+    bottom: -50px;
+    left: 0;
+    animation: slideLapa2 1s forwards;
+}
+
+.arrow-controls {
     position: absolute;
-    top: 361px;
-    left:1250px;
-    transform: rotate(180deg);
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.arrow {
+    width: 40px;
+    height: 40px;
     cursor: pointer;
-    z-index: 20;
+    pointer-events: auto;
+}
+
+/* ==========================
+   Анимации
+   ========================== */
+@keyframes slideLapa1 {
+    0% { transform: translateY(-100px); opacity: 0; }
+    100% { transform: translateY(0); opacity:1; }
+}
+
+@keyframes slideLapa2 {
+    0% { transform: translateY(100px); opacity: 0; }
+    100% { transform: translateY(0); opacity:1; }
+}
+
+/* ==========================
+   Секция описания
+   ========================== */
+.description-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    color: #333;
+}
+
+.description-section p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.description-section ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.description-section li {
+    margin-bottom: 10px;
+}
+
+/* ==========================
+   Адаптив остального контента
+   ========================== */
+@media (max-width: 1024px) {
+    .tarif-section {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .tarif-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tarif-title {
+        font-size: 2rem;
+    }
+    .description-section p,
+    .description-section li {
+        font-size: 0.9rem;
+    }
 }

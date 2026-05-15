@@ -16,6 +16,17 @@ html {
     font-family: 'RuslanDisplay';
     src: url('RuslanDisplay.ttf' ) format('truetype');
 }
+
+@keyframes borders{
+    0%{
+        border-bottom: 0px solid white;
+    }
+    
+    100%{
+        border-bottom: 5px solid white;
+    }
+
+}
 img{
     user-select: none;
     
@@ -35,7 +46,17 @@ a{
     text-decoration: none;
     color: white;
 }
-
+.bar button{
+    color: white;
+    
+    border: none;
+    font-family: 'RuslanDisplay';
+    font-size: 22px;
+   
+}
+button{
+    cursor: pointer;
+}
 .bar{
     user-select: none;
     z-index: 100;
@@ -54,10 +75,15 @@ a{
     text-align: center;
     display: flex;
     left: 51px;
-    top: 19px;
+    top: 10px;
     height: 84px;
     width: 353px;
     background-color: rgba(135, 62, 164, 0) ;
+}
+
+.bglogo img{
+    position: relative;
+    left: 28px;
 }
 .Meow{
     text-decoration: none;
@@ -99,7 +125,7 @@ a{
     display: inline-block;
     padding-bottom: 2px;
     color: white;
-    font-family: 'RuslanDisplay';
+   
 }
 .phone{
     user-select:text;
@@ -146,9 +172,10 @@ a{
     margin-left: 150px;
 }
 
-.text:hover{
-    
-    border-bottom: 2px solid white;
+.bar button:hover{
+
+   
+   
     
 }   
 .number{min-width: 576px;}
@@ -165,6 +192,7 @@ a{
     text-align: center;
     border-bottom: 2px solid rgba(255, 255, 255, 0);
 }
-.login-account:hover{
-    border-bottom: 2px solid white;
+.login-account:hover a{
+    border-bottom: 3px solid white;
+    animation: borders 0.1s ease-in;
 }
