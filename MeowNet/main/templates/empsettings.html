@@ -30,9 +30,11 @@
             <select name="changepassword-select" id="changepassword-select" size="6">
                 {% for i in employers %}
                     {% if i.username != user.username %}
+                    {%if i.user_acces > 0%}
                         <option value="{{ i.id }}">
                             {% if i.username %}{{ i.username }}{% else %}Без имени{% endif %}
                         </option>
+                        {%endif%}
                     {% endif %}
                 {% endfor %}
             </select>
@@ -79,9 +81,11 @@
                             <select name="deleteuser-select" id="deleteuser-slect" size="12">
                                  {%for i in  employers%}
                                     {%if i.username != user.username%}
+                                    {%if i.user_acces > 0%}
                                  <option value="{{i.id}}" >
                                     {%if i.username%}{{i.username}}{%else%}Без имени{%endif%}
                                 </option>
+                                 {%endif%}
                                 {%endif%}
                                  {%endfor%}
                             </select>
@@ -100,9 +104,11 @@
             <select name="edituser-select" id="edituser-select" size="6">
                 {% for i in employers %}
                     {% if i.username != user.username %}
-                        <option value="{{ i.id }}">
+                       {%if i.user_acces > 0%}
+                    <option value="{{ i.id }}">
                             {% if i.username %}{{ i.user_last_name }}{% else %}Без имени{% endif %}
                         </option>
+                         {%endif%}
                     {% endif %}
                 {% endfor %}
             </select>

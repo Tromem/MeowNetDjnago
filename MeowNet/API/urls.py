@@ -18,6 +18,7 @@ urlpatterns = [
     path('API-FIND-APP/',views.find_app),
     path('API-UPDATE-APLICATION/<int:pk>/',views.update_application),
     path('API-MakeUser/',views.make_new_user),
-    path('API-ADD-tarif/',views.add_form)
+    path('API-TARIF-WORKER/',views.del_change_add_form),
+    
    
 ]

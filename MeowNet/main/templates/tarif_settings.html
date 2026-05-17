@@ -16,74 +16,75 @@
     <!-- Добавление нового тарифа -->
     <div class="make-tarif">
         <h3>Добавить новый тариф</h3>
-        <form method="POST" action=>
+        
             {% csrf_token %}
             <div class="data">
-                <input type="text" name="Tarif_name" placeholder="Название тарифа" required>
-                <input type="number" name="price" placeholder="Цена (руб)" required>
-                <input type="number" name="price_to_connect" placeholder="Цена подключения" required>
-                <input type="number" name="discounts" placeholder="Скидка (%)">
-                <input type="date" name="time_to_end_discount" placeholder="Дата окончания акции">
-                <input type="number" name="Mounts_discount" placeholder="Длительность акции (дн)">
-                <input type="number" name="speed" placeholder="Скорость (Мбит/с)" required>
-                <input type="number" name="tv_chanels" placeholder="Количество каналов">
-                <select name="typetarif" required>
+                <input id="add-nametarif" type="text" name="Tarif_name" placeholder="Название тарифа" required>
+                <input id="add-price" type="number" name="price" placeholder="Цена (руб)" required>
+                <input id="add-price_to_connect" type="number" name="price_to_connect" placeholder="Цена подключения" required>
+                <input id="add-discounts" type="number" name="discounts" placeholder="Скидка (%)">
+                <input id="add-time_to_end_discount" type="date" name="time_to_end_discount" placeholder="Дата окончания акции">
+                <input id="add-Mounts_discount" type="number" name="Mounts_discount" placeholder="Длительность акции (дн)">
+                <input id="add-speed" type="number" name="speed" placeholder="Скорость (Мбит/с)" required>
+                <input id="add-tv_chanels" type="number" name="tv_chanels" placeholder="Количество каналов">
+                <select id="add-typetarif" name="typetarif" required>
                     {% for type in type %}
                         <option value="{{ type.id }}">{{ type.typetarif }}</option>
                     {% endfor %}
                 </select>
             </div>
             <div class="button-container">
-                <button >Добавить тариф</button>
+                <button  id="addbuttontarif">Добавить тариф</button>
             </div>
-        </form>
+        
     </div>
 
     <!-- Редактирование существующего тарифа -->
     <div class="edit-tarif">
         <h3>Редактировать тариф</h3>
-        <form method="POST" action="">
+        
             {% csrf_token %}
-            <select name="tarif_id" required>
+            <select id='change-tarif'  name="tarif_id" required>
                 {% for tarif in tarif %}
                     <option value="{{ tarif.id }}">{{ tarif.Tarif_name }}</option>
                 {% endfor %}
             </select>
             <div class="data">
-                <input type="text" name="Tarif_name" placeholder="Название тарифа">
-                <input type="number" name="price" placeholder="Цена (руб)">
-                <input type="number" name="price_to_connect" placeholder="Цена подключения">
-                <input type="number" name="discounts" placeholder="Скидка (%)">
-                <input type="date" name="time_to_end_discount" placeholder="Дата окончания акции">
-                <input type="number" name="Mounts_discount" placeholder="Длительность акции (дн)">
-                <input type="number" name="speed" placeholder="Скорость (Мбит/с)">
-                <input type="number" name="tv_chanels" placeholder="Количество каналов">
-                <select name="typetarif">
+                <input id ='change-nametarif'type="text" name="Tarif_name" placeholder="Название тарифа">
+                <input id ='change-price'type="number" name="price" placeholder="Цена (руб)">
+                <input id ='change-price_to_connect'type="number" name="price_to_connect" placeholder="Цена подключения">
+                <input id ='change-discounts'type="number" name="discounts" placeholder="Скидка (%)">
+                <input id ='change-time_to_end_discount'type="date" name="time_to_end_discount" placeholder="Дата окончания акции">
+                <input id ='change-Mounts_discount'type="number" name="Mounts_discount" placeholder="Длительность акции (дн)">
+                <input id ='change-speed'type="number" name="speed" placeholder="Скорость (Мбит/с)">
+                <input id ='change-tv_chanels'type="number" name="tv_chanels" placeholder="Количество каналов">
+                <select id='change-typetarif' name="typetarif">
                     {% for type in type %}
                         <option value="{{ type.id }}">{{ type.typetarif }}</option>
                     {% endfor %}
                 </select>
             </div>
             <div class="button-container">
-                <button type="submit">Сохранить изменения</button>
+                <button type="submit" id="changebuttontarif">Сохранить изменения</button>
             </div>
-        </form>
+        
     </div>
 
     <!-- Удаление тарифа -->
-    <div class="delete-tarif">
-        <h3>Удалить тариф</h3>
-        <form method="POST" action="">
+    <div class="delete-tarif" style="text-align: center;">
+        <h3>Архивация тарифа</h3>
+        
             {% csrf_token %}
-            <select name="tarif_id" required>
+            <select id="del-id" name="tarif_id" style="width: 300px;height: 30px;" required>
                 {% for tarif in tarif %}
-                    <option value="{{ tarif.id }}">{{ tarif.Tarif_name }}</option>
+                    <option value="{{ tarif.id }}">{{ tarif.Tarif_name }} |{%if tarif.in_archive%}В Архиве{%else%}Не в архиве{%endif%}</option>
                 {% endfor %}
             </select>
             <div class="button-container">
-                <button type="submit">Удалить тариф</button>
+                <button id="delbuttontarif">Архивировать тариф</button>
+                <button  id="addacrhive">Разархивировать тариф</button>
             </div>
-        </form>
+        
     </div>
 
 </div>

@@ -129,7 +129,7 @@ def employer(req):
       }
       return render(req,'workerPanel.html',data)
 
-
+@login_required
 def tarif_settings(req):
    data = {
       'type':TypeTarif.objects.all(),
@@ -137,13 +137,14 @@ def tarif_settings(req):
            }
    
    return render(req,'tarif_settings.html',data)
+@login_required
 def all_settings(req):
    
    return render(req,'allsettings.html')
 @login_required
 def services(req):
    return render(req,'servieces.html')
-  
+@login_required
 def base(req):
    if req.user.user_acces >= 4:
       Logger = Logs.objects.all()

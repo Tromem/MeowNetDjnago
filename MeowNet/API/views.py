@@ -11,7 +11,7 @@ from crm.models import Application_from_user ,tarif
 from django.contrib.auth.hashers import make_password
 from django.contrib.auth import authenticate
 from user.models import UserModel
-from main.models import tarif
+from main.models import tarif,TypeTarif
 from django.core import serializers
 from django.contrib.auth.decorators import login_required
 from datetime import datetime
@@ -23,6 +23,7 @@ from django.shortcuts import redirect
 from datetime import datetime
 from crm.views import Logger_decorator
 from user import password_generator
+
 
 @csrf_exempt
 @login_required
@@ -487,6 +488,9 @@ def update_application(req,pk):
       
       data = json.loads(req.body)
       
+      if req.user.user_acces < 3 and (data.get('application_status') == 'opt5'):
+         return JsonResponse({'error':'Нет доступа на статус заявки!'})
+         
       app.user = data.get('user', app.user)
       app.phone = data.get('phone', app.phone)
       app.application_status = data.get('application_status', app.application_status)
@@ -541,11 +545,62 @@ def make_new_user(req):
    return JsonResponse({'status':'200'})
    
 
-   
-def add_form(req):
-   print(req.POST['Tarif_name'] )
-def delete_form(req):
-   pass
-def redact_form(req):
-   pass
+@login_required   
+def del_change_add_form(req):
+   if req.user.user_acces >= 4:
+      
+      if req.method == 'POST':
+         data =json.loads(req.body)
+
+         
+         
+         return JsonResponse({'status':200})
+      
+      elif req.method == 'PATCH':
+         data = json.loads(req.body)
+         id = data.get('change_tarif_id')
+         try:
+            tarif_s = tarif.objects.get(id=id)
+            
+            tarif_s.Tarif_name = data.get('nametarif',tarif_s.Tarif_name)
+            tarif_s.price = data.get('price',tarif_s.price)
+            tarif_s.price_to_connect = data.get('price_to_connect',tarif_s.price_to_connect)
+            tarif_s.discounts = data.get('discounts',tarif_s.discounts)
+            tarif_s.time_to_end_discount = data.get('time_to_end_discount',tarif_s.time_to_end_discount)
+            tarif_s.Mounts_discount = data.get('Mounts_discount',tarif_s.Mounts_discount)
+            tarif_s.speed = data.get('speed',tarif_s.speed)
+            tarif_s.tv_chanels = data.get('tv_chanels',tarif_s.tv_chanels)
+            tarif_s.typetarif = TypeTarif.objects.get(id=(data.get('typetarif',tarif_s.typetarif.id)))
+            tarif_s.save()
+            return JsonResponse({'status':200}) 
+         except tarif.DoesNotExist:
+            return JsonResponse({"error":'Тариф не найден'})
+         
+         
+      
+      elif req.method == 'DELETE':
+         data = json.loads(req.body)
+         id = data.get('tarif-id')
+         print(id)
+         type_work = data.get('typework')
+         try:
+            tarif_s = tarif.objects.get(id=id)
+            print(type_work)
+            if type_work == True:
+               tarif_s.in_archive = True
+               tarif_s.save()
+               return JsonResponse({'status':200})
+            else: 
+               tarif_s.in_archive = False
+               tarif_s.save()
+               return JsonResponse({'status':200})
+            
+           
+         except tarif.DoesNotExist:
+            return JsonResponse({"error":'Тариф не найден'})
+
+      
+      else: return JsonResponse({'error':'Неизвестный метод запроса!'})
+  
+   else: return JsonResponse({'error':'В доступе отказано!'})
 
