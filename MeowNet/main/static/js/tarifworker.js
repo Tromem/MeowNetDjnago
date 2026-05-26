@@ -23,6 +23,10 @@ function addtarif(){
             alert('Заполните все поля!');
             return
         };
+        if(discounts.value > 100){
+            alert('Скидка не может быть больше 100%!');
+            return
+        };
         const url = '/API/API-TARIF-WORKER/';
         fetch(url,{
             method:'POST',
@@ -55,6 +59,7 @@ function addtarif(){
             speed.value = '';
             tv_chanels.value = '';
             typetarif.value = 1;
+            alert('Вы успешно создали тариф!');
         });
         
         
@@ -111,7 +116,7 @@ function changetarif(){
             speed.value = '';
             tv_chanels.value = '';
             typetarif.value = 1;
-        
+            alert('Данные успешно изменены!');
         });
 
     });
@@ -144,7 +149,7 @@ function ajaxtarif(type,del_id){
                 alert(data.error)
             };
         }).then(()=>{
-
+            alert('Тариф успешно изменен!');
         })
 }
 

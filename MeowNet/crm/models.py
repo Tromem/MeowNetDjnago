@@ -53,6 +53,7 @@ class Application_from_user(models.Model):
     Desired_date = models.DateTimeField(null=True, blank=True, verbose_name='Желаемая дата подключения')
     is_active = models.BooleanField(default=True)
     problem = models.ForeignKey('main.typeproblem',null=True,blank=True,on_delete=models.CASCADE)
+    color = models.CharField(max_length=100 ,blank=True,null=True)
     
     
     
@@ -115,8 +116,19 @@ def makeId(sender,instance, **kwargs):
             last_id_obj = 0
         new_id_int = last_id_obj + 1
         instance.id = str(new_id_int).zfill(4)
+    match instance.application_status:
+        case 'opt1':
+            instance.color = 'rgb(143, 143, 255)' # Заведена
+        case 'opt2':
+            instance.color = 'rgba(255, 72, 72, 0.815)'#Неуспешно
+        case 'opt3':
+            instance.color = 'white'# Новая
+        case 'opt4':
+            instance.color = 'rgba(119, 118, 118, 0.712)'#
+        case 'opt5':
+            instance.color = 'rgba(51, 219, 65, 0.836);'#Юридическая
 
 class Logs(models.Model):
     text = models.CharField(max_length=500)
-    who = models.ForeignKey('user.UserModel',on_delete=models.SET_NULL, null=True ,blank=True)
+    user_who = models.ForeignKey('user.UserModel',on_delete=models.SET_NULL, null=True ,blank=True,related_name='user_who')
     when = models.DateTimeField(auto_now_add=True)

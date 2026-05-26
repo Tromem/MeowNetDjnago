@@ -64,7 +64,7 @@ button{
     border-bottom-left-radius: 8px;
     display: flex;
     min-height:114px;
-    min-width: 100%;
+    width: 100%;
     background-color: rgba(135, 62, 164, 1) ;
     
 }
@@ -101,11 +101,11 @@ button{
 }
 .maininf{
     text-align: center;
-    margin-left: 100px !important; 
+    margin-left: 100px ; 
     left: 90px;
     top:10px ;
     font-family:"Holtwood" ;
-    width: 299px;
+    width: 10%;
     
 }
 .techblocks{
@@ -178,12 +178,12 @@ button{
    
     
 }   
-.number{min-width: 576px;}
+.number{min-width: 30%;}
 .login-account{
-    
+    margin-top: 30px ; 
     cursor: pointer;
     margin-bottom: 15px;
-    margin-top: 5px;
+    
     position: relative;
     background-color:rgba(135, 62, 164, 0)  ;
     color: white;
@@ -195,4 +195,7 @@ button{
 .login-account:hover a{
     border-bottom: 3px solid white;
     animation: borders 0.1s ease-in;
+}
+@media (min-width: 992px) { 
+    .maininf{margin-left: 0px;}
 }

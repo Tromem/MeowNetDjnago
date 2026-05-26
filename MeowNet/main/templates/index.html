@@ -63,7 +63,7 @@
                         <img src="{% static 'img/Cpu.png' %}" alt="Скорость">
                         <span>{{ t.speed }} Мбит/с</span>
                     </div>
-                    <div class="card-price">{{ t.price }} руб</div>
+                    <div class="card-price">{{ t.price }} руб в месяц</div>
                 </div>
                 <footer>
                     <button class="card-buy-btn"value="{{t.id}}">Купить</button>
@@ -80,13 +80,17 @@
                 </header>
                 <div class="card-content">
                     <div class="card-speed">
-                        <img src="{% static 'img/Cpu.png' %}" alt="Скорость">
-                        <span>{{ a.speed }} Мбит/с</span>
+                        <span>Стоимость подключения {{a.price_to_connect}}руб</span>
                     </div>
+                    <div class="card-speed">
+                        <img src="{% static 'img/Cpu.png' %}" alt="Скорость">
+                        <span>Скорость {{ a.speed }} Мбит/с</span>
+                    </div>
+                    
                     {%if a.tv_chanels > 60%}
                     <div class="card-speed">
                         <img src="{% static 'img/Cpu.png' %}" alt="Скорость">
-                        <span>{{ a.tv_chanels }} Каналов</span>
+                        <span>{{ a.tv_chanels }} ТВ Каналов</span>
                     </div>
                     {%endif%}
                     <div class="card-price">{{ a.price }} руб</div>

@@ -28,6 +28,9 @@ html{
   max-height: 1000px;
   overflow-y: scroll;
 }
+#emp-app-button{
+  background-image: url(../img/material-symbols-light_view-list.png);
+}
 .icons{
   min-height: 100%;
   height: 200vh;

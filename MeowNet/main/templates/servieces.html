@@ -17,32 +17,20 @@
         <div class="user-bar">
             <a href="{%url 'profile'%}"><div class="Main-inf"><button>Лицевой счет</button></div></a>
             <a href="{%url 'services'%}"><div class="services"><button>Услуги</button></div></a>
-           <a href="{%url 'settings'%}"> <div class="changing-profile"><button>Изменение профиля</button></div></a>
+           <a href="{%url 'settingsuser'%}"> <div class="changing-profile"><button>Изменение профиля</button></div></a>
             
         </div>
         <div class="container-other">
             <div class="container-other">
     <div class="support-left">
         <h2>Заявка в техническую поддержку</h2>
-
-        <form id="support-form">
-            <div class="form-group">
-                <label>ФИО:</label>
-                <input type="text" name="name" placeholder="Введите ваше ФИО">
-            </div>
-
-            <div class="form-group">
-                <label>Номер телефона:</label>
-                <input type="text" name="phone" placeholder="Введите номер телефона">
-            </div>
-
             <div class="form-group">
                 <label>Описание проблемы:</label>
-                <textarea name="problem" placeholder="Опишите проблему"></textarea>
+                <textarea name="problem" id="problem-id" placeholder="Опишите проблему"></textarea>
             </div>
 
-            <button type="submit" class="submit-btn">Отправить заявку</button>
-        </form>
+            <button type="submit" id="submit-btn-problem" class="submit-btn">Отправить заявку</button>
+        
     </div>
 
     <div class="support-right">
@@ -51,7 +39,7 @@
 </div>
         </div>
      </div>
-    
+     <script src="{%static 'js/new_suppot_app.js'%}"></script>
     {%endblock%}    
 </body>
 </html>

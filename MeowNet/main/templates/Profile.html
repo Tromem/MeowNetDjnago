@@ -18,7 +18,7 @@
         <div class="user-bar">
             <a href="{%url 'profile'%}"><div class="Main-inf"><button>Лицевой счет</button></div></a>
             <a href="{%url 'services'%}"><div class="services"><button>Услуги</button></div></a>
-           <a href="{%url 'settings'%}"> <div class="changing-profile"><button>Изменение профиля</button></div></a>
+           <a href="{%url 'settingsuser'%}"> <div class="changing-profile"><button>Изменение профиля</button></div></a>
             
         </div>
         <div>
@@ -39,7 +39,7 @@
                             <div class="auto-pay">Сумма платежа:{{user.user_tarif.price}}руб.<inf></inf></div>
                             
                             <a href="{%url 'logout'%}"><button id="exit-button">Выйти из профиля</button></a> </button>
-                            <button>Пополнить счет</button>
+                            <button id="balance-batton-add">Пополнить счет</button>
                         </div>
                     </div>
                     <div class="tarif-name">
@@ -70,7 +70,7 @@
     </div>    
 
     <script src="{%static 'js/check_tar.js'%}"></script>
-
+    <script src="{%static 'js/add_balance.js'%}"></script>
     {%endblock%}    
 </body>
 </html>

@@ -1,0 +1,12 @@
+.container-users-app{
+    width: 100%;
+    min-height: 1500px;
+    background-color: rgba(255, 255, 255, 0.685);
+    margin-top: 130px;
+    margin-left: 30px;
+}
+#users-app{
+    width: 200px;
+    height: 30px;
+}
+.container-users-app h2{text-align: center;}

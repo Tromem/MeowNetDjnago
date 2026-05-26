@@ -11,11 +11,13 @@
  {%if user.user_acces > 0 %}
  <div class="bar-container">
 
+    
+
      <div class="icon-conteiner">   
                 
-                <a href="{% url 'find_adres'%}"><button class="find-home-button"></button></a>
-                <a><button class="new-application" id="new-application"></button></a>
-                
+                <a href="{% url 'find_adres'%}"><button title="Просмотр технической возможности по адресу" class="find-home-button" {%if not user.in_work%}disabled{%endif%}></button></a>
+                <a><button class="new-application" title="Поиск заявок" id="new-application" {%if not user.in_work%}disabled{%endif%}></button></a>
+                <button class="new-application-from-worker" id="openModalBtn" title="Создать новую заявку" {%if not user.in_work%}disabled{%endif%}></button>
              
     
                 
@@ -24,19 +26,25 @@
            
         <div class="icon-conteiner">
                 {%if user.user_acces > 1 %} 
-                <a href="{% url 'users-stat'%}"> <button class="users-in-button"> </button></a>
+                <a href="{% url 'users-stat'%}"> <button class="users-in-button" title="Поиск по лицевому счету" {%if not user.in_work%}disabled{%endif%}> </button></a>
                 {%endif%}
-                <button class="work-shift-button" id="work-shift-button"></button>
+                <button class="work-shift-button" id="work-shift-button" title="рабочая смена"></button>
             </div>
-            
+            <div class="icon-conteiner">   
+                
+                <a href="{% url 'phones'%}"><button title="Поиск заявки по номеру телефона" class="find-phone-button" {%if not user.in_work%}disabled{%endif%}></button></a>
+                
+    
+                
+            </div>
             
     </div>
     <div class="search-container">
-        <button class="search-button" id="searchBtn"></button>
+        <button class="search-button" id="searchBtn"{%if not user.in_work%}disabled{%endif%} title="Добавление заявки"></button>
         
         <div>
 
-            <input type="text" class="search-input" id="searchInput" placeholder="ID">
+            <input type="text" class="search-input" id="searchInput" title="Добавление заявки" placeholder="ID"{%if not user.in_work%}disabled{%endif%} >
         </div>
     </div>    
  </div>   
@@ -47,14 +55,90 @@
    
 {%endblock%}
 {% block content %}
-<div id="applications-container">
 
+<div id="applications-container">
+    <div id="createAppModal" class="modal">
+    <div class="modal-card">
+        <!-- Кнопка закрытия -->
+        <span id="closeModalBtn" class="modal-close-btn">&times;</span>
+
+        <div class="modal-header">
+            <h2>Создать новую заявку</h2>
+        </div>
+
+        <div class="modal-body modal-two-columns">
+            <!-- Левая колонка -->
+            <div class="modal-column modal-left-column">
+                <div class="modal-field">
+                    <label for="modal-fullname">ФИО:</label>
+                    <input type="text" id="modal-fullname">
+                </div>
+                <div class="modal-field">
+                    <label for="modal-phone">Телефон:</label>
+                    <input type="text" id="modal-phone">
+                </div>
+                <div class="modal-field">
+                    <label for="modal-status">Статус заявки:</label>
+                    <select id="modal-status">
+                        <option value="opt1">Заявка заведена</option>
+                        <option value="opt2">Неуспешно</option>
+                        <option value="opt3" selected>Новая заявка</option>
+                        <option value="opt4">Доработка</option>
+                        <option value="opt5">Юридическая заявка</option>
+                    </select>
+                </div>
+                <div class="modal-field">
+                    <label for="modal-date_create">Желаемая дата подключения:</label>
+                    <input type="datetime-local" id="modal-date_create">
+                </div>
+            </div>
+
+            <!-- Правая колонка -->
+            <div class="modal-column modal-right-column">
+                <div class="modal-field">
+                    <label for="modal-passport">Паспорт:</label>
+                    <input type="text" id="modal-passport">
+                </div>
+                <div class="modal-field">
+                    <label for="modal-address">Адрес:</label>
+                    <input type="text" id="modal-address">
+                </div>
+                <div class="modal-field">
+                    <label for="modal-comment">Комментарий:</label>
+                    <textarea id="modal-comment"></textarea>
+                </div>
+                <div class="modal-field">
+                    <label for="modal-plan">Выбранный тариф:</label>
+                   <select name="" id="modal-plan">
+                   <option value="nothing" {%if not user.user_acces == 1 or user.user_acces >= 4%}disabled{%endif%}>Без тарифа</option>
+                    {%for i in tarifs%}
+                    <option value="{{i.id}}">{{i.Tarif_name}}</option>
+                    {%endfor%}
+                   </select>
+                   <div class="modal-field">
+                    <label for="modal-problem">Технические неполадки:</label>
+                   <select name="" id="modal-problem" {%if not user.user_acces == 3 or user.user_acces >= 4%}disabled{%endif%}>
+                   <option value="nothing">Техническая неполадка не выбрана</option>
+                    {%for i in problem%}
+                    <option value="{{i.id}}">{{i.name_problem}}</option>
+                    {%endfor%}
+                   </select>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-actions">
+            <button class="modal-save-btn" id="modalSaveBtn">Сохранить</button>
+        </div>
+    </div>
+</div>
     {%for i in app%}
     
     
     
     
-        <div class="application-card">
+        <div class="application-card" style="background-color: {{i.color}};">
             <div class="card-header">
                 <div class="card-id">
                     
@@ -245,5 +329,6 @@
 <script src="{%static 'js/getnew.js'%}"></script>
 <script src="{%static 'js/find_app_by_id.js'%}"></script>
 <script src="{%static 'js/create_new_user.js'%}"></script>
+<script src="{%static 'js/newapp_from_worker.js'%}"></script>
 </div>
 {% endblock %}

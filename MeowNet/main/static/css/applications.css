@@ -2,10 +2,10 @@
     cursor: pointer;
     transition: transform 0.3s ease;
 }
-.find-home-button:hover ,.users-in-button:hover,.work-shift-button:hover,.new-application:hover,.search-button:hover {
+.find-home-button:hover,.new-application-from-worker:hover ,.users-in-button:hover,.work-shift-button:hover,.new-application:hover,.search-button:hover ,.find-phone-button:hover{
     transform: scale(1.1);
 }
-.find-home-button ,.users-in-button,.work-shift-button,.new-application,.search-button  {
+.find-home-button ,.users-in-button,.work-shift-button,.new-application,.search-button ,.new-application-from-worker ,.find-phone-button{
     width: 30px;
     height: 30px;
     background-color: transparent;
@@ -193,4 +193,94 @@ errors{
         margin-left: 10px;
         padding: 10px;
     }
+}
+.find-phone-button{
+ background-image: url(../img/ic_baseline-phone.png);
+}
+.new-application-from-worker{
+     background-image: url(../img/new.png)!important ;
+    width: 35px;
+    height: 30px;
+}
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.modal-card {
+    margin: 50px auto;
+    max-width: 1200px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    position: relative;
+    font-size: 13px;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.modal-body.modal-two-columns {
+    display: flex;
+    gap: 15px;
+}
+
+.modal-column.modal-left-column { flex: 1; }
+.modal-column.modal-right-column { flex: 2; }
+
+.modal-field label {
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 2px;
+}
+
+.modal-field input[type="text"],
+.modal-field textarea,
+.modal-field select,
+.modal-field input[type="datetime-local"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 13px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.modal-field textarea { resize: vertical; min-height: 40px; }
+
+.modal-actions {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.modal-save-btn {
+    padding: 5px 10px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.modal-save-btn:hover { background-color: #45a049; }
+
+@keyframes fadeIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }

@@ -17,6 +17,7 @@ document.getElementById('work-shift-button').addEventListener('click',()=>{
             return
         };
     }).then(()=>{
+        window.location.reload()
         const container = document.getElementById('applications-container')
         if(container){
             while(container.firstChild){

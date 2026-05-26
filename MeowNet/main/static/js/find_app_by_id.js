@@ -16,7 +16,7 @@ input.addEventListener('keydown',(event)=>{
             })
         }).then(response => response.json()).then(data=>{
             if(data.error){
-                console.log(data.error)
+                alert(data.error)
                 return
             }
             container = document.getElementById('applications-container');
@@ -78,7 +78,7 @@ input.addEventListener('keydown',(event)=>{
 
                     container.appendChild(card);
         }).then(()=>{
-                
+                window.location.reload()
                 const instr = document.getElementById('instructions')
                 if(instr){
                     instr.remove();

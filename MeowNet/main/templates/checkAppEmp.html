@@ -1,0 +1,121 @@
+{% extends 'foremployer.html' %}
+{% load static %}
+
+{% block title %}Заявки сотрудников{% endblock %}
+{% block logolabel %}MeowCRM{% endblock %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/applications.css' %}">
+<link rel="stylesheet" href="{%static 'css/appliction_container.css'%}">
+{% endblock %}
+{%block content%}
+<div class="container-users-app">
+    <div>
+        <select name="users-app" id="users-app" >
+            <option value="">Все</option>
+            {%for i in users%}
+            <option value="{{i.id}}" {%if not i.applications.all|length %}disabled{%endif%}>{{i.username}}</option>
+            {%endfor%}
+        </select>
+
+    <div class="cards-container">
+        {%for i in all_aps%}
+        {%if not i.order == None %}
+        <div class="application-card" data-owner-id="{{ i.order.id }}">
+            <div class="card-header">
+                <div class="card-id">
+                    
+                    <div value="{{i.id}}" id='card-id' >ID:{{i.id}} Принадлежит:{{i.order.username}}</div>
+                </div>
+                <div class="card-date">
+                    <label for="app-date">Дата создания:</label>
+                    <input type="text" id="app-date" value="{{i.data_create}}" readonly>
+                </div>
+            </div>
+            
+            <div class="card-body two-columns">
+                <!-- Левая колонка -->
+                <div class="column left-column">
+                    <div class="field">
+                        <label for="app-fullname">ФИО:</label>
+                        <input type="text" id="app-fullname" value="{{i.user}}">
+                    </div>
+                    <div class="field">
+                        <label for="app-phone">Телефон:</label>
+                        <input type="text" id="app-phone" value="{{i.phone}}">
+                    </div>
+                    <div class="field">
+                        
+                        <select type="text" id="app-status" value="[Статус заявки]">
+                            {%if i.application_status == 'opt1'%}<option value="opt1"selected>Заявка заведена</option >{%else%}<option value="opt1">Заявка заведена</option > {%endif%}
+                            {%if i.application_status == 'opt2'%}<option value="opt2" selected>Неуспешно</option>{%else%}<option value="opt2" >Неуспешно</option>{%endif%}
+                            {%if i.application_status == 'opt3'%}<option value="opt3" selected>Новая заявка</option>{%else%}<option value="opt3" >Новая заявка</option>{%endif%}
+                            {%if i.application_status == 'opt4'%}<option value="opt4" selected>Доработка</option>{%else%}<option value="opt4" >Доработка</option>{%endif%}
+                            {%if i.application_status == 'opt5'%}<option value="opt5" selected>Юридическая заявка</option>{%else%}<option value="opt5" >Юридическая заявка</option>{%endif%}
+                        </select>
+                        
+                        <div style="font-size: 16px;">
+                            <div>
+    
+                                Желаемая дата подключения:<input type="datetime-local" name="date_create" id="date_create"value= {{i.Desired_date}}>
+                            </div>
+                            <div>
+    
+                                Предыдущая дата: {%if  i.Desired_date == None%}
+                                Дата не была выбрана 
+                                {%else%}
+                                {{i.Desired_date}}
+                                {%endif%}
+                            </div>
+    
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+        
+                <!-- Правая колонка -->
+                <div class="column right-column">
+                    <div class="field">
+                        <label for="app-passport">Паспорт:</label>
+                        {%if user.user_acces < 3 %}
+                            <input type="text" id="app-passport" value="" readonly>
+                            {%else%}
+                            {%if i.pasport%}
+                            <input type="text" id="app-passport" value="{{i.pasport}}" >
+                            {%else%}
+                            <input type="text" id="app-passport" value="">
+                            {%endif%}
+                        {%endif%}
+                    </div>
+                    <div class="field">
+                        <label for="app-address">Адрес:</label>
+                        <input type="text" id="app-address" value="{{i.adres}}">
+                    </div>
+                    <div class="field">
+                        <label for="app-comment">Комментарий:</label>
+                        <textarea id="app-comment">{{i.comment}}</textarea>
+                    </div>
+                    <div class="field">
+                        <label for="app-plan">Выбранный тариф:</label>
+                        <input type="text" id="app-plan" value="{{i.tariffield}}">
+                    </div>
+                </div>
+            </div>
+        
+            <div class="card-actions">
+                {%if user.user_acces > 3%}
+                <button class="save-btn" id="get-apps"  value="{{i.id}}">Отпустить заявку</button>
+                {%endif%}
+            </div>
+        </div>
+        {%endif%}
+        {%empty%}
+       <h2>
+           Сейчас ни у кого нет заявок!
+       </h2> 
+        {%endfor%}
+    </div>
+    </div>
+    <script src="{%static 'js/filter_users_apps.js'%}"> </script>
+</div>
+{%endblock%}

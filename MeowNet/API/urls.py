@@ -19,6 +19,11 @@ urlpatterns = [
     path('API-UPDATE-APLICATION/<int:pk>/',views.update_application),
     path('API-MakeUser/',views.make_new_user),
     path('API-TARIF-WORKER/',views.del_change_add_form),
-    
+    path('server-status/update/',views.server_status_update),
+    path('server-status/reset-selected/',views.server_status_reset_selected),
+    path('API-NEW-SUP-APP/',views.new_app_from_user),
+    path('Add-balance/',views.add_balance),
+    path('Add-app-worker/',views.add_app_from_worker),
+    path('get-app-for-user/',views.get_app_when_find)
    
 ]

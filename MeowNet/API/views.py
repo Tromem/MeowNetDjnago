@@ -19,11 +19,12 @@ from main.models import typeproblem
 from crm.models import *
 from django.db.models import Q
 from django.contrib.auth import logout
+from django.utils.dateparse import parse_datetime
 from django.shortcuts import redirect
 from datetime import datetime
 from crm.views import Logger_decorator
 from user import password_generator
-
+from user.models import ServerStatus
 
 @csrf_exempt
 @login_required
@@ -437,8 +438,8 @@ def out_apps(req):
          i.order = None
          i.save()
 
-def logout_view(request):
-    logout(request) 
+def logout_view(req):
+    logout(req) 
     return redirect('/') 
 @csrf_exempt
 def find_app(req):
@@ -506,7 +507,7 @@ def update_application(req,pk):
 
       
       try:
-         get_tarif = tarif.objects.get(Tarif_name=data.get('tariffield', app.tariffield))         
+         get_tarif = tarif.objects.filter(Tarif_name=data.get('tariffield')).first()        
          app.tariffield = get_tarif
       except tarif.DoesNotExist:
          return JsonResponse({'error':'Тариф не найден'})
@@ -551,8 +552,30 @@ def del_change_add_form(req):
       
       if req.method == 'POST':
          data =json.loads(req.body)
-
          
+         nametarif = data.get('nametarif')
+         price = data.get('price')
+         price_to_connect = data.get('price_to_connect')
+         discounts = data.get('discounts')
+         time_to_end_discount = data.get('time_to_end_discount')
+         Mounts_discount = data.get('Mounts_discount')
+         speed = data.get('speed')
+         tv_chanels = data.get('tv_chanels')
+         typetarif = data.get('typetarif')
+
+         dict_data = {
+            'Tarif_name':nametarif,
+            'price':price,
+            'price_to_connect':price_to_connect,
+            'discounts':discounts,
+            'time_to_end_discount':time_to_end_discount,
+            'Mounts_discount':Mounts_discount,
+            'in_archive':False,
+            'speed':speed,
+            'typetarif':TypeTarif.objects.get(id=typetarif),
+            'tv_chanels':tv_chanels,
+         }
+         new_tarif = tarif.objects.create(**dict_data)
          
          return JsonResponse({'status':200})
       
@@ -604,3 +627,154 @@ def del_change_add_form(req):
   
    else: return JsonResponse({'error':'В доступе отказано!'})
 
+def server_status_update(req):
+   if req.method == 'POST':
+        
+        try:
+            data = json.loads(req.body)
+            status_value = data.get('status')
+            tech_inf = data.get('Tech_inf')
+            for_who = data.get('for_who')
+            time_to_end_str = data.get('time_to_end')
+            
+            # Проверка на обязательные поля
+            if status_value is None or not tech_inf or not time_to_end_str:
+                return JsonResponse({'error': 'Обязательные поля не заполнены'}, status=400)
+
+            # Получаем или создаём объект ServerStatus
+            server_status, created = ServerStatus.objects.get_or_create(for_who=for_who)
+
+            server_status.status = status_value
+            server_status.Tech_inf = tech_inf
+            server_status.for_who = for_who if for_who else ''
+            
+            server_status.time_to_end = parse_datetime(time_to_end_str)
+            print(server_status.status)
+            server_status.save()
+
+            return JsonResponse({'success': True})
+
+        except Exception as e:
+            return JsonResponse({'error': str(e)}, status=400)
+
+   return JsonResponse({'error': 'Метод не разрешен'}, status=405)
+def server_status_reset_selected(req):
+   if req.method == 'POST':
+        try:
+            data = json.loads(req.body)
+            ids = data.get('ids', [])
+
+            if not ids:
+                return JsonResponse({'error': 'Нет выбранных отключений'}, status=400)
+
+            # Фильтруем по id и сбрасываем поля
+            server_statuses = ServerStatus.objects.filter(id__in=ids)
+            if not server_statuses.exists():
+                return JsonResponse({'error': 'Выбранные отключения не найдены'}, status=404)
+
+            server_statuses.update(status=False, Tech_inf='', for_who='', time_to_end=None)
+
+            return JsonResponse({'success': True})
+
+        except Exception as e:
+            return JsonResponse({'error': str(e)}, status=400)
+
+   return JsonResponse({'error': 'Метод не разрешен'}, status=405)
+@login_required
+@csrf_exempt
+def new_app_from_user(req):
+   data = json.loads(req.body)
+   textproblem = data.get('text')
+   if(req.user.user_tarif):
+      tarif_field = req.user.user_tarif.Tarif_name
+   else:
+      tarif_field =  None 
+   data = {
+      'comment': textproblem,
+      'FromOrder':req.user,
+      'adres':req.user.address,
+      'phone':req.user.numberphone,
+      'tariffield':tarif_field,
+      'type_manager_take':'opt1',
+      'pasport':req.user.paper_data,
+
+
+   }
+   try:
+      techapp = Application_from_user.objects.create(**data)
+   except Exception as ex:
+      return JsonResponse({'error':str(ex)})
+   return JsonResponse({'response':'Заявка была успешно отправлена, ожидайте звонка!'})
+@login_required
+@csrf_exempt
+def add_balance(req):
+   money = 1000
+   req.user.balance = req.user.balance + money
+   req.user.save()
+
+   Logs.objects.create(text=f'Пользователь {req.user.username}, с id {req.user.id_userlog} пополнил баланс на сумму:{money} в {datetime.now()} по местному времени',
+                       who=req.user
+                       )
+   return JsonResponse({'response':'Баланс был обновлен!'})
+@login_required
+@csrf_exempt
+def add_app_from_worker(req):
+   if req.user.user_acces > 0:
+      
+      data = json.loads(req.body)
+      app = {}
+      for key ,name in data.items():
+         if key == 'tariffield' and not name =='nothing':
+            
+            tarif_take = tarif.objects.get(id=name)
+            app[key]=tarif_take
+            continue
+         elif key =='problem' and not name =='nothing':
+            
+            problem_get = typeproblem.objects.get(id=name)
+            app[key]= problem_get
+            continue
+         elif name == 'nothing':
+            continue
+         app[key] = name
+      print(app)
+        
+      user_acces = req.user.user_acces
+      opts = {
+         2:'opt1',
+         3:'opt2',
+         1:'opt3',
+         4:'opt4'
+      }
+      new_app =  Application_from_user.objects.create(**app,order=req.user,type_manager_take=opts[user_acces])
+      
+      return JsonResponse({'status':200})
+   
+def get_app_when_find(req):
+   if req.user.user_acces > 1:
+      user_data = req.GET.get('user')
+      app_type =  req.GET.get('inftype')
+      
+      if int(user_data):
+         try:
+            user = UserModel.objects.get(id_userlog=user_data)
+            return get_app(req,user,app_type)
+            
+         except UserModel.DoesNotExist:
+            return JsonResponse({"error":"Пользователь не найден!"})
+      else:
+         try:
+            user = UserModel.objects.get()
+            return get_app(req,user,app_type)
+         except UserModel.DoesNotExist:
+            return JsonResponse({"error":"Пользователь не найден!"})
+      
+   else: return JsonResponse({"error":'В доступе отказано'})
+
+def get_app(req,usermodel,type_manager):
+   try:
+      app = Application_from_user.objects.filter(FromOrder=usermodel,type_manager_take=type_manager)
+      return JsonResponse({'applications':list(app.values())})
+
+   except Application_from_user.DoesNotExist:
+      return JsonResponse({'error':'У пользователя нет заявок'})

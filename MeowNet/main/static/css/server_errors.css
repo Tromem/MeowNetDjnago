@@ -1,0 +1,124 @@
+.server-error-panel {
+    width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 16px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    height: 500px;
+}
+
+.server-error-panel h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.server-error-panel .data {
+    display: flex;
+    flex-direction: column;
+}
+
+.server-error-panel .data label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.server-error-panel .data input,
+.server-error-panel .data select {
+    width: 100%;
+    height: 35px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.server-error-panel button {
+    background-color: rgb(56, 166, 209);
+    color: white;
+    border-radius: 8px;
+    width: 150px;
+    height: 35px;
+    margin: 20px auto 0;
+    display: block;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.server-error-panel button:hover {
+    background-color: rgb(40, 140, 180);
+}
+
+.button-container {
+    text-align: center;
+}
+.server-disable-panel {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 25px;
+    height: 500px;
+    margin-left: 20px;
+    border-radius: 16px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+}
+
+.server-disable-panel h3 {
+    text-align: center;
+    color: #d9534f;
+    margin-bottom: 10px;
+}
+
+.server-disable-panel p {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.disable-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.disable-table th, .disable-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+.disable-table th {
+    background-color: #f2f2f2;
+}
+
+.disable-table tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.button-container {
+    text-align: center;
+}
+
+.button-container button {
+    background-color: #d9534f;
+    color: white;
+    border-radius: 8px;
+    width: 250px;
+    height: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.button-container button:hover {
+    background-color: #c9302c;
+}
+
+.reset-result {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 14px;
+}

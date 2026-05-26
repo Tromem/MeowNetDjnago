@@ -16,7 +16,7 @@ document.getElementById('new-application').addEventListener('click',()=>{
             
             const container = document.getElementById('applications-container');
             
-            console.log(container)
+           
 
             
            
@@ -24,11 +24,9 @@ document.getElementById('new-application').addEventListener('click',()=>{
             if (data.error) {
                 
                 errormod.textContent = data.error;
-                errorwindow.style.visibility = 'visible';
                 
-                setTimeout(() => { 
-                    errorwindow.style.visibility = 'hidden';
-                    errormod.textContent = ''; }, 3000);
+                alert("Ошибка при получании заявки обратитесь к администратору")
+               
                 return
               if (container) {
                         while (container.firstChild) {
@@ -37,23 +35,19 @@ document.getElementById('new-application').addEventListener('click',()=>{
 }  
             }else if(data.notfound){
                 
-                
+                alert("Сейчас нет доступных заявок");
                 errormod.textContent = data.notfound;
-                 errorwindow.style.visibility = 'visible';
+                 
                
-                 setTimeout(() => { 
-                    errorwindow.style.visibility = 'hidden';
-                    errormod.textContent = ''; }, 3000);
-                    
                 
             }
 
           
         }).then(()=>{
-            sessionStorage.setItem('error',data.error)
+            alert(data.error)
             window.location.reload();
         })
         .catch(err => {
-            console.error('Ошибка при получении заявок:', err);
+            window.location.reload();
         });
 });

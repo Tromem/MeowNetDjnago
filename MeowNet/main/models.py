@@ -13,6 +13,7 @@ class tarif( models.Model):
     price = models.IntegerField() # В рублях 
     price_to_connect = models.IntegerField() # В рублях
     discounts = models.IntegerField(null=True, blank=True) #В процентах
+    discounts_price = models.IntegerField(null=True,blank=True) #Скидочная цена 
     time_to_end_discount = models.DateField(null=True , blank=True)# Когда тариф выключается
     Mounts_discount = models.IntegerField(null=True, blank=True) # Сколько дней длится акция
     in_archive = models.BooleanField(null=True, blank=True,default=False) # Нахождение в архиве 
@@ -23,7 +24,10 @@ class tarif( models.Model):
     def __str__(self):
         return self.Tarif_name
 
-
+    def save(self, *args, **kwargs):
+        if int(self.discounts) > 0 and int(self.discounts) < 101:
+            self.discounts_price = int(self.price) - (int(self.price) * int(self.discounts))/100
+        return super().save(*args, **kwargs)
 class typeproblem(models.Model):
     
     OPTION_1 = 'opt1'

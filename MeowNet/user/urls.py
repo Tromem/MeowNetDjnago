@@ -12,7 +12,9 @@ urlpatterns = [
     path('agent-panel/',views.employer,name='epmloyer'),
     path('manager-panel/settings/tarifs',views.tarif_settings,name='TarifSettings'),
     path('manager-panel/settings/AllSettings',views.all_settings,name='Allsettings'),
-    path('manager-panel/settings/base',views.base, name='base')
+    path('manager-panel/settings/base',views.base, name='base'),
+    path('manager-panel/emp/apps',views.Emp_app.as_view(),name='Empapps'),
+    path('agent-panel/phones',views.phonefind,name='phones')
    
     
   

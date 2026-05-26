@@ -1,10 +1,104 @@
-{%extends 'AdminPanel.html'%}
+{% extends 'AdminPanel.html' %}
 {% load static %}
 
-    {%block bar%} 
-    
-    {%endblock%}
-    {%block content%}
-             {%block leftpanel%} {{ block.super }} {%endblock%}
-             {%block Message%} {{ block.super }} {%endblock%}
-    {%endblock%}
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/admin.css' %}">
+<link rel="stylesheet" href="{% static 'css/message.css' %}">
+<link rel="stylesheet" href="{% static 'css/server_errors.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="admin-content">
+    {% block leftpanel %} {{ block.super }} {% endblock %}
+
+    <div class="server-error-panel">
+        <h3>Управление статусом сервера</h3>
+
+        
+           
+            <div class="data">
+                <label for="status">Состояние Страницы:</label>
+                <select id="status" name="status" required>
+                    <option value="True" {% if server_status.status %}selected{% endif %}>Включен</option>
+                    <option value="False" {% if not server_status.status %}selected{% endif %}>Отключен</option>
+                </select>
+
+                <label for="Tech_inf">Сообщение для пользователей:</label>
+                <select id="Tech_inf" name="Tech_inf" required>
+                   
+                        <option value="opt1" selected >Приложение было временно отключено, зайдите через некоторое время!</option>
+                        <option value="opt2" >Сейчас ведутся технические работы ,подождите пожалуйста, для связи с нами позвоните по номеру "8(916)000 43-00"</option>
+                        <option value="opt3" >Обновление услуг, подождите некоторое время</option>
+                        
+                        
+                   
+                </select>
+
+                <label for="for_who">Какую часть сайта отключить</label>
+                <select id="for_who" name="for_who">
+                    
+                    
+                        <option value="User" >
+                            Главная страница/Профили
+                        </option>
+                        <option value="Emps" >
+                            Рабочие панели сотрудников 
+                        </option>
+                    
+                </select>
+
+                <label for="time_to_end">Время окончания:</label>
+                <input type="datetime-local" id="time_to_end" name="time_to_end" value="{{ server_status.time_to_end|date:'Y-m-d\\TH:i' }}" required>
+            </div>
+
+            <div class="button-container">
+                <button type="submit" id="save-server-status">Сохранить изменения</button>
+            </div>
+            
+    </div>
+ <div class="server-disable-panel">
+        <h3>Управление отключениями сервера</h3>
+
+        <p>Выберите одно или несколько отключений, которые нужно удалить.</p>
+
+        
+            
+            <table class="disable-table">
+                <thead>
+                    <tr>
+                        <th>Выбрать</th>
+                        <th>Сообщение</th>
+                        <th>Кому отображать</th>
+                        <th>Время окончания</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for s in server_status %}
+                    {%if s.status%}    
+                    <tr>
+                            <td><input type="checkbox" name="reset_ids" value="{{ s.id }}"></td>
+                            <td>{{ s.get_Tech_inf_display }}</td>
+                            <td>{% if s.for_who %}{{ s.get_for_who_display }}{% else %}Все{% endif %}</td>
+                            <td>{% if s.time_to_end %}{{ s.time_to_end|date:"Y-m-d H:i" }}{% else %}-{% endif %}</td>
+                        </tr>
+                        {%endif%}
+                        {% empty %}
+                        <tr>
+                            <td colspan="4">Нет активных отключений</td>
+                        </tr>
+                       
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <div class="button-container">
+                <button type="submit" id="reset-selected">Удалить выбранные отключения</button>
+            </div>
+        
+
+        <div class="reset-result" id="reset-result"></div>
+    </div>
+</div>
+
+<script src="{% static 'js/server_errors.js' %}"></script>
+{% endblock %}

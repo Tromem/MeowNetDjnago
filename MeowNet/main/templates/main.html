@@ -22,8 +22,9 @@
             <a id="a-logo" href="/">
 
                 <div class="bglogo"> 
-                    <div class="Meow">{%block logolabel%} MeowNet {%endblock%}</div>
                     <img src="{% static 'img/Net.png'%}" alt="">
+                    <div class="Meow">{%block logolabel%} MeowNet {%endblock%}</div>
+                    
                     
                 </div>
             </a>
@@ -41,7 +42,7 @@
         <div class="number"><div class="phone">Горячая линия: 8(916)000 43-00</div></div>
         <div class="rightbar">
             {%if user.username%}
-                <div class="login-account"><a href="profile">{{user.username}}</a></div>
+                <div class="login-account"><a href="{%url 'profile'%}">В личный кабинет</a></div>
             {%else%}
                 <div class="login-account"><a href="/user/auth">Войти | Зарегестрироваться </a></div>
             {%endif%}

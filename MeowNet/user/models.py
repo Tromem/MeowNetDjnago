@@ -88,4 +88,25 @@ def make_hash(sender,instance, **kwargs):
 
  
 
-        
+class ServerStatus(models.Model):
+    
+    OPTION_text_1 = 'Приложение было временно отключено, зайдите через некоторое время!'
+    OPTION_text_2 = 'Сейчас ведутся технические работы ,подождите пожалуйста, для связи с нами позвоните по номеру "8(916)000 43-00"'
+    OPTION_text_3 = 'Обновление услуг, подождите некоторое время'
+    
+    OPTION_who_1 = 'Пользователи'
+    OPTION_who_2 = 'Сотрудники'
+
+    Choises_who = [('User',OPTION_who_1),
+                   ('Emps',OPTION_who_2)]
+    
+    Choises_text_inf = [("opt1",OPTION_text_1),
+               ("opt2",OPTION_text_2),
+               ("opt3",OPTION_text_3)
+               ]
+    
+    status = models.BooleanField(default=False) # Проверка для декоратора на состояние страницы
+    Tech_inf = models.CharField( choices=Choises_text_inf,max_length=450)
+    time_to_end = models.DateTimeField(auto_now=False, auto_now_add=False,null=True, blank=True)
+    for_who = models.CharField(choices=Choises_who,max_length=10,blank=True,null=True,unique=True )
+

@@ -14,7 +14,14 @@ from main.models import TypeTarif ,tarif
 from django.views.decorators.csrf import csrf_exempt
 from crm.views import Logger_decorator 
 from crm.models import Logs
-
+from user.models import ServerStatus
+from django.views.generic import TemplateView
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.http import JsonResponse
+import json
+from django.forms.models import model_to_dict
+from django.core.paginator import Paginator
+import math
 # Модули доступа
 # 5 - максимальный доступ к црм
 # 4 - Менеджер по сотрудникам
@@ -72,7 +79,14 @@ def Admin(req):
    else:
       return redirect('/')
 
-
+def phonefind(req):
+  try:
+   apps_phone = Application_from_user.objects.filter(phone__icontains=req.GET.get('phone'))
+   data = {'apps':apps_phone}
+   
+   return render(req,'phoneinf.html',data)
+  except:
+   return render(req,'phoneinf.html')
 
 @login_required
 def settings_emp(req):
@@ -91,7 +105,21 @@ def settings_emp(req):
 
 
 @login_required
+@csrf_exempt
 def userinf(req):
+   if req.method == 'POST':
+      id = json.loads(req.body).get('user_id')
+      try:
+         user = UserModel.objects.get(id_userlog=id)
+      except UserModel.DoesNotExist:
+         return JsonResponse({'error':'Пользоватлеь не найден'})
+      try:
+         Logs_obj = Logs.objects.filter(user_who=user)
+      except Logs.DoesNotExist:
+         return JsonResponse({'error':'Логов не обнаруженно'})
+      
+      return JsonResponse({'Logs':list(Logs_obj.values())})
+   
    if ( req.user.user_acces >= 2 or req.user.is_superuser ):
       problems = {'typeproblem': typeproblem.objects.all}
       return render(req,'userinfAdm.html',problems)
@@ -123,33 +151,102 @@ def employer(req):
       user = req.user
       applications = user.applications.all()
       AppEmp = Application_from_user.objects.filter(order=None,application_status='opt5',is_active=True)
+      tarifs = tarif.objects.all()
       data = {
          'app':applications,
-         'AdmApp':AppEmp
+         'AdmApp':AppEmp,
+         'tarifs':tarifs,
+         'problem':typeproblem.objects.all()
       }
       return render(req,'workerPanel.html',data)
 
 @login_required
 def tarif_settings(req):
-   data = {
+   if req.user.user_acces < 4:
+      return redirect('/')
+   else:
+      data = {
       'type':TypeTarif.objects.all(),
       'tarif':tarif.objects.all()
            }
    
-   return render(req,'tarif_settings.html',data)
+      return render(req,'tarif_settings.html',data)
 @login_required
 def all_settings(req):
-   
-   return render(req,'allsettings.html')
+   Status = ServerStatus.objects.all()
+   data = {'server_status':Status}
+   return render(req,'allsettings.html',data)
 @login_required
 def services(req):
    return render(req,'servieces.html')
 @login_required
 def base(req):
-   if req.user.user_acces >= 4:
-      Logger = Logs.objects.all()
-      data = {'logs':Logger}
-      return render(req,'baseinf.html',data)
-   else: return redirect('profile') 
+   html = 'baseinf.html'
    
-  
+   if req.user.user_acces >= 4:
+      user =req.GET.get('user')
+      
+      users_models = UserModel.objects.filter(user_acces__gt=0)
+      if user:
+         user_obj = UserModel.objects.get(username=user)
+         Logger = Logs.objects.filter(user_who=user_obj)
+         paginator = Paginator(Logger,10)
+         pages = math.ceil(len(Logger)/10)
+         page_number = req.GET.get('page')
+         page = paginator.get_page(page_number)
+         
+         data = {'logs':page,'num_pages':range(pages),'users':users_models,'user_selected':user}
+         
+         return render(req,html,data)
+      
+      
+      Logger = Logs.objects.all().order_by('-when')
+      
+      pages = math.ceil(len(Logger)/10)
+      
+      paginator = Paginator(Logger,10)
+      
+      page_number = req.GET.get('page')
+      
+      page = paginator.get_page(page_number)
+      
+      data = {'logs':page,'num_pages':range(pages),'users':users_models}
+      return render(req,html ,data)
+   
+
+
+
+   else: return redirect('profile') 
+@login_required 
+def profileSettings(req):
+   return render(req,'settingsprofile.html')
+
+
+class Emp_app(LoginRequiredMixin,TemplateView):
+   
+   
+   template_name = 'checkAppEmp.html'
+   
+   def get(self ,req):
+      if req.user.user_acces >=3:
+         apps = Application_from_user.objects.filter(order__isnull=False)
+         users = UserModel.objects.filter(user_acces__gt=0)
+         data = {'all_aps':apps,'users':users}
+         return render(req,template_name=self.template_name,context=data)
+      else : return redirect('profile')
+   def post(self,req):
+      if req.method == 'POST':
+         data = json.loads(req.body)
+         id= data.get('id')
+         try:
+            app = Application_from_user.objects.get(id=id)
+            if app.order == None:
+               return JsonResponse({'error':'У заявки нет владельца!'})
+            else: 
+               app.order = None
+               app.save()
+               return JsonResponse({'resp':'Заявка отозвана'})
+         except Application_from_user.DoesNotExist:
+            return JsonResponse({'error':'Упс, не смогли найти заявку!'})
+
+        

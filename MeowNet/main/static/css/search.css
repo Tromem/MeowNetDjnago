@@ -1,0 +1,121 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background:#f5f5f5;
+    min-height:100vh;
+
+    display:flex;
+}
+
+/* Если есть sidebar слева */
+.sidebar{
+    width:250px;
+    height:100vh;
+    background:#1f2937;
+}
+
+/* Основная область справа */
+.search-box{
+    flex:1;
+    
+
+    background:#ffffff;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px;
+}
+
+/* Заголовок */
+.search-box h2{
+    font-size:32px;
+    margin-bottom:25px;
+    color:#111827;
+}
+
+/* Форма */
+.search-box form{
+    width:100%;
+    max-width:500px;
+}
+
+/* Поле телефона */
+.search-box input{
+    width:100%;
+    padding:16px;
+
+    border:1px solid #d1d5db;
+    border-radius:10px;
+
+    font-size:16px;
+
+    margin-bottom:20px;
+
+    outline:none;
+    transition:0.2s;
+}
+
+.search-box input:focus{
+    border-color:#2563eb;
+    box-shadow:0 0 0 3px rgba(37,99,235,0.15);
+}
+
+/* Кнопка */
+.search-box button{
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+    border-radius:10px;
+
+    background:#2563eb;
+    color:white;
+
+    font-size:16px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.2s;
+}
+
+/* Hover */
+.search-box button:hover{
+    background:#1d4ed8;
+}
+
+/* Active */
+.search-box button:active{
+    transform:scale(0.99);
+}
+
+/* Адаптив */
+@media(max-width:768px){
+
+    body{
+        flex-direction:column;
+    }
+
+    .sidebar{
+        width:100%;
+        height:70px;
+    }
+
+    .search-box{
+        height:calc(100vh - 70px);
+        padding:20px;
+    }
+
+    .search-box h2{
+        font-size:24px;
+    }
+}

@@ -1,0 +1,127 @@
+{% extends 'workerPanel.html' %}
+{% load static %}
+
+{% block title %}Заявки{% endblock %}
+{% block logolabel %}MeowCRM{% endblock %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/applications.css' %}">
+<link rel="stylesheet" href="{%static 'css/search.css'%}">
+{% endblock %}
+
+{% block content %}
+
+
+<div class="search-box">
+    <h2>Поиск заявок</h2>
+
+    <form id="phoneSearchForm">
+        <input
+            type="tel"
+            id="phone"
+            placeholder="Введите номер телефона"
+            required
+        >
+
+        <button type="submit">
+            Найти заявки
+        </button>
+    </form>
+</div>
+
+<script src="{% static 'js/search.js' %}"></script>
+<div class="container-apps">
+    {%if apps%}
+    {%for i in apps%}
+    
+        <div class="application-card" style="background-color: {{i.color}};">
+            <div class="card-header">
+                <div class="card-id">
+                    
+                    <div value="{{i.id}}" id='card-id' >ID:{{i.id}}</div>
+                </div>
+                <div class="card-date">
+                    <label for="app-date">Дата создания:</label>
+                    <input type="text" id="app-date" value="{{i.data_create}}" readonly>
+                </div>
+            </div>
+            
+            <div class="card-body two-columns">
+                <!-- Левая колонка -->
+                <div class="column left-column">
+                    <div class="field">
+                        <label for="app-fullname">ФИО:</label>
+                        <input type="text" id="app-fullname" value="{{i.user}}" disabled>
+                    </div>
+                    <div class="field">
+                        <label for="app-phone">Телефон:</label>
+                        <input type="text" id="app-phone" value="{{i.phone}}" disabled>
+                    </div>
+                    <div class="field">
+                        
+                        <select type="text" id="app-status" value="[Статус заявки]" disabled>
+                            {%if i.application_status == 'opt1'%}<option value="opt1"selected>Заявка заведена</option >{%else%}<option value="opt1">Заявка заведена</option > {%endif%}
+                            {%if i.application_status == 'opt2'%}<option value="opt2" selected>Неуспешно</option>{%else%}<option value="opt2" >Неуспешно</option>{%endif%}
+                            {%if i.application_status == 'opt3'%}<option value="opt3" selected>Новая заявка</option>{%else%}<option value="opt3" >Новая заявка</option>{%endif%}
+                            {%if i.application_status == 'opt4'%}<option value="opt4" selected>Доработка</option>{%else%}<option value="opt4" >Доработка</option>{%endif%}
+                            {%if i.application_status == 'opt5'%}<option value="opt5" selected>Юридическая заявка</option>{%else%}<option value="opt5" >Юридическая заявка</option>{%endif%}
+                        </select>
+                        
+                        <div style="font-size: 16px;">
+                            <div>
+    
+                                Желаемая дата подключения:<input type="datetime-local" name="date_create" id="date_create"value= {{i.Desired_date}} disabled>
+                            </div>
+                            <div>
+    
+                                Предыдущая дата: {%if  i.Desired_date == None%}
+                                Дата не была выбрана 
+                                {%else%}
+                                {{i.Desired_date}}
+                                {%endif%}
+                            </div>
+    
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+        
+                <!-- Правая колонка -->
+                <div class="column right-column">
+                    <div class="field">
+                        <label for="app-passport" disabled>Паспорт:</label>
+                        {%if user.user_acces < 3 %}
+                            <input type="text" id="app-passport" value="" readonly>
+                            {%else%}
+                            {%if i.pasport%}
+                            <input type="text" id="app-passport" value="{{i.pasport}}" disabled>
+                            {%else%}
+                            <input type="text" id="app-passport" value="" disabled>
+                            {%endif%}
+                        {%endif%}
+                    </div>
+                    <div class="field">
+                        <label for="app-address">Адрес:</label>
+                        <input type="text" id="app-address" value="{{i.adres}}" disabled>
+                    </div>
+                    <div class="field">
+                        <label for="app-comment">Комментарий:</label>
+                        <textarea disabled id="app-comment">{{i.comment}}</textarea>
+                    </div>
+                    <div class="field">
+                        <label for="app-plan">Выбранный тариф:</label>
+                        <input type="text" id="app-plan" value="{{i.tariffield}}" disabled >
+                    </div>
+                </div>
+            </div>
+        
+            <div class="card-actions">
+                
+            </div>
+        </div>
+    {%endfor%}
+    {%endif%}
+</div>
+</body>
+</html>
+{%endblock%}

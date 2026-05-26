@@ -8,6 +8,7 @@
     <title>{%block title%}Административная панель{%endblock%}</title>
     {%block link%}
     <link rel="stylesheet" href="{% static 'css/admin.css' %}">
+     <link rel="stylesheet" href="{% static 'css/paginator.css' %}">
     {%endblock%}
 
 </head>
@@ -18,31 +19,49 @@
     {%endblock%}
     {%block content%}
     {%block leftpanel%} {{ block.super }} {%endblock%}
-    
-   <table id="base-table"  >
-                    <thead>
-                        <tr>
-                            <th>Когда</th>
-                            <th>Логин</th>
-                            <th>ID</th>
-                            <th style="width: 400px;">Информация</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        
-                        {%for i in  logs%}
-                        <tr></tr>
-                        <th>{{i.when}}</th>
-                        <th>{{i.who}}</th>
-                        <th>{{i.id}}</th>
-                        <th>{{i.text}}</th>
-                            
-                        </tr>
-                        {%endfor%}
-                            
-                        
-                    </tbody>
-                </table>
+    <div>
+        <div>
+            <select onchange="window.location.href=this.value" class="user-select">
+                <option value="?page=0">Выберите пользователя</option>
+                {%for i in users%}
+                <option value="?page=0&user={{i.username}}" {%if user_selected == i.username%}selected{%endif%}{%if not i.user_who.all|length%}disabled{%endif%}>{{i}}</option>
+                
+                {%endfor%}
+            </select>
+        </div>
+        <table id="base-table"  >
+                         <thead>
+                             <tr>
+                                 <th>Когда</th>
+                                 <th>Логин</th>
+                                 <th>ID</th>
+                                 <th style="width: 400px;">Информация</th>
+                             </tr>
+                         </thead>
+                         <tbody>
+                             
+                             {%for i in  logs%}
+                             <tr></tr>
+                             <th>{{i.when}}</th>
+                             <th>{{i.who}}</th>
+                             <th>{{i.id}}</th>
+                             <th>{{i.text}}</th>
+                                 
+                             </tr>
+                             {%endfor%}
+                                 
+                             
+                         </tbody>
+                     </table>
+                     <div class="pages-container">
+                         <div class="pages-obj">
+
+                             {%for i in num_pages%}
+                             <a href="?page={{i}}{%if user_selected %}&user={{user_selected}}{%endif%} ">{{i}}</a>
+                             {%endfor%}
+                         </div>
+                     </div>
+    </div>
     {%endblock%}
 </body>
 </html>
