@@ -1,5 +1,7 @@
 {%extends 'foremployer.html'%}
 {% load static %}
+{% url 'managerpanel' as manager_url %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,8 +28,8 @@
     <div class="admin-panel"> 
         <div class="leftbar">
             <div class="icons">
-                <div class="icon-conteiner">
-                    <a href="{% url 'managerpanel'%}"><button class="Supporters-button"></button></a>
+                <div class="icon-conteiner" >
+                    <a href="{% url 'managerpanel'%}"><button  {%if req.path == manager_url %} style="background-color: rgba(128, 128, 128, 0.623);border-radius: 8px;" {%endif%}class="Supporters-button"></button></a>
             </div>
             <div class="icon-conteiner">
                     <a href="{% url 'find_adres'%}"><button class="find-home-button"></button></a>

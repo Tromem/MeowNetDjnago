@@ -4,6 +4,7 @@
 {% block link %}
 <link rel="stylesheet" href="{% static 'css/cards.css' %}">
 <link rel="stylesheet" href="{% static 'css/index.css' %}">
+<link rel="stylesheet" href="{%static 'css/pages_index.css'%}">
 {% endblock %}
 
 {% block title %}Главная страница{% endblock %}
@@ -47,22 +48,34 @@
 </div>
 
 <section class="tarif-section">
-    <h1 class="tarif-title">Тарифы</h1>
-
+    <h1 class="tarif-title"><a href="?tariftype=none">Тарифы</a></h1>
+    <div class="buttons-tarif-page">
+        <div class="item {% if request.GET.tariftype == "tv" %}selected{% endif %}"><a href="?tariftype=tv">Телевидение</a></div>
+        <div class="item {% if request.GET.tariftype == "ethernet" %}selected{% endif %}" ><a href="?tariftype=ethernet">Интернет</a></div>
+        <div class="item {% if request.GET.tariftype == "packs" %}selected{% endif %}" ><a href="?tariftype=packs">Пакеты</a></div>
+        
+    </div>
     <!-- Контейнер карточек и лап -->
     <div class="cards-wrapper-container">
         <div class="cards-wrapper">
             {% for t in tarif %}
             <article class="card filter-internet"> 
                 <header class="card-header">
-                    <span class="card-type">Интернет</span>
+                    <span class="card-type">{{t.typetarif}}</span>
                     <h3 class="card-name">{{ t.Tarif_name }}</h3>
                 </header>
                 <div class="card-content">
+                     {%if t.tv_chanels > 40%}
+                    <div class="card-speed">
+                        <img src="{% static 'img/Cpu.png' %}" alt="Скорость">
+                        <span>{{ t.tv_chanels }} ТВ Каналов</span>
+                    </div>
+                    {%endif%}
                     <div class="card-speed">
                         <img src="{% static 'img/Cpu.png' %}" alt="Скорость">
                         <span>{{ t.speed }} Мбит/с</span>
                     </div>
+                    
                     <div class="card-price">{{ t.price }} руб в месяц</div>
                 </div>
                 <footer>
@@ -87,7 +100,7 @@
                         <span>Скорость {{ a.speed }} Мбит/с</span>
                     </div>
                     
-                    {%if a.tv_chanels > 60%}
+                    {%if a.tv_chanels > 40%}
                     <div class="card-speed">
                         <img src="{% static 'img/Cpu.png' %}" alt="Скорость">
                         <span>{{ a.tv_chanels }} ТВ Каналов</span>

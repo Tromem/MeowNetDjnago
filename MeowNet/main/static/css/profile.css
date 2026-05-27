@@ -14,6 +14,41 @@ html{
     margin-left: 150px;
     border-radius: 14px;
 }
+@media (max-width :720px) {
+    .main-container{
+        display: block;
+        margin-left: 10%;
+    }
+    .maininf{
+        display: none !important;
+        
+    }
+    .login-account{
+        display: none;
+    }
+    .container-other{
+        display: Flex;
+        flex-direction: column;
+    }
+    .main-container{
+        width: 100%;
+        width: 620px;
+        height: 100vh;
+    }
+    .Main-inf, .services, .changing-profile{
+        width: 207px !important;
+    }
+    .form-group input{
+    max-width: 300px !important;
+    }
+    }
+
+#problem-id{
+    width: 318px;
+    resize: none;
+    height: 165px;
+
+}  
 .container-other{
     width: 100%;
     height: 400px;

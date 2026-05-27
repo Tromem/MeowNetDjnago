@@ -1,0 +1,28 @@
+.buttons-tarif-page{
+    display: flex;
+    
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.item{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.tarif-section a{
+    position: relative;
+    z-index: 10 !important;
+    color: black;
+    padding: 5px;
+    border-radius: 8px;
+}
+.selected{
+    background-color:rgba(217, 217, 217, 1) ;
+    padding: 5px;
+    border-radius: 8px;
+}
+.tarif-section a:hover {
+    background-color:rgba(217, 217, 217, 1) ;
+    
+
+}

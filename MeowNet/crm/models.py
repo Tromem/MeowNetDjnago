@@ -127,6 +127,8 @@ def makeId(sender,instance, **kwargs):
             instance.color = 'rgba(119, 118, 118, 0.712)'#
         case 'opt5':
             instance.color = 'rgba(51, 219, 65, 0.836);'#Юридическая
+    if instance.application_status =='opt1' and not instance.order:
+        instance.type_manager_take = 'opt2'
 
 class Logs(models.Model):
     text = models.CharField(max_length=500)

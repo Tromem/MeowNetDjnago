@@ -169,15 +169,25 @@ def swap_role(req):
 @csrf_exempt
 def post_aplication(req):
  if req.method == 'POST':
+   
    jsonbody= json.loads(req.body)
    
-   name = jsonbody.get('name')
-   phone = jsonbody.get('phone')
-   description = jsonbody.get('description')
-   adres = jsonbody.get('adres')
-   opt =jsonbody.get('opt')
-   problem = jsonbody.get('problem')
-   tarif_field = jsonbody.get('tarif')
+   if req.user.is_authenticated:
+         name = req.user.user_last_name
+         phone = req.user.numberphone
+         description = "Хочу заменить тариф!"
+         adres = req.user.address
+         opt = jsonbody.get('opt')
+         tarif_field = jsonbody.get('tarif')
+         problem = jsonbody.get('problem')
+   else:
+      name = jsonbody.get('name')
+      phone = jsonbody.get('phone')
+      description = jsonbody.get('description')
+      adres = jsonbody.get('adres')
+      opt = jsonbody.get('opt')
+      problem = jsonbody.get('problem')
+      tarif_field = jsonbody.get('tarif')
    
    if not (problem == None):
       try:
@@ -389,6 +399,8 @@ def check_user_app(req):
    user = req.user
    user_app = user.applications.all()
    for i in user_app:
+      if req.user.user_acces == 3 and i.application_status == 'opt1':
+         return False
       if i.application_status == 'opt3':
          
          return False
@@ -410,8 +422,10 @@ def get_apps(req):
       1:'opt3'
    }
    user_app_acces =types_emp[req.user.user_acces] 
-   
-   none_applications = Application_from_user.objects.filter(order__isnull=True,application_status='opt3',type_manager_take=user_app_acces)
+   if req.user.user_acces == 3:
+      none_applications = Application_from_user.objects.filter(Q(application_status='opt3')| Q(application_status='opt1'),order__isnull=True,type_manager_take=user_app_acces)
+   else:
+      none_applications = Application_from_user.objects.filter(order__isnull=True,application_status='opt3',type_manager_take=user_app_acces)
     
    if none_applications:
          if len(none_applications) >= 2:
@@ -454,7 +468,7 @@ def find_app(req):
    app = Application_from_user.objects.get(id=id_req)
 
    user_app_acces = types_emp[app.type_manager_take]
-   if(not req.user.user_acces == user_app_acces ):
+   if(not req.user.user_acces == user_app_acces and req.user.user_acces < 4 ):
       return JsonResponse({'error':'Заявка не по вашему уровню доступа!'})
    if (not app.order == None):
       return JsonResponse({'error':'Сейчас заявка принадлежит другому пользователю!'})
@@ -517,8 +531,19 @@ def update_application(req,pk):
 @login_required
 @csrf_exempt
 def make_new_user(req):
+   if not req.user.user_acces >= 4:
+      return JsonResponse({"error":'В доступе отказано'})
+
    idapp = json.loads(req.body).get('id')
    app = Application_from_user.objects.get(id=idapp)
+   if app.FromOrder:
+      user = app.FromOrder
+      
+      user.user_tarif = app.tariffield
+      user.save()
+      app.is_active = False
+      app.save()
+      return JsonResponse({'status':'Пользователь найден'})
    password = password_generator.password_generator()
    
    new_password=make_password(password)
@@ -544,6 +569,7 @@ def make_new_user(req):
       numberphone=app.phone,user_last_name=app.user)
             New_user.save()
    return JsonResponse({'status':'200'})
+   
    
 
 @login_required   
@@ -686,7 +712,7 @@ def new_app_from_user(req):
    data = json.loads(req.body)
    textproblem = data.get('text')
    if(req.user.user_tarif):
-      tarif_field = req.user.user_tarif.Tarif_name
+      tarif_field = req.user.user_tarif
    else:
       tarif_field =  None 
    data = {

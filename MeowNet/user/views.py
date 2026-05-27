@@ -79,14 +79,19 @@ def Admin(req):
    else:
       return redirect('/')
 
+@login_required
 def phonefind(req):
-  try:
-   apps_phone = Application_from_user.objects.filter(phone__icontains=req.GET.get('phone'))
-   data = {'apps':apps_phone}
-   
-   return render(req,'phoneinf.html',data)
-  except:
-   return render(req,'phoneinf.html')
+   if req.user.user_acces < 1:
+      try:
+         apps_phone = Application_from_user.objects.filter(phone__icontains=req.GET.get('phone'))
+         data = {'apps':apps_phone}
+      
+         return render(req,'phoneinf.html',data)
+      except:
+         return render(req,'phoneinf.html')
+   else:
+      return redirect('/')
+      
 
 @login_required
 def settings_emp(req):
@@ -146,16 +151,24 @@ def find_adres(req):
    
    else:
       return redirect('/')
-   
+
+@login_required  
 def employer(req):
       user = req.user
       applications = user.applications.all()
       AppEmp = Application_from_user.objects.filter(order=None,application_status='opt5',is_active=True)
+      AppEmp_len_page = math.ceil(len(AppEmp)/2)
+      if req.GET.get('page'):
+         page = req.GET.get('page')
+      else: page = 1
+      pages = Paginator(AppEmp,2)
+      get_page = pages.get_page(page)
       tarifs = tarif.objects.all()
       data = {
          'app':applications,
-         'AdmApp':AppEmp,
+         'AdmApp':get_page,
          'tarifs':tarifs,
+         'pages':range(AppEmp_len_page),
          'problem':typeproblem.objects.all()
       }
       return render(req,'workerPanel.html',data)

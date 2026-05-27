@@ -5,7 +5,14 @@ html{
     width: 100%;
     height: 100%;
 }
-
+@media (max-width:720px) {
+    .login{
+        left: 25% !important;
+    }
+    .maininf,.login-account{
+        display: none;
+    }
+}
 @font-face {
     font-family: "RubikShadow";
     src: url('RubikDoodleShadow.ttf');
@@ -19,8 +26,9 @@ html{
     user-select: none;
     color: white;
     left:756px ;
-    
+    margin-top: 74px;
 }
+
 .login img{
     position: relative;
     left: 137px;
@@ -39,7 +47,7 @@ html{
   width: 401px;
   height: 478px;
   margin-left: 20px;
-  margin-top: 74px;
+  
   
 }
 .text-login{

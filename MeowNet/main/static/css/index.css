@@ -264,7 +264,14 @@ body {
 .description-section li {
     margin-bottom: 10px;
 }
-
+@media(max-width:994px){
+    .maininf{
+        display: none;
+    }
+    .number{
+        display: none;
+    }
+}
 /* ==========================
    Адаптив остального контента
    ========================== */

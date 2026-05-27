@@ -5,6 +5,7 @@
 {% block logolabel %}MeowCRM{% endblock %}
 {% block link %}
 <link rel="stylesheet" href="{% static 'css/applications.css' %}">
+<link rel="stylesheet" href="{%static 'css/paginator.css'%}">
 {% endblock %}
 {%block bar%}
 <div class="icons">
@@ -215,7 +216,7 @@
                     </div>
                     <div class="field">
                         <label for="app-plan">Выбранный тариф:</label>
-                        <input type="text" id="app-plan" value="{{i.tariffield}}">
+                        <input type="text" id="app-plan" value="{{i.tariffield}}" readonly>
                     </div>
                 </div>
             </div>
@@ -231,11 +232,11 @@
 
         {%if user.user_acces >= 4%}
         {%for i in AdmApp %}
-          <div class="application-card">
+          <div class="application-card "style="background-color: {{i.color}};">
             <div class="card-header">
-                <div class="card-id">
-                    
+                <div class="card-id" style="font-size: 16px;">
                     <div value="{{i.id}}" id='card-id' >ID:{{i.id}}</div>
+                    <div >{%if i.FromOrder %}Заявка от пользователя:{{i.FromOrder}}{%endif%}</div>
                 </div>
                 <div class="card-date">
                     <label for="app-date">Дата создания:</label>
@@ -308,18 +309,28 @@
                     </div>
                     <div class="field">
                         <label for="app-plan">Выбранный тариф:</label>
-                        <input type="text" id="app-plan" value="{{i.tariffield}}">
+                        <input type="text" id="app-plan" value="{{i.tariffield}}" readonly>
                     </div>
                 </div>
             </div>
         
             <div class="card-actions">
                 {%if user.user_acces > 3%}
-                <button class="save-btn"  value="{{i.id}}">Создать пользователя</button>
+                
+                <button class="save-btn"  value="{{i.id}}">{%if i.FromOrder %}Изменить пользователя{%else%}Создать пользователя{%endif%}</button>
                 {%endif%}
             </div>
         </div>
         {%endfor%}
+        <div class="pages-container" style="display: inline;">
+            <div class="pages-obj">
+            {%for i in pages%}
+            
+                <a href="?page={{i}}" class="pages">{{i}}</a>
+            
+            {%endfor%}
+            </div>
+        </div>
         {%endif%}
 
 </div>
