@@ -47,12 +47,15 @@ button1.addEventListener('click',function(){
         username.value = '';
         password.value  = '';
         userLastName.value ='';
+        make_message("Пользователь успешно создан!");
     })
     .catch(error =>{
-        
+        make_message(error);
         console.error(error)
     });
-   }
+   }else{
+    make_message('Неправильно были заполнены данные для создания пользователя!');
+   };
 
    
 })

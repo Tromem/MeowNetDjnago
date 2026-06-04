@@ -8,17 +8,26 @@
 <link rel="stylesheet" href="{%static 'css/paginator.css'%}">
 {% endblock %}
 {%block bar%}
+{%block messages%}
+        <div class="message-inf" id="message-inf">
+          
+           
+        </div>
+    {%endblock%}
 <div class="icons">
  {%if user.user_acces > 0 %}
  <div class="bar-container">
 
     
 
-     <div class="icon-conteiner">   
-                
-                <a href="{% url 'find_adres'%}"><button title="Просмотр технической возможности по адресу" class="find-home-button" {%if not user.in_work%}disabled{%endif%}></button></a>
+     <div class="icon-conteiner">  
+         
+                <button class="work-shift-button" id="work-shift-button" title="рабочая смена"></button>
                 <a><button class="new-application" title="Поиск заявок" id="new-application" {%if not user.in_work%}disabled{%endif%}></button></a>
-                <button class="new-application-from-worker" id="openModalBtn" title="Создать новую заявку" {%if not user.in_work%}disabled{%endif%}></button>
+                 <button class="new-application-from-worker" id="openModalBtn" title="Создать новую заявку" {%if not user.in_work%}disabled{%endif%}></button>
+                <a href="{% url 'find_adres'%}"><button title="Просмотр технической возможности по адресу" class="find-home-button" {%if not user.in_work%}disabled{%endif%}></button></a>
+                
+               
              
     
                 
@@ -29,7 +38,7 @@
                 {%if user.user_acces > 1 %} 
                 <a href="{% url 'users-stat'%}"> <button class="users-in-button" title="Поиск по лицевому счету" {%if not user.in_work%}disabled{%endif%}> </button></a>
                 {%endif%}
-                <button class="work-shift-button" id="work-shift-button" title="рабочая смена"></button>
+                
             </div>
             <div class="icon-conteiner">   
                 
@@ -84,7 +93,7 @@
                         <option value="opt1">Заявка заведена</option>
                         <option value="opt2">Неуспешно</option>
                         <option value="opt3" selected>Новая заявка</option>
-                        <option value="opt4">Доработка</option>
+                        <option value="opt4">Заявка обработана сотрудником</option>
                         <option value="opt5">Юридическая заявка</option>
                     </select>
                 </div>
@@ -163,12 +172,12 @@
                         <input type="text" id="app-phone" value="{{i.phone}}">
                     </div>
                     <div class="field">
-                        
+                        <div style="font-size: 16px;">Изменение статуса заявки</div>
                         <select type="text" id="app-status" value="[Статус заявки]">
                             {%if i.application_status == 'opt1'%}<option value="opt1"selected>Заявка заведена</option >{%else%}<option value="opt1">Заявка заведена</option > {%endif%}
                             {%if i.application_status == 'opt2'%}<option value="opt2" selected>Неуспешно</option>{%else%}<option value="opt2" >Неуспешно</option>{%endif%}
                             {%if i.application_status == 'opt3'%}<option value="opt3" selected>Новая заявка</option>{%else%}<option value="opt3" >Новая заявка</option>{%endif%}
-                            {%if i.application_status == 'opt4'%}<option value="opt4" selected>Доработка</option>{%else%}<option value="opt4" >Доработка</option>{%endif%}
+                            {%if i.application_status == 'opt4'%}<option value="opt4" selected>Заявка обработана сотрудником</option>{%else%}<option value="opt4" >Заявка обработана сотрудником</option>{%endif%}
                             {%if i.application_status == 'opt5'%}<option value="opt5" selected>Юридическая заявка</option>{%else%}<option value="opt5" >Юридическая заявка</option>{%endif%}
                         </select>
                         
@@ -256,12 +265,12 @@
                         <input type="text" id="app-phone" value="{{i.phone}}">
                     </div>
                     <div class="field">
-                        
+                        <div style="font-size: 16px;">Изменение статуса заявки</div>
                         <select type="text" id="app-status" value="[Статус заявки]">
                             {%if i.application_status == 'opt1'%}<option value="opt1"selected>Заявка заведена</option >{%else%}<option value="opt1">Заявка заведена</option > {%endif%}
                             {%if i.application_status == 'opt2'%}<option value="opt2" selected>Неуспешно</option>{%else%}<option value="opt2" >Неуспешно</option>{%endif%}
                             {%if i.application_status == 'opt3'%}<option value="opt3" selected>Новая заявка</option>{%else%}<option value="opt3" >Новая заявка</option>{%endif%}
-                            {%if i.application_status == 'opt4'%}<option value="opt4" selected>Доработка</option>{%else%}<option value="opt4" >Доработка</option>{%endif%}
+                            {%if i.application_status == 'opt4'%}<option value="opt4" selected>Заявка обработана сотрудником</option>{%else%}<option value="opt4" >Заявка обработана сотрудником</option>{%endif%}
                             {%if i.application_status == 'opt5'%}<option value="opt5" selected>Юридическая заявка</option>{%else%}<option value="opt5" >Юридическая заявка</option>{%endif%}
                         </select>
                         
@@ -335,6 +344,7 @@
 
 </div>
 </div>
+<script src="{%static 'js/make_messeges_from_site.js'%}"> </script>
 <script src="{%static 'js/workshift.js'%}"></script>
 <script src="{%static 'js/ChangeCards.js'%}"></script>
 <script src="{%static 'js/getnew.js'%}"></script>

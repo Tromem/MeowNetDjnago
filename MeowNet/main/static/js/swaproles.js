@@ -16,6 +16,8 @@ buttonsswap.forEach(btn=>{
                     'acces_swap': optionEL,
                     'userid': parseInt(UserIdForSwap)
                 })
+            }).then(()=>{
+                make_message('Роль была успешно изменена!');
             })
         }
     })

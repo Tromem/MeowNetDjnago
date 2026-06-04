@@ -24,8 +24,8 @@ document.getElementById('new-application').addEventListener('click',()=>{
             if (data.error) {
                 
                 
-                
-                alert(data.error);
+                make_message(data.error);
+               
                
                 return
               if (container) {
@@ -34,8 +34,8 @@ document.getElementById('new-application').addEventListener('click',()=>{
                         }
 }  
             }else if(data.notfound){
+                make_message("Сейчас нет доступных заявок");
                 
-                alert("Сейчас нет доступных заявок");
                 errormod.textContent = data.notfound;
                  
                
@@ -44,10 +44,16 @@ document.getElementById('new-application').addEventListener('click',()=>{
 
           
         }).then(()=>{
-            alert(data.error)
-            window.location.reload();
+            
+            make_message(data.error);
+            setInterval(()=>{
+                window.location.reload();
+            },5000)
+            
         })
         .catch(err => {
-            window.location.reload();
+           setInterval(()=>{
+                window.location.reload();
+            },5000)
         });
 });

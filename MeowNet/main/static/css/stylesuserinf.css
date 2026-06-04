@@ -18,7 +18,7 @@ body {
     height: 50px;
     border: none;
     color: white;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
 }
 h1 {
     text-align: center;
@@ -58,10 +58,26 @@ h1 {
 }
 
 .account-details table {
-    width: 100%;
+    width: 80%;
     border-collapse: collapse;
 }
+#accountDetails table{
+    margin-left: 10%;
+}
+#accountDetails table th{
+    width: 20%;
+    text-align: center;
+}
 
+#problem{
+    font-size: 16px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    
+}
+.submit-btn{
+    right: 15px;
+}
 .account-details th, .account-details td {
     padding: 10px;
     text-align: left;
@@ -152,6 +168,7 @@ h1 {
     font-size: 16px;
     width: 100%;
     margin-top: 10px;
+    
 }
 
 .modal-form button:hover {

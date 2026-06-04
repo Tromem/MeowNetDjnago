@@ -1,201 +1,297 @@
-a{text-decoration: none;}
-html {
-  height: 200%; 
-  overflow-x: hidden;
+
+
+html, body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
 }
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+img {
+    user-select: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* =========================
+   Шрифты
+========================= */
 @font-face {
     font-family: "Holtwood";
-    
     src: url('HoltwoodOneSCRegular.ttf') format('truetype');
 }
 @font-face {
-    font-family:'RubikMono' ;
+    font-family: 'RubikMono';
     src: url('RubikMonoOneRegular.ttf') format('truetype');
 }
 @font-face {
     font-family: 'RuslanDisplay';
-    src: url('RuslanDisplay.ttf' ) format('truetype');
+    src: url('RuslanDisplay.ttf') format('truetype');
 }
 
-@keyframes borders{
-    0%{
-        border-bottom: 0px solid white;
-    }
-    
-    100%{
-        border-bottom: 5px solid white;
-    }
-
+/* =========================
+   Анимации
+========================= */
+@keyframes borders {
+    0% { border-bottom: 0px solid white; }
+    100% { border-bottom: 3px solid white; }
 }
-img{
+
+/* =========================
+   Шапка сайта
+========================= */
+.bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 114px;
+    background-color: rgba(135, 62, 164, 1);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    z-index: 100;
     user-select: none;
-    
 }
 
-.site{
-    display: block;
+.bglogo {
+    display: flex;
+    align-items: center;
 }
-body {
-  min-height: 100vh; 
-  margin: 0; 
-  padding: 0; 
-  display: inline;
-  
+
+.bglogo img {
+    width: 64px;
+    height: 64px;
 }
-a{
-    text-decoration: none;
+
+.Meow {
+    margin-left: 15px;
+    font-family: 'RubikMono';
+    font-size: 48px;
+    color: aliceblue;
+}
+
+/* =========================
+   Информация и контакты
+========================= */
+.maininf {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.phone {
+    font-family: 'RubikMono';
     color: white;
+    font-size: 19px;
 }
-.bar button{
+
+/* =========================
+   Кнопки
+========================= */
+.bar button {
     color: white;
-    
     border: none;
     font-family: 'RuslanDisplay';
     font-size: 22px;
-   
-}
-button{
-    cursor: pointer;
-}
-.bar{
-    user-select: none;
-    z-index: 100;
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
-    display: flex;
-    min-height:114px;
-    width: 100%;
-    background-color: rgba(135, 62, 164, 1) ;
-    
-}
-.bglogo{
-    
-    cursor: pointer;
-    justify-content: center;
-    text-align: center;
-    display: flex;
-    left: 51px;
-    top: 10px;
-    height: 84px;
-    width: 353px;
-    background-color: rgba(135, 62, 164, 0) ;
 }
 
-.bglogo img{
-    position: relative;
-    left: 28px;
-}
-.Meow{
-    text-decoration: none;
-    margin-top: 15px;
-    margin-left: 30px;
-    font-family:'RubikMono' ;
-    color: aliceblue;
-    font-size: 48px;
-}
-
-.logo{
-    text-align: center;
-    margin-top: 10px;
-    min-width: 380px;
-}
-.maininf{
-    text-align: center;
-    margin-left: 100px ; 
-    left: 90px;
-    top:10px ;
-    font-family:"Holtwood" ;
-    width: 10%;
-    
-}
-.techblocks{
+.login-account {
     cursor: pointer;
-    margin-bottom: 15px;
-    margin-top: 5px;
-    position: relative;
-    background-color:rgba(135, 62, 164, 0)  ;
-    width:299px;
-    height:39px;
-    color: white;
-}
-
-.text{
-    font-size: 22px;
-    width: 247px;
-    display: inline-block;
-    padding-bottom: 2px;
-    color: white;
-   
-}
-.phone{
-    user-select:text;
-    text-align: center;
-    font-family:'RubikMono' ;
-    color: white;
-    font-size: 19px;
-    text-align: left;
-    max-width: 500px;
-    min-width: 200px;
-    max-height: 40px;
-   margin-top: 35px;
-    
-}
-.rightbar{
-    margin-top: 5px;
-    background-color:rgba(135, 62, 164, 1)  ;
-}
-.support{
-    cursor: pointer;
-    text-align: center;
-    min-width:400px;
-    height:39px;
-    background-color:rgba(135, 62, 164, 1)  ;
-   
-    
-
-}
-.support .text{
-    margin-top: 20x;
-    
-    
-
-}
-.more{
-    width: 300px;
-    height: 100;
-    cursor: pointer;
-   
-    
-}
-.more-object{
     margin-top: 30px;
-    margin-left: 150px;
-}
-
-.bar button:hover{
-
-   
-   
-    
-}   
-.number{min-width: 30%;}
-.login-account{
-    margin-top: 30px ; 
-    cursor: pointer;
     margin-bottom: 15px;
-    
     position: relative;
-    background-color:rgba(135, 62, 164, 0)  ;
+    background-color: transparent;
     color: white;
     font-family: 'RuslanDisplay';
     font-size: 22px;
     text-align: center;
+    padding-bottom: 10px;
     border-bottom: 2px solid rgba(255, 255, 255, 0);
 }
-.login-account:hover a{
+
+.login-account:hover a {
     border-bottom: 3px solid white;
     animation: borders 0.1s ease-in;
 }
-@media (min-width: 992px) { 
-    .maininf{margin-left: 0px;}
+
+.support {
+    cursor: pointer;
+    text-align: center;
+    background-color: rgba(135, 62, 164, 1);
+    padding: 5px 10px;
+}
+
+/* =========================
+   Карточки тарифов
+========================= */
+.tarif-card {
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 10px auto;
+    max-width: 300px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.tarif-card .info {
+    background-color: rgba(0,0,0,0.3);
+    padding: 5px 10px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+}
+
+/* =========================
+   Остальные блоки
+========================= */
+.techblocks {
+    margin: 5px 0 15px 0;
+    position: relative;
+    background-color: transparent;
+    width: 100%;
+    max-width: 299px;
+    height: 39px;
+    color: white;
+}
+
+.text {
+    font-size: 22px;
+    display: inline-block;
+    padding-bottom: 2px;
+    color: white;
+}
+
+.more {
+    width: 100%;
+    max-width: 300px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.more-object {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* =========================
+   Сообщения
+========================= */
+.message-inf{
+    position: fixed;
+    width: 20%;
+    height: 10%;
+    pointer-events: none;
+    z-index: 150;
+}
+
+.toast-message{
+    margin: 5px;
+    background-color: #ffb300;
+    color: white;
+    padding-left: 5px;
+    padding-top: 5px;
+    top: 10%;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+/* =========================
+   Ховер эффекты
+========================= */
+.bar button:hover {
+    opacity: 0.8;
+}
+
+/* =========================
+   Адаптив
+========================= */
+@media (max-width: 768px) {
+    /* Шапка */
+    .bar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        min-height: auto;
+        padding: 10px 5px;
+    }
+
+    .Meow {
+        font-size: 32px;
+        margin-left: 0;
+    }
+
+    .bglogo {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .maininf {
+        display: none; /* скрываем ненужное */
+    }
+
+    .phone {
+        font-size: 16px;
+        margin-left: 0;
+    }
+
+    .rightbar {
+        display: none; /* скрываем на мобильных */
+        position: static;
+        margin-left: 0;
+    }
+
+    /* Карточки */
+    .tarif-card {
+        max-width: 95%;
+        margin: 10px;
+    }
+
+    .more {
+        max-width: 95%;
+    }
+
+    .techblocks {
+        max-width: 95%;
+    }
+
+    /* Кнопки */
+    .login-account {
+        font-size: 18px;
+        margin: 5px 0;
+        padding-bottom: 5px;
+    }
+}
+
+/* =========================
+   Ещё более мелкие экраны
+========================= */
+@media (max-width: 480px) {
+    .Meow {
+        font-size: 28px;
+    }
+
+    .tarif-card {
+        padding: 10px;
+    }
+
+    .text {
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 18px;
+    }
 }

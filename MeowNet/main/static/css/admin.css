@@ -3,7 +3,7 @@ html{
 }
 .bar{
   position: relative;
- 
+  justify-content: left;
 }
 
 .content{
@@ -16,6 +16,12 @@ html{
   min-height: 200%;
   width: 261px;
   display: flex;
+}
+.button-submit-swap:hover{
+  background-color: #3333332f;
+}
+.button-submit-swap{
+  border-radius: 8px;
 }
 #base-table{
   width: 1500px;

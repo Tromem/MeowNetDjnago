@@ -63,6 +63,8 @@ const modal = document.getElementById('buy-modal');
                 'connection_type':connection_type.value,
                 'tarif':button_mod.value
             })
+        }).then(()=>{
+            make_message('Заявка была успешно отправлена!')
         })
         modal.style.display = 'none';
         

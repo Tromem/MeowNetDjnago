@@ -65,7 +65,10 @@
                     <h3 class="card-name">{{ t.Tarif_name }}</h3>
                 </header>
                 <div class="card-content">
-                     {%if t.tv_chanels > 40%}
+                     <div class="card-speed">
+                        <span>Стоимость подключения {{t.price_to_connect}}руб</span>
+                    </div>
+                    {%if t.tv_chanels > 40%}
                     <div class="card-speed">
                         <img src="{% static 'img/Cpu.png' %}" alt="Скорость">
                         <span>{{ t.tv_chanels }} ТВ Каналов</span>
@@ -133,5 +136,7 @@
     </ul>
     <p>Миссия MeowNet — сделать интернет доступным и комфортным для каждого, обеспечивая надежную связь и качественный сервис.</p>
 </section>
+<script src="{% static 'js/make_messeges_from_site.js'%}"></script>
 <script src="{%static "js/modal.js"%}"></script>
+
 {% endblock %}

@@ -124,7 +124,7 @@ def makeId(sender,instance, **kwargs):
         case 'opt3':
             instance.color = 'rgb(245, 245, 245)'
         case 'opt4':
-            instance.color = 'rgba(170, 170, 170, 0.5)'
+            instance.color = 'rgb(255, 237, 136)'
         case 'opt5':
             instance.color = 'rgba(120, 250, 130, 0.5)'
     if instance.application_status =='opt1' and not instance.order:

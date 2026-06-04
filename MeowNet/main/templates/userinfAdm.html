@@ -12,6 +12,14 @@
     {%endblock%}
 </head>
 <body>
+    {%block bar%}
+    {%block messages%}
+        <div class="message-inf" id="message-inf">
+          
+           
+        </div>
+    {%endblock%}
+    {%endblock%}
     {%block content%}
     <div class="container">
         <h1>Поиск лицевого счета клиента</h1>
@@ -26,7 +34,11 @@
 
       
         <div id="accountDetails" class="account-details" style="display:none;">
-            <h2>Информация о клиенте </h2> <button id="requestInstallerBtn" class="request-installer-btn">Заявка на вызов монтажника</button>
+           <div class>
+
+               <h2>Информация о клиенте </h2> <button id="requestInstallerBtn" class="request-installer-btn">Заявка на вызов монтажника</button>
+           </div>
+
             
         </div>
     </div>
@@ -59,7 +71,7 @@
         </form>
     </div>
 </div>
-    
+    <script src="{%static 'js/make_messeges_from_site.js'%}"></script>
     <script src="{%static 'js/callmontages.js'%}"></script>
     <script src="{% static 'js/finduser.js'%}"></script>
     {%endblock%}

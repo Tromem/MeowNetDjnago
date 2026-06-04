@@ -3,6 +3,10 @@ const buttonfind = document.getElementById('find').addEventListener('click',()=>
     const find_table = document.getElementById('table-user-inf');
     const errors = document.getElementById('errors');
     const find_table_log = document.getElementById('table-log')
+    const table_apps = document.getElementById('apps_by_user');
+    if (table_apps){
+        table_apps.remove();
+    }
     if (find_table){
         
         find_table.remove();
@@ -10,8 +14,20 @@ const buttonfind = document.getElementById('find').addEventListener('click',()=>
     if(find_table_log){
         find_table_log.remove();
     }
-    if(findfield != '' && parseInt(findfield) && findfield.length == 12){
 
+    if (findfield.length == 0){
+        make_message("Пустая строка!");
+        return;
+    } 
+    if (findfield.length < 12 || findfield.length > 12){
+        make_message("Невозможно начать поиск, проблема с длинной строки!");
+        
+        return;
+    } 
+    
+
+    if(findfield != '' && parseInt(findfield) && findfield.length == 12){
+        
         const url = '/API/API-GET-USER/';
         fetch(
             url,
@@ -84,6 +100,7 @@ const buttonfind = document.getElementById('find').addEventListener('click',()=>
                 
                 }).then(response=>response.json()).then(data=>{
                     const table_apps = document.createElement('table');
+                    table_apps.id = 'apps_by_user';
                     table_apps.style.marginTop = '15px';
                     for (i in data.applications){
                         table_apps.appendChild(createTableRow('Заявка номер',data.applications[i].id));

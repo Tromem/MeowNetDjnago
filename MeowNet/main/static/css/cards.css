@@ -3,17 +3,20 @@
    ========================== */
 .cards-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* сделали карточки шире */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 350px));; /* сделали карточки шире */
     grid-auto-rows: auto;
     gap: 20px;
     align-items: start;
-    padding-bottom: 20px;
+    
   
 }
 
 /* ==========================
    Карточка тарифа
    ========================== */
+   .cards-wrapper-container{
+    padding: 50px;
+   }
 .card {
     display: flex;
     flex-direction: column;
@@ -53,7 +56,7 @@
 }
 
 .card-name {
-    font-size: 1.7rem; /* чуть больше текста */
+    /* чуть больше текста */
     font-weight: 700;
     color: #fff;
     margin-top: 5px;

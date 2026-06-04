@@ -15,6 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
             return response.json();
         })
         .then(result => {
+            make_message("Данные успешно изменены!");
+            
             document.querySelectorAll('.application-card').forEach(card=>{
                 let status_card = card.querySelector('#app-status').value
                 switch (status_card){
@@ -25,10 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
         card.style.backgroundColor = 'rgba(255, 140, 140, 0.6)'
         break;
     case 'opt3':
-        card.style.backgroundColor = 'rgb(245, 245, 245)'
+        card.style.backgroundColor = 'rgb(255, 255, 255)'
         break;
     case 'opt4':
-        card.style.backgroundColor = 'rgba(170, 170, 170, 0.45)'
+        card.style.backgroundColor = 'rgb(255, 237, 136)'
         break;
     case 'opt5':
         card.style.backgroundColor = 'rgba(140, 230, 150, 0.5)'

@@ -18,12 +18,16 @@
 <body>
     {%block logolabel%} MeowAdm {%endblock%}
     {%block bar%} 
+     {%block messages%}
+        <div class="message-inf" id="message-inf">
+          
+           
+        </div>
+    {%endblock%}
     {%endblock%}
 
     {%block content%}
-    {%block Message%}
-        <div id="Message">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda repudiandae </div>
-    {%endblock%}
+   
     {%block leftpanel%}
     <div class="admin-panel"> 
         <div class="leftbar">
@@ -111,13 +115,13 @@
                         {%for i in  employers%}
                         <tr id="tr-{{i.id}}">
                             <th>{%if i.user_last_name %}{{i.user_last_name}}{%else%}Имя отсуствует{%endif%}</th>
-                            <th><select name="swap-user-select" id="swap-user-select-{{i.id}}" class="swap-user-select">
+                            <th><select name="swap-user-select" id="swap-user-select-{{i.id}}" class="swap-user-select"  {%if user.user_acces < 5  and not user.is_superuser%} disabled {%endif%}>
                                     {%if i.user_acces == 2 %}<option value="2" selected>Техническая поддержка</option>{%else%}<option value="2">Техническая поддержка</option>{%endif%}
                                     {%if i.user_acces == 1 %}<option value="1" selected>Продажи</option>{%else%}<option value="1">Продажи</option>{%endif%}
                                     {%if i.user_acces == 3 %}<option value="3" selected>Монтажник</option>{%else%}<option value="3">Монтажник</option>{%endif%}
                                     {%if i.user_acces == 4 %}<option value="4" selected>Младший Менеджер</option>{%else%}<option value="4">Младший Менеджер</option>{%endif%}
                                     {%if i.user_acces == 5 %}<option value="5" selected>Старший Менеджер</option>{%else%}<option value="5">Старший Менеджер</option>{%endif%}
-                                </select><button class="button-submit-swap" type="submit" value="{{i.id}}">✔</button> </th>
+                                </select><button class="button-submit-swap" type="submit" value="{{i.id}}"  {%if user.user_acces < 5  and not user.is_superuser%} disabled {%endif%}>✔</button> </th>
                             
                             <th>{%if i.in_work %} Активен{%else%}Офлайн{%endif%}</th>
                             <th>{{i.username}}</th>
@@ -134,6 +138,8 @@
             </div>
     
     </div>
+    
+    <script src="{%static 'js/make_messeges_from_site.js'%}"> </script>
     <script src="{%static 'js/swaproles.js'%}"></script>  
     <script src="{%static 'js/filter.js'%}"></script>
 

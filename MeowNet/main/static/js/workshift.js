@@ -8,21 +8,16 @@ document.getElementById('work-shift-button').addEventListener('click',()=>{
         
         if(data.error){
             
-            errormod.textContent = data.error
-            errorwindow.style.visibility = 'visible';
-            setTimeout(() => {
-                errormod.textContent = '';
-                errorwindow.style.visibility = 'hidden';
-            }, 3000);
-            return
+           make_message(data.error);
+            setInterval(()=>{
+                window.location.reload();
+                
+            },5000)
+            return;
         };
-    }).then(()=>{
-        window.location.reload()
-        const container = document.getElementById('applications-container')
-        if(container){
-            while(container.firstChild){
-                container.removeChild();
-            }
-        }
+        make_message("Смена была обновлена!");
+            setInterval(()=>{
+                window.location.reload();
+            },5000)
     });
 })

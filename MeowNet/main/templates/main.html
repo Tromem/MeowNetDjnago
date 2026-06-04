@@ -44,11 +44,15 @@
             {%if user.username%}
                 <div class="login-account"><a href="{%url 'profile'%}">В личный кабинет</a></div>
             {%else%}
-                <div class="login-account"><a href="/user/auth">Войти | Зарегестрироваться </a></div>
+                <div class="login-account"><a href="/user/auth">Авторизация | Регистрация </a></div>
             {%endif%}
             
         </div>
-        
+        {%block messages%}
+        <div class="message-inf" id="message-inf">
+          
+           
+        </div>{%endblock%}
         {%endblock%}
     </div>
     

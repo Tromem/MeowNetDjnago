@@ -16,7 +16,12 @@
 <body>
    
     {%block bar%} 
-    
+     {%block messages%}
+        <div class="message-inf" id="message-inf">
+          
+           
+        </div>
+    {%endblock%}
     {%endblock%}
     {%block content%}
              {%block leftpanel%} {{ block.super }} {%endblock%}
@@ -122,6 +127,7 @@
     </div>
     <hr>
 </div>
+    <script src="{%static 'js/make_messeges_from_site.js'%}"></script>
     <script src="{%static 'js/testmakeuser.js' %}"></script>
     <script src="{%static 'js/deleteuser.js'%}"></script>
     <script src="{%static 'js/editscript.js'%}"></script>

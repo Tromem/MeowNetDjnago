@@ -24,7 +24,8 @@ function addtarif(){
             return
         };
         if(discounts.value > 100){
-            alert('Скидка не может быть больше 100%!');
+          
+             make_message('Скидка не может быть больше 100%!');
             return
         };
         const url = '/API/API-TARIF-WORKER/';
@@ -47,7 +48,8 @@ function addtarif(){
             }),
         }).then(response => response.json()).then(data=>{
             if (data.error){
-                console.log(data.error)
+                make_message(data.error);
+                
             };
         }).then(()=>{
             nametarif.value = '';
@@ -59,7 +61,8 @@ function addtarif(){
             speed.value = '';
             tv_chanels.value = '';
             typetarif.value = 1;
-            alert('Вы успешно создали тариф!');
+            make_message('Вы успешно создали тариф!');
+            
         });
         
         
@@ -116,7 +119,8 @@ function changetarif(){
             speed.value = '';
             tv_chanels.value = '';
             typetarif.value = 1;
-            alert('Данные успешно изменены!');
+            make_message('Данные успешно изменены!');
+            
         });
 
     });
@@ -127,30 +131,36 @@ function achivetarif(){
     const del_id = document.getElementById('del-id');
     delbuttontarif.addEventListener('click',()=> ajaxtarif(true,del_id));
     addbuttonarchive.addEventListener('click',()=> ajaxtarif(false,del_id));
+             
 }
 
-function ajaxtarif(type,del_id){
-        
-        console.log(type)
-        const url = '/API/API-TARIF-WORKER/';
-        fetch(url,{
-            method:'DELETE',
-            headers:{
-                'content-type':'application/json',
-                'X-CSRFToken':getCSRFToken()
-            },
-            body:JSON.stringify({
-                'typework':type,
-                'tarif-id':del_id.value
+function ajaxtarif(type, del_id) {
+    console.log(type);
+    const url = '/API/API-TARIF-WORKER/';
 
-            }),
-        }).then(response => response.json()).then(data=>{
-            if (data.error){
-                alert(data.error)
-            };
-        }).then(()=>{
-            alert('Тариф успешно изменен!');
-        })
+    fetch(url, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': getCSRFToken()
+        },
+        body: JSON.stringify({
+            typework: type,
+            'tarif-id': del_id.value
+        }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.error) {
+            alert(data.error);
+            return;
+        }
+        make_message('Тариф успешно изменен!');
+    })
+    .catch(error => {
+        console.error('Ошибка:', error);
+        make_message('Ошибка при удалении тарифа');
+    });
 }
 
 addtarif()

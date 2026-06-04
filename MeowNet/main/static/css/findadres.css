@@ -68,6 +68,8 @@ table td {
     border: 1px solid #ddd;
     text-align: center;
     font-size: 16px;
+    
+    
 }
 
 table th {
@@ -198,6 +200,7 @@ button:hover {
     /* Уменьшаем размер шрифта в таблице */
     table td, table th {
         font-size: 14px;
+       
     }
 
     /* Вводные поля занимают 100% ширины */

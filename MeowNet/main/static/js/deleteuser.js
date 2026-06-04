@@ -18,15 +18,7 @@ deletebutton.addEventListener('click',()=>{
     
             })
         }).then(()=>{
-            message = document.getElementById('Message');
-            message.style.display = 'none';
-            message.textContent = "Пользователь был удален";
-            message.classList.add('anim');
-           
-            message.style.display = 'block';
-            setTimeout(() => {
-                message.style.display = 'none';
-            }, 3000);
+            make_message("Пользователь был успешно удален!");
         });
         getselectoption.removeChild(option_select);
         
