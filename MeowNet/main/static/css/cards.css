@@ -23,12 +23,11 @@
     padding: 20px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     transition: transform 0.3s, box-shadow 0.3s;
-    min-height: 320px;
     height: auto;
     overflow: hidden;
     z-index: 100;
     max-width: 337px;
-    min-height: 337px;
+    min-height: 391px;
 }
 
 /* Hover эффект */

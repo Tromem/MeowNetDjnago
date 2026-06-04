@@ -15,7 +15,28 @@ document.addEventListener('DOMContentLoaded', () => {
             return response.json();
         })
         .then(result => {
+            document.querySelectorAll('.application-card').forEach(card=>{
+                let status_card = card.querySelector('#app-status').value
+                switch (status_card){
+    case 'opt1':
+        card.style.backgroundColor = 'rgb(180, 180, 255)'
+        break;
+    case 'opt2':
+        card.style.backgroundColor = 'rgba(255, 140, 140, 0.6)'
+        break;
+    case 'opt3':
+        card.style.backgroundColor = 'rgb(245, 245, 245)'
+        break;
+    case 'opt4':
+        card.style.backgroundColor = 'rgba(170, 170, 170, 0.45)'
+        break;
+    case 'opt5':
+        card.style.backgroundColor = 'rgba(140, 230, 150, 0.5)'
+        break;
+}
+            })
             console.log('Данные успешно обновлены:', result);
+            
         })
         .catch(error => {
             console.error('Ошибка при обновлении:', error);
@@ -26,10 +47,11 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.application-card').forEach(card => {
         const rawid = card.querySelector('#card-id').textContent;
         const id = rawid.replace('ID:','').trim();
-
+        
         // Слежение за изменениями всех полей input, select, textarea
         card.querySelectorAll('input, select, textarea').forEach(input => {
             input.addEventListener('change', () => {
+                 
                 const data = {
                     user: card.querySelector('#app-fullname').value,
                     phone: card.querySelector('#app-phone').value,

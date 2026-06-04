@@ -118,15 +118,15 @@ def makeId(sender,instance, **kwargs):
         instance.id = str(new_id_int).zfill(4)
     match instance.application_status:
         case 'opt1':
-            instance.color = 'rgb(143, 143, 255)' # Заведена
+            instance.color = 'rgb(180, 180, 255)'
         case 'opt2':
-            instance.color = 'rgba(255, 72, 72, 0.815)'#Неуспешно
+            instance.color = 'rgba(255, 120, 120, 0.6)'
         case 'opt3':
-            instance.color = 'white'# Новая
+            instance.color = 'rgb(245, 245, 245)'
         case 'opt4':
-            instance.color = 'rgba(119, 118, 118, 0.712)'#
+            instance.color = 'rgba(170, 170, 170, 0.5)'
         case 'opt5':
-            instance.color = 'rgba(51, 219, 65, 0.836);'#Юридическая
+            instance.color = 'rgba(120, 250, 130, 0.5)'
     if instance.application_status =='opt1' and not instance.order:
         instance.type_manager_take = 'opt2'
 

@@ -456,6 +456,7 @@ def logout_view(req):
     logout(req) 
     return redirect('/') 
 @csrf_exempt
+@login_required
 def find_app(req):
    id_req  = json.loads(req.body).get('id')
    types_emp = {
@@ -496,7 +497,8 @@ def update_application(req,pk):
       2:'opt1',
       3:'opt2',
       1:'opt3',
-      4:'opt4'
+      4:'opt4',
+      5:'opt5'
    }
    if (req.method == 'POST' 
        and types_emp[req.user.user_acces] == app.type_manager_take or req.user.user_acces >=4):

@@ -23,9 +23,9 @@ document.getElementById('new-application').addEventListener('click',()=>{
 
             if (data.error) {
                 
-                errormod.textContent = data.error;
                 
-                alert("Ошибка при получании заявки обратитесь к администратору")
+                
+                alert(data.error);
                
                 return
               if (container) {
