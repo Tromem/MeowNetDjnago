@@ -7,27 +7,71 @@
 {%block logolabel%} MeowNet {%endblock%}
 {%block content%}
 
-<div class="login">
-    <div class="log-container">
-        <img src="{% static 'img/Net.png'%}" alt="">
-        <div class="logoAuth">MeowNet</div>
-        <div class="text-login"><text>Вход в личный кабинет </text></div>
-        
-        <div class="databar">
-            <form method="POST" >
-                {% csrf_token %}
-                <input  name = 'username'type="text" placeholder="Логин" id="login" >
-                <input  name='password' type="password" placeholder="Пароль" id="password">
-            
+<div class="auth-wrapper">
+
+    <div class="login">
+
+        <img src="{% static 'img/Net.png' %}" alt="logo">
+
+        <div class="logoAuth">
+            MEOWNET
         </div>
-        
-        <div ><button class="confrum-button">Продолжить</button></div>
+
+        <!-- Переключение форм -->
+        <div class="switch-panel">
+            <button id="loginBtn" class="switch-btn active">Вход</button>
+            <button id="registerBtn" class="switch-btn">Регистрация</button>
+        </div>
+
+        <!-- Форма входа -->
+        <form id="loginForm" method="POST" class="form-block">
+            {% csrf_token %}
+            <div class="databar">
+                <input name="username" type="text" placeholder="Логин" required>
+                <input name="password" type="password" placeholder="Пароль" required>
+            </div>
+            <button type="submit" class="confrum-button">Войти</button>
+            <div class="user-legal">
+                Нажимая кнопку "Войти", вы принимаете условия пользовательского соглашения
+            </div>
+            <div class="forgotpassword">
+                <a href="#">Забыли пароль?</a>
+            </div>
         </form>
-        <div class="user-legal"> 
-            <text > Нажимая кнопку “Войти”,вы принимаете условия пользовательского соглашения</text></div>
-        <hr>
-            <div class="forgotpassword" title="Для восстановления пароля обратитесь к администратору!"><text><a href="">Забыли пароль?</a></text> </div>
+
+        <!-- Форма регистрации -->
+        <form id="registerForm" class="form-block hidden">
+            {% csrf_token %}
+            <div class="databar">
+                <input type="text" placeholder="ФИО пользователя" required>
+                
+                <input type="password" placeholder="Пароль" required>
+                <input type="password" placeholder="Повторите пароль" required>
+            </div>
+            <button type="submit" class="confrum-button">Зарегистрироваться</button>
+        </form>
+
     </div>
-        
-    </div>
+</div>
+
+<script>
+const loginBtn = document.getElementById('loginBtn');
+const registerBtn = document.getElementById('registerBtn');
+const loginForm = document.getElementById('loginForm');
+const registerForm = document.getElementById('registerForm');
+
+loginBtn.addEventListener('click', () => {
+    loginBtn.classList.add('active');
+    registerBtn.classList.remove('active');
+    loginForm.classList.remove('hidden');
+    registerForm.classList.add('hidden');
+});
+
+registerBtn.addEventListener('click', () => {
+    registerBtn.classList.add('active');
+    loginBtn.classList.remove('active');
+    registerForm.classList.remove('hidden');
+    loginForm.classList.add('hidden');
+});
+</script>
 {%endblock%}
