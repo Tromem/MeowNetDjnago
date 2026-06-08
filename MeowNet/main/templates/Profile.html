@@ -33,6 +33,8 @@
                     <div class="number-phone">Номер телефона: <inf>{{user.numberphone}}</inf></div>
                     <div class="adress">Адрес:<inf>{{user.address}}</inf></div>
             </div>    
+            <a href="{%url 'logout'%}"><button id="exit-button">Выйти из профиля</button></a> </button>
+                            <button id="balance-batton-add">Пополнить счет</button>
                         {%if user.user_tarif%}
                         <div class="otherinf">
                             <div class="type-pay">Следующее списание:<inf>{{user.Date_of_new_write_off}}</inf></div>
@@ -61,8 +63,7 @@
                     
                     </div>
                     {%endif%}
-                    <a href="{%url 'logout'%}"><button id="exit-button">Выйти из профиля</button></a> </button>
-                            <button id="balance-batton-add">Пополнить счет</button>
+                    
                     
             </div>
         </div>
