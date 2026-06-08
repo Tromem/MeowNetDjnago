@@ -741,7 +741,7 @@ def add_balance(req):
    req.user.save()
 
    Logs.objects.create(text=f'Пользователь {req.user.username}, с id {req.user.id_userlog} пополнил баланс на сумму:{money} в {datetime.now()} по местному времени',
-                       who=req.user
+                       user_who=req.user
                        )
    return JsonResponse({'response':'Баланс был обновлен!'})
 @login_required

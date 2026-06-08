@@ -20,7 +20,37 @@ body {
     overflow: auto;
     background-color: rgba(0,0,0,0.5);
 }
+.content{
+    background: 
+  
+    url(../img/tailphone.png) no-repeat,
+    url(../img/catlapaphone.png) no-repeat,
+    url(../img/minilapaphone.png) no-repeat,
+    url(../img/minilapaphone.png)  no-repeat,
+    url(../img/minilapaphone.png)  no-repeat,
+    url(../img/minilapaphone.png)  no-repeat;
+    background-repeat:
 
+        no-repeat,
+        no-repeat;
+    background-position:
+
+        100% 100%,
+        105% -2%,
+        5% 10%,
+        80% 20%,
+        15px 50%,
+        90% 55%;
+     background-size:
+   
+        20% auto,    
+        30% auto,
+        150px auto,
+        150px auto,
+        150px auto,
+        150px auto;
+   
+}
 /* Содержимое окна */
 .modal-content {
     background-color: #fff;
@@ -295,5 +325,50 @@ body {
     .description-section p,
     .description-section li {
         font-size: 0.9rem;
+    }
+}
+@media (max-width: 768px){
+
+    .content{
+        background-position:
+           
+            100% 100%,  /* tailphone */
+            115% 0%,    /* catlapaphone */
+            5% 15%,     /* mini 1 */
+            85% 25%,    /* mini 2 */
+            10% 55%,    /* mini 3 */
+            90% 70%;    /* mini 4 */
+
+        background-size:
+   
+            120px auto,
+            180px auto,
+            60px auto,
+            60px auto,
+            60px auto,
+            60px auto;
+    }
+}
+
+@media (max-width: 480px){
+
+    .content{
+        background-position:
+
+            100% 100%,
+            120% -20px,
+            5% 10%,
+            80% 20%,
+            10% 50%,
+            85% 65%;
+
+        background-size:
+
+            90px auto,
+            130px auto,
+            40px auto,
+            40px auto,
+            40px auto,
+            40px auto;
     }
 }

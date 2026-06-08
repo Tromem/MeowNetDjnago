@@ -22,7 +22,7 @@
             
         </div>
         <div class="profieinf">
-            <div class="user-id-text">Лицевой счет <inf>  №{{user.id_userlog}}</inf></div>
+            <div class="user-id-text">Лицевой счет <inf>  №{{user.id_userlog}}   {%if not user.user_tarif%}Логин {{user.username}}{%endif%}</inf></div>
             <div class="container-other">
     
                 <div class="balanse-text">
@@ -38,8 +38,7 @@
                             <div class="type-pay">Следующее списание:<inf>{{user.Date_of_new_write_off}}</inf></div>
                             <div class="auto-pay">Сумма платежа:{{user.user_tarif.price}}руб.<inf></inf></div>
                             
-                            <a href="{%url 'logout'%}"><button id="exit-button">Выйти из профиля</button></a> </button>
-                            <button id="balance-batton-add">Пополнить счет</button>
+                            
                         </div>
                     </div>
                     <div class="tarif-name">
@@ -62,6 +61,8 @@
                     
                     </div>
                     {%endif%}
+                    <a href="{%url 'logout'%}"><button id="exit-button">Выйти из профиля</button></a> </button>
+                            <button id="balance-batton-add">Пополнить счет</button>
                     
             </div>
         </div>

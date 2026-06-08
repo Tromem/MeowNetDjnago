@@ -1,224 +1,218 @@
-html{
-   overflow: hidden;
+/* =========================
+   Общие стили
+========================= */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: 'Rubik', sans-serif;
+    overflow-x: hidden;
+    background-color: #f5f5f5;
+    color: #333;
 }
-.user-id-text{
-    font-size: 32px;
+#balance-batton-add{
+    height: 40px;
     
+    padding: 12px 20px;
+    
+
 }
-.main-container{
-    width: 1500px;
-    height: 600px;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
-    margin-top: 100px;
-    margin-left: 150px;
+
+.main-container {
+    max-width: 1200px;
+    margin: 100px auto 50px auto;
+    background-color: #fff;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
     border-radius: 14px;
+    padding: 20px;
 }
-@media (max-width :720px) {
-    .main-container{
-        display: block;
-        margin-left: 10%;
-    }
-    .maininf{
-        display: none !important;
-        
-    }
-    .login-account{
-        display: none;
-    }
-    .container-other{
-        display: Flex;
-        flex-direction: column;
-    }
-    .main-container{
-        width: 100%;
-        width: 620px;
-        height: 100vh;
-    }
-    .Main-inf, .services, .changing-profile{
-        width: 207px !important;
-    }
-    .form-group input{
-    max-width: 300px !important;
-    }
-    }
 
-#problem-id{
-    width: 318px;
-    resize: none;
-    height: 165px;
-
-}  
-.container-other{
-    width: 100%;
-    height: 400px;
+/* =========================
+   Навигационная панель пользователя
+========================= */
+.user-bar {
     display: flex;
-    margin-left: 50px;
-}
-.user-id-text{
-    margin-left: 50px;
-}
-.balasne{
-    color: rgb(255, 123, 0);
-    font-size: 50px;
-}
-.imgtarif{
-    border-radius: 15px;
-    width: 60px;
-    height: 60px;
-    background-color: blueviolet;
-    text-align: center;
-    align-items: center;
-    
-}
-.imgtarif img{
-    margin-top: 5px;
-}
-.tarif-name{
-    border-width: 1px;
-    border-style: dashed;
-    border-color: black;
-    width: 350px;
-    height: 300px;
-    background-color: rgb(255, 255, 255);
-    margin-left: 50px;
-    border-radius: 10px;
-    
-
-}
-.content-block{
-    margin-top: 15px;
-    display: flex;
-    margin-left: 15px;
-    
-}
-.type-tarif{
-    
-    font-size: 22px;
-}
-.tarif-login-and-type{
-    margin-left: 15px;
-}
-.login-tarif{
-    margin-top: 10px;
-    
-    font-size: 24px;
-}
-.container-more{
-    margin-top: 20px;
-    font-size: 20px;
-    margin-left: 15px;
-}
-inf{
- color: blueviolet;    
-}
-
-.otherinf{
-    font-size: 22px;
-}
-.container-other button{
-    width: 200px;
-    height: 50px;
-    margin-top: 15px;
-    background-color: blueviolet;
-    color: white;
-    font-size: 20px;
-    border: none;
-    outline: 0px;
-    cursor: pointer;
-}
-.container-other button:hover{
-    background-color: rgb(145, 46, 238);
-   
-}
-
-.type-pay ,.auto-pay ,.delivery-inf,.status-tarif,.status,.bonuses{
-    margin-top: 10px;
-}
-.user-bar{
-    background-color: rgba(255, 255, 255, 0.336);
-    width: 100%;
-    height: 50px;
-    display: flex;
-    user-select: none;
-    
-        
-    
-}
-.Main-inf, .services,.changing-profile{
-    height: 100%;
-    width: 250px;
-    display: flex;
-    background-color: white;
-    text-align: center;
-    align-items: center;
-    font-size: 24px;
-    justify-content: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
 }
 
 .user-bar button {
     width: 100%;
-    height: 100%;
-    background-color: white;
-    outline: 0 ;
+    padding: 12px 10px;
+    border-radius: 5px;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
+    background-color: white;
+    font-size: 18px;
 }
-.user-bar button:hover{
+
+.user-bar button:hover {
     background-color: rgb(231, 231, 231);
 }
-button{
-    user-select: none;
-}
-.user-profile-inf{
-    font-size: 22px;
-    margin-bottom: 30px;
-    margin-top: 15px;
-}
-.first-name ,.number-phone ,.adress{
-    margin-top: 10px;
-}
-.container-other .form-group{
+
+/* =========================
+   Информация пользователя
+========================= */
+.profieinf {
     display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.user-id-text {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.container-other {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+}
+
+/* =========================
+   Блок с балансом (увеличенный)
+========================= */
+.balanse-text {
+    flex: 2; /* занимает больше места */
+    min-width: 300px;
+}
+
+.balasne {
+    color: rgb(255,123,0);
+    font-size: 40px;
+}
+
+/* =========================
+   Блок тарифов
+========================= */
+.tarif-name {
+    flex: 1; /* компактнее */
+    min-width: 250px;
+    border: 1px dashed black;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.content-block {
+    display: flex;
+    gap: 15px;
     align-items: center;
-    margin-bottom: 15px;
 }
 
-.container-other label{
-    width: 180px;
-    font-size: 20px;
-    color: #333;
+.imgtarif img {
+    width: 60px;
+    height: 60px;
 }
 
-.container-other input{
-    flex: 1;
-    padding: 8px 12px;
-    font-size: 18px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    outline: none;
-    transition: border 0.3s, box-shadow 0.3s;
-}
-
-.container-other input:focus{
-    border-color: blueviolet;
-    box-shadow: 0 0 6px rgba(138,43,226,0.3);
-}
-
-.container-other .save-btn{
-    margin-top: 20px;
+/* =========================
+   Кнопки внутри контейнеров
+========================= */
+.container-other button {
     padding: 12px 20px;
-    font-size: 18px;
-    font-weight: 600;
-    color: #fff;
     background-color: blueviolet;
+    color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     transition: background 0.3s;
 }
 
-.container-other .save-btn:hover{
-    background-color: rgb(145, 46, 238);
+.container-other button:hover {
+    background-color: rgb(145,46,238);
+}
+
+/* =========================
+   Дополнительные блоки и текст
+========================= */
+.type-tarif {
+    font-size: 22px;
+}
+
+.login-tarif {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.otherinf {
+    font-size: 22px;
+}
+
+.container-more {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.tarif-login-and-type {
+    margin-left: 15px;
+}
+
+/* =========================
+   Адаптив
+========================= */
+@media (max-width: 1024px) {
+    .main-container {
+        margin: 50px auto;
+        padding: 15px;
+    }
+    .content-block {
+        flex-direction: column;
+        align-items: center;
+    }
+    .balanse-text,
+    .tarif-name {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .user-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .user-id-text {
+        font-size: 24px;
+        text-align: center;
+    }
+    .container-other {
+        flex-direction: column;
+        align-items: center;
+    }
+    .balasne {
+        font-size: 32px;
+    }
+    .tarif-name {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .user-id-text {
+        font-size: 20px;
+    }
+    .balasne {
+        font-size: 28px;
+    }
+    .imgtarif img {
+        width: 50px;
+        height: 50px;
+    }
+    .container-other button {
+        width: 100%;
+        font-size: 16px;
+    }
+    .tarif-name {
+        padding: 10px;
+    }
+    .type-tarif {
+        font-size: 18px;
+    }
+    .login-tarif {
+        font-size: 18px;
+    }
+    .otherinf {
+        font-size: 18px;
+    }
 }

@@ -27,8 +27,15 @@
         <form id="loginForm" method="POST" class="form-block">
             {% csrf_token %}
             <div class="databar">
-                <input name="username" type="text" placeholder="Логин" required>
-                <input name="password" type="password" placeholder="Пароль" required>
+               <input
+                    name="username"
+                    type="text"
+                    placeholder="Логин"
+                    pattern="[A-Za-z0-9_]+"
+                    title="Разрешены английские буквы, цифры и нижнее подчеркивание"
+                    required>
+                <input name="password" type="password" placeholder="Пароль" pattern="[A-Za-z0-9_]+"
+                    title="Разрешены английские буквы, цифры и нижнее подчеркивания" required>
             </div>
             <button type="submit" class="confrum-button">Войти</button>
             <div class="user-legal">
@@ -38,15 +45,30 @@
                 <a href="#">Забыли пароль?</a>
             </div>
         </form>
-
+        {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li class="message {{ message.tags }}">{{ message }}</li>
+        {% endfor %}
+        {%endif%}
         <!-- Форма регистрации -->
-        <form id="registerForm" class="form-block hidden">
+        <form id="registerForm" class="form-block hidden" method="POST">
             {% csrf_token %}
             <div class="databar">
-                <input type="text" placeholder="ФИО пользователя" required>
+               <input
+                type="text"
+                name="userlastname"
+                placeholder="ФИО пользователя"
+                pattern="[А-Яа-яЁё\s\-]+"
+                title="Разрешены только русские буквы"
+                required>
                 
-                <input type="password" placeholder="Пароль" required>
-                <input type="password" placeholder="Повторите пароль" required>
+                <input type="password" name="password" placeholder="Пароль" pattern="[A-Za-z0-9_]+"
+                    title="Разрешены английские буквы, цифры и нижнее подчеркивание" required>
+                <input type="password" placeholder="Повторите пароль" pattern="[A-Za-z0-9_]+"
+                    title="Разрешены английские буквы, цифры и нижнее подчеркивание" required>
+                 <input type="" name="phone" placeholder="Номер телефона" pattern="^(\+7|8)\d{10}$"
+                    title="Введите номер в формате +79991234567 или 89991234567"required>
             </div>
             <button type="submit" class="confrum-button">Зарегистрироваться</button>
         </form>

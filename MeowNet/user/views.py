@@ -14,6 +14,7 @@ from main.models import TypeTarif ,tarif
 from django.views.decorators.csrf import csrf_exempt
 from crm.views import Logger_decorator 
 from crm.models import Logs
+from django.contrib import messages
 from user.models import ServerStatus
 from django.views.generic import TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -22,6 +23,9 @@ import json
 from django.forms.models import model_to_dict
 from django.core.paginator import Paginator
 import math
+from django.db import IntegrityError
+from .password_generator import login_generator
+from django.contrib.auth.hashers import make_password
 # Модули доступа
 # 5 - максимальный доступ к црм
 # 4 - Менеджер по сотрудникам
@@ -32,21 +36,59 @@ import math
 
 
 
-def auth(req):
-   if req.user.is_authenticated:
-     return redirect('profile')
-   
-   if req.POST:
+def auth(request):
+    # Если уже авторизован
+    if request.user.is_authenticated:
+        return redirect('profile')
 
-      username = req.POST['username']
-      password = req.POST['password']
-      user = authenticate(req,username=username,password = password)
-      
-      if user is not None:
-         login(req,user=user)
-         return redirect('profile')  
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        user_last_name = request.POST.get('userlastname')
+        password = request.POST.get('password')
 
-   return render(req,'autorization.html')
+        # Авторизация по username
+        if username and password:
+            user = authenticate(request, username=username, password=password)
+            if user is not None:
+                login(request, user)
+                return redirect('profile')
+            else:
+                messages.error(request, "Неверный логин или пароль")
+                return render(request, 'autorization.html')
+
+        # Регистрация по фамилии
+        elif user_last_name and password:
+            user_login = login_generator(user_last_name)
+            data = {
+                'username': user_login,
+                'password': make_password(password),
+                'user_last_name': user_last_name,
+                'paper_data': 'Отсуствуют',
+                'address': 'Не указан',
+                'balance': 0,
+                'numberphone':request.POST.get('phone')
+            }
+            try:
+                # Создаем нового пользователя
+                new_user = UserModel.objects.create(**data)
+                # Авторизация нового пользователя
+                auth_user = authenticate(request, username=user_login, password=password)
+                if auth_user:
+                    login(request, auth_user)
+                    return redirect('profile')
+                else:
+                    messages.error(request, "Не удалось авторизовать нового пользователя")
+                    return render(request, 'autorization.html')
+            except IntegrityError:
+                messages.error(request, "Пользователь с таким логином уже существует")
+                return render(request, 'autorization.html')
+
+        else:
+            messages.error(request, "Введите все необходимые данные")
+            return render(request, 'autorization.html')
+
+    # GET-запрос — просто отображаем страницу авторизации
+    return render(request, 'autorization.html')
 
 @login_required(login_url='authlogin')
 def Profile(req):
