@@ -353,7 +353,9 @@ body {
 }
 
 @media (max-width: 480px){
-
+    .lapa2{
+        bottom: -463px;
+    }
     .content{
         background-position:
 
