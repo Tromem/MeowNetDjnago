@@ -248,7 +248,7 @@ button {
     }
 
     .rightbar {
-        display: none; /* скрываем на мобильных */
+         /* скрываем на мобильных */
         position: static;
         margin-left: 0;
     }
