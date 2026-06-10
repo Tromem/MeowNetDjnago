@@ -330,8 +330,11 @@ body {
     }
 }
 @media (max-width: 768px){
-
+ .lapa2{
+        bottom: -463px;
+    }
     .content{
+        
         background-position:
            
             100% 100%,  /* tailphone */
@@ -353,6 +356,12 @@ body {
 }
 
 @media (max-width: 480px){
+    .cards-wrapper-container {
+    padding: 25px;
+}
+.card {
+        width: 224px;
+}
     .lapa2{
         bottom: -463px;
     }
