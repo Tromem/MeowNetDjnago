@@ -317,6 +317,10 @@ body {
 }
 
 @media (max-width: 480px) {
+    .buttons-tarif-page{
+        text-align: center;
+        display: block;
+    }
     .tarif-title {
         font-size: 2rem;
     }
