@@ -89,7 +89,7 @@ html, body {
    Блок тарифов
 ========================= */
 .tarif-name {
-    flex: 1; /* компактнее */
+    
     min-width: 250px;
     border: 1px dashed black;
     border-radius: 10px;
