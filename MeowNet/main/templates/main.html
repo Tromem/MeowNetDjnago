@@ -19,7 +19,7 @@
     </div>
     <div class="bar">
         <div class="logo">
-            <a id="a-logo" href="/">
+            <a id="a-logo" {%if user.user_acces == 0%} href="/"{%else%} href='{%url 'profile'%}'{%endif%}>
 
                 <div class="bglogo"> 
                     <img src="{% static 'img/Net.png'%}" alt="">
