@@ -123,7 +123,7 @@ def Admin(req):
 
 @login_required
 def phonefind(req):
-   if req.user.user_acces > 1:
+   if req.user.user_acces > 0:
       try:
          apps_phone = Application_from_user.objects.filter(phone__icontains=req.GET.get('phone'))
          data = {'apps':apps_phone}

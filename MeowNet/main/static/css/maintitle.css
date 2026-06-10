@@ -94,6 +94,7 @@ button {
 }
 
 .phone {
+    user-select:all;
     font-family: 'RubikMono';
     color: white;
     font-size: 19px;
