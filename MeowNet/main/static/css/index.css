@@ -333,6 +333,11 @@ body {
  .lapa2{
         bottom: -463px;
     }
+footer{
+    background-color: rgba(135, 62, 164, 1);
+    height: auto !important;
+    
+}
     .content{
         
         background-position:
@@ -384,4 +389,19 @@ body {
             40px auto,
             40px auto;
     }
+}
+#footer{
+    background-color: rgba(135, 62, 164, 1);
+    height: 50px;
+    text-align: center;
+    color: white;
+    border-top-left-radius:8px ;
+    border-top-right-radius:8px ;
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+}
+#footer div{
+    text-align: center;
+    padding-left: 5px;
 }
