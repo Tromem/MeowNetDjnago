@@ -27,7 +27,7 @@ DEBUG = True
 
 LOGIN_URL = 'authlogin'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 #Возраст куки в секундах
 SESSION_COOKIE_AGE = 3600
 # Application definition
