@@ -50,7 +50,14 @@ const modal = document.getElementById('buy-modal');
         const name = document.getElementById('user-name');
         const adres = document.getElementById('Adres-user');
         const connection_type = document.getElementById('modal-buy-btn');
+        const phoneRegex = /^[0-9+()\\-\\s]{7,20}$/;
+    
+        if (!phoneRegex.test(phone.value.trim())) {
+        phone.value = '';
+        phone.placeholder = 'Введите номер в формате +79991234567 или 89991234567!'
         
+        return;
+        };
         fetch(url,{
             method:"POST",
             headers:{'content-type':'application/json'},
@@ -67,5 +74,11 @@ const modal = document.getElementById('buy-modal');
             make_message('Заявка была успешно отправлена!')
         })
         modal.style.display = 'none';
+        phone.placeholder = 'Введите номер'
+        if(!phone.readOnly){
+            name.value = '';
+            phone.value = '';
+            adres.value = '';
+        };
         
     });

@@ -34,12 +34,12 @@
         <!-- Форма покупки -->
         <div id="buy-form" class="modal-form">
             <label for="user-name">Ваше имя:</label>
-            <input type="text" id="user-name" name="user-name" required placeholder="Введите имя">
+            <input type="text" id="user-name" name="user-name" required placeholder="Введите имя" {%if user.is_authenticated%} value="{{user.user_last_name}}" readonly{%endif%}>
 
             <label for="user-phone">Номер телефона:</label>
-            <input type="text" id="user-phone" name="user-phone" required placeholder="Введите номер">
+            <input type="text" id="user-phone" name="user-phone" required placeholder="Введите номер"  {%if user.is_authenticated%} value="{{user.numberphone}}" readonly{%endif%} >
             <label for="Adres-user">Адрес</label>
-            <input type="text" id="Adres-user" name="Adres-user" required placeholder="Введите адрес">
+            <input type="text" id="Adres-user" name="Adres-user" required placeholder="Введите адрес"  {%if user.address %} value="{{user.address}}" readonly{%endif%}>
 
 
             <button type="submit" class="modal-buy-btn" id="modal-buy-btn"  >Подтвердить</button>
