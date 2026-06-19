@@ -1,0 +1,48 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block link %}
+  <link rel="stylesheet" href="{%static 'css/aboutus.css'%}">
+{% endblock %}
+
+{% block title %}О нас{% endblock %}
+
+{% block content %}
+
+<div class="inf-block">
+
+    <h2>О нас</h2>
+
+    <p>
+        Meownet— интернет-провайдер, предоставляющий услуги подключения к интернету и цифровому телевидению.
+    </p>
+
+    <p>
+        Мы обеспечиваем стабильное и быстрое подключение к сети Интернет, а также доступ к современным ТВ-услугам для дома.
+    </p>
+
+    <h3>Наши услуги</h3>
+    <ul>
+        <li>Подключение высокоскоростного интернета</li>
+        <li>Цифровое телевидение</li>
+        <li>Техническая поддержка</li>
+        
+    </ul>
+
+    <h3>Разработка</h3>
+    <p>
+        Сайт разработан студентом Владивостокского судостроительного колледжа
+       
+    </p>
+
+    <h3>Юридический адрес</h3>
+    <div>ул. Шепеткова, 60, Владивосток, Приморский край, 690013
+</div>
+
+    <h3>Карта</h3>
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1456.17272683205!2d131.9419594!3d43.1182687!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5fb3925e3a91479f%3A0x73964df3eec213aa!2z0JLQu9Cw0LTQuNCy0L7RgdGC0L7QutGB0LrQuNC5INGB0YPQtNC-0YHRgtGA0L7QuNGC0LXQu9GM0L3Ri9C5INC60L7Qu9C70LXQtNC2!5e0!3m2!1sru!2sru!4v1781847962960!5m2!1sru!2sru"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="map"></iframe>
+    </div>
+
+</div>
+{% endblock %}

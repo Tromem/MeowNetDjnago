@@ -276,6 +276,8 @@ def base(req):
 def profileSettings(req):
    return render(req,'settingsprofile.html')
 
+def aboutus(req):
+   return render(req,'aboutus.html')
 
 class Emp_app(LoginRequiredMixin,TemplateView):
    

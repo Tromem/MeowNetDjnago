@@ -1,6 +1,6 @@
 
 from django.urls import path , include
-from user.views import Profile ,auth,services,profileSettings
+from user.views import Profile ,auth,services,profileSettings,aboutus
 
 from . import views
 urlpatterns = [
@@ -9,6 +9,6 @@ urlpatterns = [
     path('user/auth/',auth ,name='authlogin'),
     path('profile/services',services,name="services"),
     path('profile/settings',profileSettings,name='settingsuser'),
-    
+    path('/aboutus',aboutus,name='aboutus')
     
 ]
