@@ -542,6 +542,15 @@ def make_new_user(req):
       user = app.FromOrder
       
       user.user_tarif = app.tariffield
+      if user.balance < app.tariffield.price:
+         print(1)
+         user.user_tarif_balance = False
+      else:
+         print(1)
+         user.balance = user.balance = app.tariffield.price
+      
+      user.Date_of_last_write_off = datetime.now()
+      
       user.save()
       app.is_active = False
       app.save()
@@ -568,7 +577,8 @@ def make_new_user(req):
       paper_data=app.pasport,
       balance=0,Date_of_last_write_off=datetime.now(),
       user_tarif=tariff,
-      numberphone=app.phone,user_last_name=app.user)
+      numberphone=app.phone,user_last_name=app.user,
+      )
             New_user.save()
    return JsonResponse({'status':'200'})
    

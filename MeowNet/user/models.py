@@ -65,8 +65,14 @@ class UserModel(AbstractBaseUser, PermissionsMixin):
             self.Date_of_new_write_off = self.Date_of_last_write_off + timedelta(days=30)
         super().save(*args, **kwargs)
         if self.user_tarif  and self.user_tarif_balance == True:
-            self.user_tarif_active == True
+            print(1)
+            self.user_tarif_active = True
             super().save(*args, **kwargs) 
+        else:
+            self.user_tarif_active = False
+            print(self.user_tarif_active)
+            super().save(*args, **kwargs) 
+
 
             
             
