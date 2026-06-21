@@ -16,9 +16,15 @@
     <div class="main-container">
         
         <div class="user-bar">
-            <a href="{%url 'profile'%}"><div class="Main-inf"><button>Лицевой счет</button></div></a>
-            <a href="{%url 'services'%}"><div class="services"><button>Услуги</button></div></a>
-           <a href="{%url 'settingsuser'%}"> <div class="changing-profile"><button>Изменение профиля</button></div></a>
+           <div class="button-blocks">
+                <a href="{%url 'profile'%}"><div class="Main-inf selected-button"><button>Лицевой счет</button></div></a>
+           </div> 
+            <div class="button-blocks">
+                <a href="{%url 'services'%}"><div class="services"><button>Услуги</button></div></a>
+            </div> 
+           <div class="button-blocks">
+                <a href="{%url 'settingsuser'%}"> <div class="changing-profile"><button>Изменение профиля</button></div></a>
+           </div>
             
         </div>
         <div class="profieinf">
@@ -26,12 +32,12 @@
             <div class="container-other">
     
                 <div class="balanse-text">
-                        <div class="text-inf" id="balance-date"></div>
-                        <div class="balasne">{{user.balance}}руб.</div>
+                        <div class="text-inf minor-inf" id="balance-date"></div>
+                        <div class="balasne" id="balasne">{{user.balance}}руб.</div>
                         <div class="user-profile-inf">
-                    <div class="first-name">Фио: <inf>{{user.user_last_name}}</inf></div>
-                    <div class="number-phone">Номер телефона: <inf>{{user.numberphone}}</inf></div>
-                    <div class="adress">Адрес:<inf>{{user.address}}</inf></div>
+                    <div class="first-name minor-inf">Фио: <inf>{{user.user_last_name}}</inf></div>
+                    <div class="number-phone minor-inf">Номер телефона: <inf>{{user.numberphone}}</inf></div>
+                    <div class="adress minor-inf">Адрес:<inf>{{user.address}}</inf></div>
             </div>    
             <a href="{%url 'logout'%}"><button id="exit-button">Выйти из профиля</button></a> </button>
                             <button id="balance-batton-add">Пополнить счет</button>
@@ -53,7 +59,7 @@
                             </div>
                         </div>
                         <div class="container-more">
-                            <div class="status-tarif">Статус услуги:<inf id="tarif-act">{{user.user_tarif_active}}</inf></div>
+                            <div class="status-tarif ">Статус услуги:<inf id="tarif-act">{{user.user_tarif_active}}</inf></div>
                             <div class="status">Тариф:<inf>{{user.user_tarif.Tarif_name}}  {{user.user_tarif.speed}}Мбит/c</inf></div>
                             <div class="bonuses">Скидочный период: Отсуствует </div>
                             <div class="button">
@@ -87,6 +93,7 @@
     
     document.getElementById('balance-date').innerHTML = `Баланс на ${formatter.format(date)}`;
     </script>
+    <script src="{%static 'js/make_messeges_from_site.js'%}"></script>
     <script src="{%static 'js/check_tar.js'%}"></script>
     <script src="{%static 'js/add_balance.js'%}"></script>
     {%endblock%}    

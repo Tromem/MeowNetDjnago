@@ -100,7 +100,7 @@ def Profile(req):
       return redirect('epmloyer')
 
    if not req.user.Date_of_new_write_off == None:
-      if req.user.Date_of_new_write_off >= datetime.date.today():    
+      if req.user.Date_of_new_write_off <= datetime.date.today():    
          user = req.user
          if user.balance >= user.user_tarif.price:
             user.balance = user.balance - user.user_tarif.price
@@ -161,7 +161,7 @@ def userinf(req):
       try:
          user = UserModel.objects.get(id_userlog=id)
       except UserModel.DoesNotExist:
-         return JsonResponse({'error':'Пользоватлеь не найден'})
+         return JsonResponse({'error':'Пользователь не найден'})
       try:
          Logs_obj = Logs.objects.filter(user_who=user)
       except Logs.DoesNotExist:
@@ -235,7 +235,12 @@ def all_settings(req):
    return render(req,'allsettings.html',data)
 @login_required
 def services(req):
-   return render(req,'servieces.html')
+   if req.user.is_superuser or req.user.user_acces >=4:
+      return redirect('managerpanel')
+   elif req.user.user_acces > 0 and req.user.user_acces < 4:
+      return redirect('epmloyer')
+   apps = Application_from_user.objects.filter(FromOrder=req.user).order_by('-data_create')
+   return render(req,'servieces.html',{'apps':apps})
 @login_required
 def base(req):
    html = 'baseinf.html'
@@ -276,6 +281,10 @@ def base(req):
    else: return redirect('profile') 
 @login_required 
 def profileSettings(req):
+   if req.user.is_superuser or req.user.user_acces >=4:
+      return redirect('managerpanel')
+   elif req.user.user_acces > 0 and req.user.user_acces < 4:
+      return redirect('epmloyer')
    return render(req,'settingsprofile.html')
 
 def aboutus(req):

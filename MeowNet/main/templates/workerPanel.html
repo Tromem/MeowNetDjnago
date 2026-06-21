@@ -171,11 +171,11 @@
                     <div class="field">
                         <div style="font-size: 16px;">Изменение статуса заявки</div>
                         <select type="text" id="app-status" value="[Статус заявки]">
-                            {%if i.application_status == 'opt1'%}<option value="opt1"selected>Заявка заведена</option >{%else%}<option value="opt1">Заявка заведена</option > {%endif%}
-                            {%if i.application_status == 'opt2'%}<option value="opt2" selected>Неуспешно</option>{%else%}<option value="opt2" >Неуспешно</option>{%endif%}
+                            {%if i.application_status == 'opt1'%}<option value="opt1"selected>Заявка заведена</option >{%else%}<option value="opt1" {%if i.type_manager_take == 'opt1'%}disabled{%endif%}>Заявка заведена</option > {%endif%}
+                            {%if i.application_status == 'opt2'%}<option value="opt2" selected>{%if i.type_manager_take%}Отклонена{%else%}Неуспешно{%endif%}</option>{%else%}<option value="opt2" >{%if i.type_manager_take%}Отклонена{%else%}Неуспешно{%endif%}</option>{%endif%}
                             {%if i.application_status == 'opt3'%}<option value="opt3" selected>Новая заявка</option>{%else%}<option value="opt3" >Новая заявка</option>{%endif%}
                             {%if i.application_status == 'opt4'%}<option value="opt4" selected>Заявка обработана сотрудником</option>{%else%}<option value="opt4" >Заявка обработана сотрудником</option>{%endif%}
-                            {%if i.application_status == 'opt5'%}<option value="opt5" selected>Юридическая заявка</option>{%else%}<option value="opt5" >Юридическая заявка</option>{%endif%}
+                            {%if i.application_status == 'opt5'%}<option value="opt5" selected>Юридическая заявка</option>{%else%}<option value="opt5"   {%if i.type_manager_take == 'opt1'%}disabled{%endif%}>Юридическая заявка</option>{%endif%}
                         </select>
                         
                         <div style="font-size: 16px;">

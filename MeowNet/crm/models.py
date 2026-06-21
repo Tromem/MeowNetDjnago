@@ -30,7 +30,7 @@ class Application_from_user(models.Model):
         (OPTION_1_status,'Заявка заведена'),
         (OPTION_2_status,"Неуспешно"),
         (OPTION_3_status,"Новая заявка"),
-        (OPTION_4_status,"Доработка"),
+        (OPTION_4_status,"Заявка обработана"),
         (OPTION_5_status,"Юридическая заявка")
     ]
     
@@ -54,7 +54,7 @@ class Application_from_user(models.Model):
     is_active = models.BooleanField(default=True)
     problem = models.ForeignKey('main.typeproblem',null=True,blank=True,on_delete=models.CASCADE)
     color = models.CharField(max_length=100 ,blank=True,null=True)
-    
+    response = models.CharField(max_length=5000,blank=True,null=True)
     
     
 class city(models.Model):

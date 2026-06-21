@@ -727,9 +727,11 @@ def new_app_from_user(req):
       tarif_field = req.user.user_tarif
    else:
       tarif_field =  None 
+   
    data = {
       'comment': textproblem,
       'FromOrder':req.user,
+      'user':req.user.user_last_name,
       'adres':req.user.address,
       'phone':req.user.numberphone,
       'tariffield':tarif_field,

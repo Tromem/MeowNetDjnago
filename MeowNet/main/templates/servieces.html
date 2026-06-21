@@ -15,10 +15,15 @@
     {%block content%}
      <div class="main-container">
         <div class="user-bar">
-            <a href="{%url 'profile'%}"><div class="Main-inf"><button>Лицевой счет</button></div></a>
-            <a href="{%url 'services'%}"><div class="services"><button>Услуги</button></div></a>
-           <a href="{%url 'settingsuser'%}"> <div class="changing-profile"><button>Изменение профиля</button></div></a>
-            
+            <div class="button-blocks">
+                <a href="{%url 'profile'%}"><div class="Main-inf "><button>Лицевой счет</button></div></a>
+           </div> 
+            <div class="button-blocks">
+                <a href="{%url 'services'%}"><div class="services selected-button"><button>Услуги</button></div></a>
+            </div> 
+           <div class="button-blocks">
+                <a href="{%url 'settingsuser'%}"> <div class="changing-profile"><button>Изменение профиля</button></div></a>
+           </div>
         </div>
         <div class="container-other">
             <div class="container-other">
@@ -29,7 +34,7 @@
                 <textarea name="problem" id="problem-id" placeholder="Опишите проблему"></textarea>
             </div>
 
-            <button type="submit" id="submit-btn-problem" class="submit-btn">Отправить заявку</button>
+            <button type="submit" id="submit-btn-problem" class="submit-btn">Отправить заявку</button> <button id="check-status">Посмотеть статус своих заявок</button>
         
     </div>
 
@@ -38,7 +43,38 @@
     </div>
 </div>
         </div>
+        <div class="status-applications" id="status-applications">
+        <table id="app-status-inf" class="">
+            <tr>
+                <td>Номер заявки</td>
+                <td>Тип обращения</td>
+                <td>Статус</td>
+                <td>Дата создания</td>
+            </tr>
+            {%for app in apps %}
+            <tr>
+                <td>{{app.id}}</td>
+                <td>{%if app.type_manager_take == 'opt1'%}Техническая поддержка{%else%}Услуга подключения{%endif%}</td>
+                <td>
+                    {%if app.application_status == "opt2"%}Заявка была отклонена
+                    {%elif app.application_status == "opt3" %}На рассмотрении
+                    {%elif app.application_status == "opt4"%}Заявка была закрыта
+                    {%elif app.application_status == 'opt1' %}Заявка обрабатывается
+                    {%elif app.application_status == 'opt5' %}Услуга оказана
+                    {%endif%}
+                </td>
+                
+                <td>{{app.data_create}}</td>
+            </tr>
+           
+            {%empty%}
+            <tr><td>Сейчас у вас нет никаких заявок!</td></tr>
+            {%endfor%}
+            
+        </table>
      </div>
+     </div>
+     <script src="{%static 'js/checkstatusapps.js'%}"></script>
      <script src="{%static 'js/new_suppot_app.js'%}"></script>
     {%endblock%}    
 </body>
