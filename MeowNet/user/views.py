@@ -59,6 +59,7 @@ def auth(request):
         # Регистрация по фамилии
         elif user_last_name and password:
             user_login = login_generator(user_last_name)
+            
             data = {
                 'username': user_login,
                 'password': make_password(password),
@@ -68,6 +69,7 @@ def auth(request):
                 'balance': 0,
                 'numberphone':request.POST.get('phone')
             }
+            
             try:
                 # Создаем нового пользователя
                 new_user = UserModel.objects.create(**data)
@@ -79,8 +81,8 @@ def auth(request):
                 else:
                     messages.error(request, "Не удалось авторизовать нового пользователя")
                     return render(request, 'autorization.html')
-            except IntegrityError:
-                messages.error(request, "Пользователь с таким логином уже существует")
+            except IntegrityError as e:
+                messages.error(request, e)
                 return render(request, 'autorization.html')
 
         else:

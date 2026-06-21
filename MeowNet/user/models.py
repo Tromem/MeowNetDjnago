@@ -29,7 +29,7 @@ class Emlpoyers:
     access = models.IntegerField()
 
 class UserModel(AbstractBaseUser, PermissionsMixin):
-    
+    id = models.BigAutoField(primary_key=True)
     id_userlog = models.CharField(max_length=12, unique=True, verbose_name='ID')
     username = models.CharField(max_length=150, unique=True, verbose_name='Логин')
     settings = models.CharField(max_length=70  ,verbose_name='Настройки',blank=True,null=True)# Настройки ввиде символов которые будет считывать js
@@ -44,7 +44,7 @@ class UserModel(AbstractBaseUser, PermissionsMixin):
     works_day = models.IntegerField(null=True ,blank=True)  #Рабочие дни в месяц
     work_hours = models.IntegerField(null=True ,blank=True) #секунды в часы  
     user_acces = models.IntegerField(null=True ,blank=True,default=0)
-    userhash = models.CharField(max_length=128 ,unique=True)
+    userhash = models.CharField(max_length=128 )
     numberphone = models.CharField(max_length=13)
     balance = models.IntegerField(default=0)
     user_tarif = models.ForeignKey("main.tarif", models.SET_NULL,null=True,blank=True)
@@ -60,17 +60,18 @@ class UserModel(AbstractBaseUser, PermissionsMixin):
 
     USERNAME_FIELD = 'username'
     objects = UserManager()
+    
     def save(self,*args, **kwargs):
         if self.Date_of_last_write_off:
             self.Date_of_new_write_off = self.Date_of_last_write_off + timedelta(days=30)
-        super().save(*args, **kwargs)
+        
         if self.user_tarif  and self.user_tarif_balance == True:
             self.user_tarif_active = True
-            super().save(*args, **kwargs) 
+           
         else:
             self.user_tarif_active = False
             print(self.user_tarif_active)
-            super().save(*args, **kwargs) 
+        super().save(*args, **kwargs) 
 
 
             
@@ -84,6 +85,7 @@ def makeId(sender, instance, **kwargs):
             if not sender.objects.filter(id_userlog=new_id).exists():
                 instance.id_userlog = new_id
                 break
+
 @receiver(pre_save,sender=UserModel)
 def make_hash(sender,instance, **kwargs):
     if not instance.userhash:
