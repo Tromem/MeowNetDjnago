@@ -193,6 +193,7 @@ button {
 ========================= */
 .message-inf{
     position: fixed;
+    top:110px;
     width: 20%;
     height: 10%;
     pointer-events: none;
@@ -222,6 +223,10 @@ button {
 ========================= */
 @media (max-width: 768px) {
     /* Шапка */
+    .message-inf{
+        right: 70%;
+        width: 200px;
+    }
     .bar {
         flex-direction: column;
         align-items: center;
@@ -281,7 +286,12 @@ button {
    Ещё более мелкие экраны
 ========================= */
 @media (max-width: 480px) {
+    .message-inf{
+        right: 40%;
+        width: 200px;
+    }
     .Meow {
+        
         font-size: 28px;
     }
 
