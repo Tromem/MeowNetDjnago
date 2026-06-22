@@ -115,5 +115,5 @@ class ServerStatus(models.Model):
     status = models.BooleanField(default=False) # Проверка для декоратора на состояние страницы
     Tech_inf = models.CharField( choices=Choises_text_inf,max_length=450)
     time_to_end = models.DateTimeField(auto_now=False, auto_now_add=False,null=True, blank=True)
-    for_who = models.CharField(choices=Choises_who,max_length=10,blank=True,null=True,unique=True )
+    for_who = models.CharField(choices=Choises_who,max_length=10,blank=True,null=True )
 

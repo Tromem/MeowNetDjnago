@@ -24,6 +24,7 @@ urlpatterns = [
     path('API-NEW-SUP-APP/',views.new_app_from_user),
     path('Add-balance/',views.add_balance),
     path('Add-app-worker/',views.add_app_from_worker),
-    path('get-app-for-user/',views.get_app_when_find)
+    path('get-app-for-user/',views.get_app_when_find),
+    path('api-change-settings/',views.change_userdata)
    
 ]

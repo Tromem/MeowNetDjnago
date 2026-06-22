@@ -681,7 +681,7 @@ def server_status_update(req):
 
             # Получаем или создаём объект ServerStatus
             server_status, created = ServerStatus.objects.get_or_create(for_who=for_who)
-
+            
             server_status.status = status_value
             server_status.Tech_inf = tech_inf
             server_status.for_who = for_who if for_who else ''
@@ -693,12 +693,13 @@ def server_status_update(req):
             return JsonResponse({'success': True})
 
         except Exception as e:
+           
             return JsonResponse({'error': str(e)}, status=400)
 
    return JsonResponse({'error': 'Метод не разрешен'}, status=405)
 def server_status_reset_selected(req):
    if req.method == 'POST':
-        try:
+      #   try:
             data = json.loads(req.body)
             ids = data.get('ids', [])
 
@@ -714,8 +715,9 @@ def server_status_reset_selected(req):
 
             return JsonResponse({'success': True})
 
-        except Exception as e:
-            return JsonResponse({'error': str(e)}, status=400)
+      #   except Exception as e:
+      #       print(e)
+      #       return JsonResponse({'error': str(e)}, status=400)
 
    return JsonResponse({'error': 'Метод не разрешен'}, status=405)
 @login_required
@@ -818,3 +820,39 @@ def get_app(req,usermodel,type_manager):
 
    except Application_from_user.DoesNotExist:
       return JsonResponse({'error':'У пользователя нет заявок'})
+@csrf_exempt
+@login_required
+def change_userdata(request):
+   if request.method != "POST":
+         return JsonResponse({"error": "Only POST allowed"}, status=405)
+   try:
+         data = json.loads(request.body)
+
+         user = request.user  # текущий пользователь (UserModel)
+
+         # обновление полей
+         if "full_name" in data:
+               user.user_last_name = data["full_name"]
+
+         if "phone" in data:
+               user.numberphone = data["phone"]
+
+         if "address" in data:
+               user.address = data["address"]
+
+         # пароль
+         if data.get("new_password"):
+               user.set_password(data["new_password"])
+
+         user.save()
+
+         return JsonResponse({
+               "status": "ok",
+               "message": "Профиль обновлён"
+         })
+
+   except Exception as e:
+         return JsonResponse({
+               "status": "error",
+               "message": str(e)
+         }, status=400)
